@@ -15,7 +15,17 @@
     "jsx": "preserve",
     "incremental": true,
     "paths": {
-      "@/*": ["./src/*"]
+      "@/types/*": ["src/types/*"],
+
+      "@/components/*": ["src/components/*"],
+      "@/UI/*": ["src/components/UI/*"],
+      "@/screens/*": ["src/components/screens/*"],
+
+      "@/pages/*": ["src/pages/*"],
+      "@/services/*": ["src/services/*"],
+
+      "@/public/*": ["public/*"],
+      "@/styles/*": ["styles/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
