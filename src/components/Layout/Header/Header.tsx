@@ -1,15 +1,17 @@
-import { useState } from "react";
-import { useDisclosure } from "@chakra-ui/react";
-import Image from "next/image";
+'use client';
 
-import logo from "@/public/Hero/header/image.png";
-import userLogo from "@/public/Hero/header/user.png";
+import { useState } from 'react';
+import { useDisclosure } from '@chakra-ui/react';
+import Image from 'next/image';
+
+import logo from '@/public/Hero/header/image.png';
+import userLogo from '@/public/Hero/header/user.png';
 
 const mainItems = [
-  { name: "Главная", href: "#" },
-  { name: "Избранное", href: "#" },
-  { name: "История", href: "#" },
-  { name: "Подписки", href: "#" },
+  { name: 'Главная', href: '#' },
+  { name: 'Избранное', href: '#' },
+  { name: 'История', href: '#' },
+  { name: 'Подписки', href: '#' },
 ];
 
 export default function Header() {

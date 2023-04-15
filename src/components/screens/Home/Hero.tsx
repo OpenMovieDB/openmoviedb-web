@@ -1,3 +1,5 @@
+'use client';
+
 import {
   Box,
   Flex,
@@ -8,48 +10,48 @@ import {
   useBreakpointValue,
   Container,
   Button,
-} from "@chakra-ui/react";
-import Image from "next/image";
+} from '@chakra-ui/react';
+import Image from 'next/image';
 
-import backgroundImage from "@/public/Hero/slider-bg.png";
-import filmTitle from "@/public/Hero/film-logo.png";
-import mainCharacter from "@/public/Hero/character.png";
+import backgroundImage from '@/public/Hero/slider-bg.png';
+import filmTitle from '@/public/Hero/film-logo.png';
+import mainCharacter from '@/public/Hero/character.png';
 
 const genres = [
   {
-    name: "Боевик",
-    icon: "💣",
-    href: "#",
+    name: 'Боевик',
+    icon: '💣',
+    href: '#',
   },
   {
-    name: "Мелодрама",
-    icon: "💋",
-    href: "#",
+    name: 'Мелодрама',
+    icon: '💋',
+    href: '#',
   },
   {
-    name: "Драма",
-    icon: "😢",
-    href: "#",
+    name: 'Драма',
+    icon: '😢',
+    href: '#',
   },
   {
-    name: "Фэнтези",
-    icon: "🧙",
-    href: "#",
+    name: 'Фэнтези',
+    icon: '🧙',
+    href: '#',
   },
 ];
 
 const ratings = [
   {
-    rating: "5.6",
-    service: "kinoland",
+    rating: '5.6',
+    service: 'kinoland',
   },
   {
-    rating: "5.6",
-    service: "IMDb",
+    rating: '5.6',
+    service: 'IMDb',
   },
   {
-    rating: "6",
-    service: "КП",
+    rating: '6',
+    service: 'КП',
   },
 ];
 
@@ -70,7 +72,7 @@ const Hero = () => {
         <Flex flex="1" flexDirection="column" flexWrap="wrap">
           <Flex flexDirection="column">
             {isSmallScreen && (
-              <Image src={mainCharacter} width="300px" height="330px" alt="" />
+              <Image src={mainCharacter} width={300} height={330} alt="" />
             )}
             <Image src={filmTitle} alt="" sizes="100vw" />
           </Flex>
@@ -91,7 +93,7 @@ const Hero = () => {
                   <div className="hidden lg:flex md:hidden pt-3 pb-3 pr-5 pl-5 rounded-full backdrop-blur-md bg-white/30 flex-nowrap">
                     <Link
                       href={item.href}
-                      style={{ transition: "var(--transition-1)" }}
+                      style={{ transition: 'var(--transition-1)' }}
                     >
                       {item.name} {item.icon}
                     </Link>
@@ -112,7 +114,7 @@ const Hero = () => {
 
           <Box mt="60px">
             <Button borderRadius={50} pt="25px" pb="25px" pr="60px" pl="60px">
-              {" "}
+              {' '}
               Страница фильма
             </Button>
           </Box>
