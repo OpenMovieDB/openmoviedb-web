@@ -1,8 +1,24 @@
-import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 
 import { ChakraProvider } from "@chakra-ui/react";
 import { extendTheme } from "@chakra-ui/react";
+import { Layout } from "@/components/Layout/Layout";
+
+import "@/styles/globals.css";
+
+// Setting ChakraUI default sizes
+const config = {
+  initialColorMode: "dark",
+  useSystemColorMode: false,
+};
+
+const breakpoints = {
+  sm: "2em",
+  md: "48em", // 768px
+  lg: "62em", // 992px
+  xl: "80em", // 1280px
+  "2xl": "96em", // 1536px
+};
 
 const sizes = {
   sizes: {
@@ -24,7 +40,7 @@ const sizes = {
     "7xl": "80rem",
     "8xl": "90rem",
     container: {
-      sm: "640px",
+      sm: "360px",
       md: "768px",
       lg: "1024px",
       xl: "1280px",
@@ -32,12 +48,21 @@ const sizes = {
   },
 };
 
-const theme = extendTheme({ sizes });
+const fonts = {
+  heading: `'Montserrat', sans-serif`,
+  body: `'Montserrat', sans-serif`,
+};
+
+const theme = extendTheme({ sizes, fonts, config, breakpoints });
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={theme}>
-      <Component {...pageProps} />
+      <div>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </div>
     </ChakraProvider>
   );
 }
