@@ -1,17 +1,17 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { useDisclosure } from '@chakra-ui/react';
-import Image from 'next/image';
+import { useState } from "react";
+import { useDisclosure } from "@chakra-ui/react";
+import Image from "next/image";
 
-import logo from '@/public/Hero/header/image.png';
-import userLogo from '@/public/Hero/header/user.png';
+import logo from "@/public/Hero/header/image.png";
+import userLogo from "@/public/Hero/header/user.png";
 
 const mainItems = [
-  { name: 'Главная', href: '#' },
-  { name: 'Избранное', href: '#' },
-  { name: 'История', href: '#' },
-  { name: 'Подписки', href: '#' },
+  { name: "Главная", href: "#" },
+  { name: "Избранное", href: "#" },
+  { name: "История", href: "#" },
+  { name: "Подписки", href: "#" },
 ];
 
 export default function Header() {
@@ -19,7 +19,7 @@ export default function Header() {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
-    <header className="bg-transparent md:block hidden absolute w-full">
+    <header className="bg-transparent md:block hidden absolute w-full z-10">
       <nav
         className="container mx-auto flex items-center justify-between p-6 lg:px-8 "
         aria-label="Global"

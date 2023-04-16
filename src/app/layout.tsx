@@ -1,10 +1,10 @@
 // components
-import InitChacraUI from '@/components/InitChacraUI';
-import Header from '@/components/Layout/Header/Header';
-import Footer from '@/components/Layout/Footer/Footer';
+import InitChakraUI from "@/components/InitChakraUI";
+import Header from "@/components/Layout/Header/Header";
+import Footer from "@/components/Layout/Footer/Footer";
 
 // styles
-import '@/styles/globals.css';
+import "@/styles/globals.css";
 
 interface Props {
   children: React.ReactNode;
@@ -13,11 +13,11 @@ interface Props {
 const RootLayout = ({ children }: Props) => (
   <html lang="ru">
     <body>
-      <InitChacraUI>
+      <InitChakraUI>
         <Header />
         <main>{children}</main>
         <Footer />
-      </InitChacraUI>
+      </InitChakraUI>
     </body>
   </html>
 );
