@@ -11,7 +11,7 @@ import {
   Container,
   Button,
 } from "@chakra-ui/react";
-import Image from "next/image";
+import Img from "@/components/Img/Img";
 
 import React, { useRef, useState } from "react";
 
@@ -157,9 +157,9 @@ const Hero = () => {
                   <Flex flex="1" flexDirection="column" flexWrap="wrap">
                     <Flex flexDirection="column">
                       {isSmallScreen && (
-                        <Image src={item.filmCharacterImage} alt="" />
+                        <Img src={item.filmCharacterImage} alt="" />
                       )}
-                      <Image src={item.filmTitleImage} alt="" sizes="100vw" />
+                      <Img src={item.filmTitleImage} alt="" sizes="100vw" />
                     </Flex>
                     <Flex>
                       {ratings.map((item, id) => (
@@ -212,7 +212,7 @@ const Hero = () => {
                   {!isSmallScreen && (
                     <Flex flex="2" flexDirection="column">
                       <Box ml={20}>
-                        <Image src={item.filmCharacterImage} alt="" />
+                        <Img src={item.filmCharacterImage} alt="" />
                       </Box>
                     </Flex>
                   )}
