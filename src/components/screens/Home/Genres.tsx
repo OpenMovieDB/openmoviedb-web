@@ -3,66 +3,69 @@
 import { Carousel } from "@/components/Carousel/Carousel";
 import { SwiperSlide } from "swiper/react";
 
-import cover1 from "@/public/Recomendations/cover1.png";
-import cover2 from "@/public/Recomendations/cover2.png";
-import cover3 from "@/public/Recomendations/cover3.png";
-import cover4 from "@/public/Recomendations/cover4.png";
-
-import { Flex, Box, Image } from "@chakra-ui/react";
+import { Flex, Box, Text, Center, Image } from "@chakra-ui/react";
 import Img from "@/components/Img/Img";
-import rectangle from "@/public/rectangle.png";
 
-const recomendationsList = [
+import ghost from "@/assets/emojis/ghost.png";
+import alien from "@/assets/emojis/alien.png";
+import kiss from "@/assets/emojis/kiss.png";
+import mage from "@/assets/emojis/mage.png";
+import sad from "@/assets/emojis/sad.png";
+import laugh from "@/assets/emojis/laugh.png";
+import wink from "@/assets/emojis/wink.png";
+
+const genresList = [
   {
-    image: cover1.src,
-    title: "История игрушек 4",
-    type: "Мультфильм",
+    icon: laugh.src,
+    type: "Комедии",
   },
   {
-    image: cover2.src,
-    title: "Очень странные дела",
-    type: "Мультфильм",
+    icon: ghost.src,
+    type: "Ужасы",
   },
   {
-    image: cover3.src,
-    title: "К звёздам",
-    type: "Фильм",
+    icon: alien.src,
+    type: "Фантастика",
   },
   {
-    image: cover4.src,
-    title: "Она",
-    type: "Фильм",
+    icon: kiss.src,
+    type: "Мелодрамы",
   },
   {
-    image: cover1.src,
-    title: "История игрушек 4",
-    type: "Мультфильм",
+    icon: sad.src,
+    type: "Драмы",
   },
   {
-    image: cover2.src,
-    title: "Очень странные дела",
-    type: "Мультфильм",
-  },
-  {
-    image: cover3.src,
-    title: "К звёздам",
-    type: "Фильм",
-  },
-  {
-    image: cover4.src,
-    title: "Она",
-    type: "Фильм",
+    icon: mage.src,
+    type: "Фэнтези",
   },
 ];
 
 const Genres = () => {
   return (
-    <Carousel title="Рекомендации" className="container">
-      {recomendationsList.map((item, id) => (
+    <Carousel title="Жанры" className="container mt-96">
+      {genresList.map((item, id) => (
         <SwiperSlide
           key={id}
-          style={{ minWidth: "260px", minHeight: "260px", marginRight: "30px" }}
-        ></SwiperSlide>
+          style={{
+            marginRight: "30px",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Flex
+            borderRadius="15px"
+            bgColor="rgba(255, 255, 255, 0.05)"
+            alignItems="center"
+            justifyContent="center"
+            flexDirection="column"
+            minHeight={{ base: "260px", sm: "207px" }}
+            minWidth={{ base: "260px", sm: "207px" }}
+          >
+            <Image src={item.icon} alt="" />
+            <Text>{item.type}</Text>
+          </Flex>
+        </SwiperSlide>
       ))}
     </Carousel>
   );

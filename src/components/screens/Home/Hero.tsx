@@ -278,7 +278,7 @@ const Hero = () => {
                 <Center>
                   <div
                     key={id}
-                    className="flex pt-4 pb-4 rounded-full bg-black"
+                    className="hidden lg:flex md:flex pt-4 pb-4 rounded-full bg-black"
                   >
                     {characters.map((item, id) => (
                       <div className="mr-4 flex items-center content-center gap-2">

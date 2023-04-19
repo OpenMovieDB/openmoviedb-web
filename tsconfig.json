@@ -22,7 +22,8 @@
       "@/pages/*": ["./src/pages/*"],
       "@/services/*": ["./src/services/*"],
       "@/public/*": ["./public/*"],
-      "@/styles/*": ["./src/styles/*"]
+      "@/styles/*": ["./src/styles/*"],
+      "@/assets/*": ["./src/assets/*"]
     },
     "plugins": [
       {

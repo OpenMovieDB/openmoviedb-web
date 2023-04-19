@@ -9,13 +9,13 @@ import { Box, Flex, Heading } from "@chakra-ui/react";
 
 const breakpoints = {
   577: {
-    slidesPerGroup: 3,
-    slidesPerView: 3,
+    slidesPerGroup: 2,
+    slidesPerView: 2,
     spaceBetween: 15,
   },
   769: {
-    slidesPerGroup: 3,
-    slidesPerView: 3,
+    slidesPerGroup: 2,
+    slidesPerView: 2,
     spaceBetween: 30,
   },
   1025: {
