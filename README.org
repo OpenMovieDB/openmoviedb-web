@@ -23,7 +23,7 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
 * Tasks
-** Add / Change / Delete / Fix  ~N~ [4/10]
+** Add / Change / Delete / Fix  ~N~ [6/10]
 1) [X] @ADD: Header
 2) [-] @ADD: Hero section
    - [ ] @FIX: Update icon. From film emoji to openmovie-db logo
@@ -34,12 +34,12 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
    - [ ] @FIX: Neue Machina font (idk how i can download it)
    - [X] @FIX: Change buttons placement
    - [X] @FIX: Add white space between swiper elements
-   - [ ] @FIX: Background
-4) [ ] @ADD: Genres section
-   - [ ] @ADD: 
+   - [X] @FIX: Background
+4) [X] @ADD: Genres section
+   - [X] @ADD: Emojis
    
 5) [X] @ADD: Carousel
-6) [ ] @ADD: Emoji pack
+6) [X] @ADD: Emoji pack
 7) [X] @ADD: Move settings for ChakraUI to ~config.ts~ file
 8) [X] @ADD: /Montserrat/ font
 9) [ ] @CHANGE: Move "Swiper" feature from [[file:src/components/screens/Home/Hero.tsx][Hero.tsx]] to separate file
