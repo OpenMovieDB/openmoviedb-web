@@ -2,6 +2,8 @@
 
 import { ChakraProvider } from "@chakra-ui/react";
 import { extendTheme } from "@chakra-ui/react";
+import type { StyleFunctionProps } from "@chakra-ui/styled-system";
+import { mode } from "@chakra-ui/theme-tools";
 
 const config = {
   initialColorMode: "dark",
@@ -49,7 +51,15 @@ const fonts = {
   body: `'Montserrat', sans-serif`,
 };
 
-const theme = extendTheme({ sizes, fonts, config, breakpoints });
+const styles = {
+  global: (props: StyleFunctionProps) => ({
+    body: {
+      bg: mode("#0F0D18", "#0F0D18")(props),
+    },
+  }),
+};
+
+const theme = extendTheme({ sizes, fonts, config, breakpoints, styles });
 
 interface Props {
   children: React.ReactNode;
