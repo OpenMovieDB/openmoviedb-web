@@ -62,24 +62,7 @@ const Genres = () => {
         <SwiperSlide
           key={id}
           style={{ minWidth: "400px", marginRight: "30px" }}
-        >
-          <Box
-            background={`background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${rectangle.src});`}
-            borderRadius={15}
-            w="405px"
-          >
-            <div className="flex items-center content-center gap-2">
-              <Image src={item.image} alt="" />
-
-              <div className="justify-left flex flex-col gap-2.5 p-6 whitespace-nowrap">
-                <div>
-                  <b>{item.title}</b>
-                </div>
-                <div>{item.type}</div>
-              </div>
-            </div>
-          </Box>
-        </SwiperSlide>
+        ></SwiperSlide>
       ))}
     </Carousel>
   );
