@@ -64,7 +64,7 @@ const Recomendations = () => {
           style={{ minWidth: "400px", marginRight: "30px" }}
         >
           <Box
-            background={`background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${rectangle.src});`}
+            background={`linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${rectangle.src})`}
             borderRadius={15}
             w="405px"
           >

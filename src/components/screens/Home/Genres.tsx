@@ -61,7 +61,7 @@ const Genres = () => {
       {recomendationsList.map((item, id) => (
         <SwiperSlide
           key={id}
-          style={{ minWidth: "400px", marginRight: "30px" }}
+          style={{ minWidth: "260px", minHeight: "260px", marginRight: "30px" }}
         ></SwiperSlide>
       ))}
     </Carousel>

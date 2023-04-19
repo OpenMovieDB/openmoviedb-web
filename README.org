@@ -36,6 +36,7 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
    - [X] @FIX: Add white space between swiper elements
    - [ ] @FIX: Background
 4) [ ] @ADD: Genres section
+   - [ ] @ADD: 
    
 5) [X] @ADD: Carousel
 6) [ ] @ADD: Emoji pack
