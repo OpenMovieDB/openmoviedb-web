@@ -8,7 +8,7 @@ import cover2 from "@/public/Recomendations/cover2.png";
 import cover3 from "@/public/Recomendations/cover3.png";
 import cover4 from "@/public/Recomendations/cover4.png";
 
-import { Flex, Box, Image } from "@chakra-ui/react";
+import { Flex, Box, Image, useBreakpointValue } from "@chakra-ui/react";
 import Img from "@/components/Img/Img";
 import rectangle from "@/public/rectangle.png";
 
@@ -56,8 +56,10 @@ const recomendationsList = [
 ];
 
 const Recomendations = () => {
+  const isSmallScreen = useBreakpointValue({ sm: true, md: false });
+
   return (
-    <Carousel title="Рекомендации" className="container">
+    <Carousel title="Рекомендации" className="">
       {recomendationsList.map((item, id) => (
         <SwiperSlide
           key={id}

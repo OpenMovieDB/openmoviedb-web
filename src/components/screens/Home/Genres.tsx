@@ -39,16 +39,40 @@ const genresList = [
     icon: mage.src,
     type: "Фэнтези",
   },
+  {
+    icon: laugh.src,
+    type: "Комедии",
+  },
+  {
+    icon: ghost.src,
+    type: "Ужасы",
+  },
+  {
+    icon: alien.src,
+    type: "Фантастика",
+  },
+  {
+    icon: kiss.src,
+    type: "Мелодрамы",
+  },
+  {
+    icon: sad.src,
+    type: "Драмы",
+  },
+  {
+    icon: mage.src,
+    type: "Фэнтези",
+  },
 ];
 
 const Genres = () => {
   return (
-    <Carousel title="Жанры" className="container mt-96">
+    <Carousel title="Жанры" className="mt-96">
       {genresList.map((item, id) => (
         <SwiperSlide
           key={id}
           style={{
-            marginRight: "30px",
+            marginRight: "90px",
             justifyContent: "center",
             alignItems: "center",
           }}
