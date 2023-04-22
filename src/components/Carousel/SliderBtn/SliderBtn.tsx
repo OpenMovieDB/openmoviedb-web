@@ -8,8 +8,6 @@ interface SliderBtnProps {
 
 export const SliderBtn = forwardRef<HTMLButtonElement, SliderBtnProps>(
   (props, ref) => {
-    console.log("click!");
-
     return (
       <Button bg="transparent" color="gray.100" ref={ref} m="40px">
         {props.dir === "left" ? "<" : ">"}

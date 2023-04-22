@@ -63,12 +63,11 @@ const Recomendations = () => {
       {recomendationsList.map((item, id) => (
         <SwiperSlide
           key={id}
-          style={{ minWidth: "400px", marginRight: "30px" }}
+          style={{ minWidth: "405px", marginRight: "30px" }}
         >
           <Box
             background={`linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${rectangle.src})`}
             borderRadius={15}
-            w="405px"
           >
             <div className="flex items-center content-center gap-2">
               <Image src={item.image} alt="" />
