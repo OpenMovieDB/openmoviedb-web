@@ -42,8 +42,17 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
      - [X] @ADD: Rating
      - [X] @ADD: Title
    - [ ] @ADD: Film selecting
-   - [ ] @ADD: Selected film (main film)
-   - [ ] @ADD: Bottom placed film list. Under selected film
+   - [-] @CHANGE: New carousel
+     - [-] @ADD: Preview selected item (big image + desc)
+       - [X] @ADD: Genres 
+       - [ ] @ADD: Title
+       - [ ] @ADD: Rating
+       - [ ] @ADD: Description
+       - [ ] @ADD: Image
+       - [ ] @ADD: Buttons
+       - [ ] @ADD: Play button
+   - [X] @ADD: Selected film (main film)
+   - [X] @ADD: Bottom placed film list. Under selected film
    
 6) [X] @ADD: Carousel
 7) [X] @ADD: Emoji pack

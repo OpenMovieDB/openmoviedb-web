@@ -2,7 +2,7 @@
 
 import { FC, PropsWithChildren, useRef } from "react";
 
-import { SliderBtn } from "./SliderBtn/SliderBtn";
+import { SliderBtn } from "@/UI/SliderBtn/SliderBtn";
 import { Swiper } from "swiper/react";
 import SwiperClass, { Navigation } from "swiper";
 import "swiper/css";
