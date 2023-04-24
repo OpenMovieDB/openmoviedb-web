@@ -233,34 +233,35 @@ export const BigCarousel: FC<CarouselProps> = ({
         <Swiper modules={[Navigation]} {...swiperParams}>
           {data.map((item, id) => {
             return (
-              <SwiperSlide
-                key={id}
-                onClick={() => {
-                  setActiveIndex(id);
-                  setActiveItem(item);
-                }}
-                style={{
-                  width: "405px",
-                  height: "216px",
-                  padding: "20px",
-                  borderRadius: "15px",
-                  background: `linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 100%), url(${item.image})`,
-                  objectFit: "contain",
-                  backgroundSize: "cover",
-                }}
-              >
-                <Box>
-                  <Rating rating={item.rating} />
-                  <Text
-                    position="absolute"
-                    bottom="20px"
-                    left="20px"
-                    fontSize="14px"
-                    fontWeight="800"
-                    lineHeight="14px"
-                  >
-                    {item.title}
-                  </Text>
+              <SwiperSlide key={id}>
+                <Box
+                  onClick={() => {
+                    setActiveIndex(id);
+                    setActiveItem(item);
+                  }}
+                  style={{
+                    width: "405px",
+                    height: "216px",
+                    padding: "20px",
+                    borderRadius: "15px",
+                    background: `linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 100%), url(${item.image})`,
+                    objectFit: "contain",
+                    backgroundSize: "cover",
+                  }}
+                >
+                  <Box>
+                    <Rating rating={item.rating} />
+                    <Text
+                      position="absolute"
+                      bottom="20px"
+                      left="20px"
+                      fontSize="14px"
+                      fontWeight="800"
+                      lineHeight="14px"
+                    >
+                      {item.title}
+                    </Text>
+                  </Box>
                 </Box>
               </SwiperSlide>
             );
