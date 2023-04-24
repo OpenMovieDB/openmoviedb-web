@@ -1,23 +1,23 @@
 import { PropsWithChildren, ReactNode, FC } from "react";
 import { Box, Flex, Wrap, WrapItem, Link } from "@chakra-ui/react";
 
-interface GenresData {
-  name: string;
-  icon: ReactNode;
-  href: string;
-}
-
 interface GenresProps {
-  data: GenresData;
+  data: {
+    genres: {
+      name: string;
+      href: string;
+      icon: string;
+    };
+  };
   className?: string;
+  props?: ReactNode;
 }
 
-export const Genres: any = ({
-  // : FC<PropsWithChildren<GenresProps>>
+export const Genres: FC<PropsWithChildren<GenresProps>> = ({
   data,
   className,
 }) => {
-  console.log(data.genres);
+  console.log(data);
 
   return (
     <>

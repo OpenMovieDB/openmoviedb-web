@@ -8,10 +8,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperClass, { Navigation } from "swiper";
 import "swiper/css";
 
-import image1 from "@/public/Novelties/main-poster-0.png";
-import image2 from "@/public/Novelties/main-poster-1.png";
-import image3 from "@/public/Novelties/main-poster-2.png";
-import image4 from "@/public/Novelties/main-poster-3.png";
+import preview from "@/public/preview.jpeg";
 
 import { Box, Flex, Heading, useBreakpointValue, Text } from "@chakra-ui/react";
 import { Genres } from "@/components/Genres/Genres";
@@ -84,9 +81,6 @@ export const BigCarousel: FC<PropsWithChildren<CarouselProps>> = ({
     navigation: swiperNavigation,
     onSwiper: onSwiper,
     breakpoints: swiperBreakpoints,
-    /* on: {
-     *   slideChange: handleSlideChange,
-     * }, */
   };
 
   return (
@@ -134,25 +128,48 @@ export const BigCarousel: FC<PropsWithChildren<CarouselProps>> = ({
         {!isSmallScreen && <SliderBtn dir="left" ref={navigationPrevRef} />}
       </Flex>
 
-      {/* Preview */}
-      {/* <Box bg="gray.700" mt="30px" borderRadius="15px" className="container">
-					{data.map((item, idx) => {
-          console.log(data);
+      <Flex
+        bg="rgba(0, 0, 0, 0.4)"
+        mt="30px"
+        borderRadius="15px"
+        className="container"
+        width="1710px"
+        height="749px"
+      >
+        <Box w="782px" h="547px" ml="50px" mt="220px" zIndex="5">
+          <Flex flexDirection="column" alignItems="flex-start">
+            <Flex mb="80px">
+              <Genres data={activeItem} />
+            </Flex>
+            <Heading
+              mb="30px"
+              fontWeight="800"
+              fontSize="40px"
+              lineHeight="41px"
+            >
+              {activeItem.title}
+            </Heading>
+            <Box
+              fontStyle="normal"
+              fontWeight="400"
+              fontSize="18px"
+              lineHeight="150%"
+            >
+              {activeItem.description}
+            </Box>
+          </Flex>
+        </Box>
 
-          return (
-          <Box key={idx}>
-          <Genres data={item} />
-          </Box>
-          );
-					})}
-					<Box>{activeIndex}</Box>
-						 </Box> */}
-
-      <Box bg="gray.700" mt="30px" borderRadius="15px" className="container">
-        <Genres data={activeItem} />
-        <Box>{activeItem.title}</Box>
-        <Box>{activeItem.description}</Box>
-      </Box>
+        <Flex
+          bg={`linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 18.96%), url(${preview.src})`}
+          w="1274px"
+          h="749px"
+          position="relative"
+          objectFit="contain"
+          backgroundSize="cover"
+          alignItems="flex-end"
+        ></Flex>
+      </Flex>
 
       <Flex alignItems="center" mt="30px">
         {!isSmallScreen && <SliderBtn dir="left" ref={navigationPrevRef} />}
@@ -169,7 +186,7 @@ export const BigCarousel: FC<PropsWithChildren<CarouselProps>> = ({
                 height: "216px",
                 padding: "20px",
                 borderRadius: "15px",
-                background: `linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 100%), url(${item.image})`,
+                background: `linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 100%),  url(${item.image})`,
                 objectFit: "contain",
                 backgroundSize: "cover",
               }}
