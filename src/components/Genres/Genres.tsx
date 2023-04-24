@@ -17,8 +17,6 @@ export const Genres: FC<PropsWithChildren<GenresProps>> = ({
   data,
   className,
 }) => {
-  console.log(data);
-
   return (
     <>
       {data.genres.map((item, idx) => {
