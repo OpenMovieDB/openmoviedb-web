@@ -2,23 +2,20 @@ import { Box, Text } from "@chakra-ui/react";
 import { FC, ReactNode } from "react";
 import Rating from "../Rating/Rating";
 
-interface MovieCardProps {
-  item: {
-    image: string;
-    rating: number;
-    title: string;
-  };
-  onClick?: ReactNode | null;
+interface MovieCardEmptyProps {
+  text?: string;
+  icon?: string;
   props?: ReactNode;
 }
 
-export const MovieCard: FC<MovieCardProps> = ({ item, props }) => {
-  const { image, rating, title } = { ...item };
-
+export const MovieCardEmpty: FC<MovieCardEmptyProps> = ({
+  text,
+  icon,
+  props,
+}) => {
   return (
-    <Box {...props}>
+    <Box {...props} background="rgba(255, 255, 255, 0.05)">
       <Box>
-        <Rating rating={rating} />
         <Text
           position="relative"
           top="140px"
@@ -27,7 +24,7 @@ export const MovieCard: FC<MovieCardProps> = ({ item, props }) => {
           fontWeight="800"
           lineHeight="14px"
         >
-          {title}
+          {text}
         </Text>
       </Box>
     </Box>

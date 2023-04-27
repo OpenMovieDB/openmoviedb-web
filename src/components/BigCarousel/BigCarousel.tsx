@@ -22,6 +22,8 @@ import {
 } from "@chakra-ui/react";
 import { Genres } from "@/components/Genres/Genres";
 import play from "@/public/play.png";
+import { MovieCard } from "../MovieCard/MovieCard";
+import { RatingInline } from "../RatingInline/RatingInline";
 
 const swiperBreakpoints = {
   577: {
@@ -134,19 +136,7 @@ export const BigCarousel: FC<CarouselProps> = ({
                   backgroundSize: "cover",
                 }}
               >
-                <Box>
-                  <Rating rating={item.rating} />
-                  <Text
-                    position="absolute"
-                    bottom="20px"
-                    left="20px"
-                    fontSize="14px"
-                    fontWeight="800"
-                    lineHeight="14px"
-                  >
-                    {item.title}
-                  </Text>
-                </Box>
+                <MovieCard item={item} />
               </SwiperSlide>
             );
           })}
@@ -176,6 +166,7 @@ export const BigCarousel: FC<CarouselProps> = ({
               >
                 {activeItem.title}
               </Heading>
+              <RatingInline item={data.rating} />
               <Box
                 fontStyle="normal"
                 fontWeight="400"
@@ -198,7 +189,33 @@ export const BigCarousel: FC<CarouselProps> = ({
                     mt={20}
                     bg="#121119"
                   >
-                    Смотреть
+                    Подробнее
+                  </Button>
+                  <Button
+                    p="25px 60px 25px 60px"
+                    fontStyle="normal"
+                    fontWeight="400"
+                    fontSize="18px"
+                    lineHeight="150%"
+                    textAlign="center"
+                    borderRadius="full"
+                    mt={20}
+                    bg="transparent"
+                  >
+                    В избранное
+                  </Button>
+                  <Button
+                    p="25px 60px 25px 60px"
+                    fontStyle="normal"
+                    fontWeight="400"
+                    fontSize="18px"
+                    lineHeight="150%"
+                    textAlign="center"
+                    borderRadius="full"
+                    mt={20}
+                    bg="transparent"
+                  >
+                    Саундтреки
                   </Button>
                 </ButtonGroup>
               </Box>
@@ -217,7 +234,7 @@ export const BigCarousel: FC<CarouselProps> = ({
             right="0px"
           >
             <Button
-              p="40px"
+              p="45px"
               bg="rgba(255, 255, 255, 0.05)"
               borderRadius="full"
               backdropFilter="blur(15px)"
@@ -233,36 +250,23 @@ export const BigCarousel: FC<CarouselProps> = ({
         <Swiper modules={[Navigation]} {...swiperParams}>
           {data.map((item, id) => {
             return (
-              <SwiperSlide key={id}>
-                <Box
-                  onClick={() => {
-                    setActiveIndex(id);
-                    setActiveItem(item);
-                  }}
-                  style={{
-                    width: "405px",
-                    height: "216px",
-                    padding: "20px",
-                    borderRadius: "15px",
-                    background: `linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 100%), url(${item.image})`,
-                    objectFit: "contain",
-                    backgroundSize: "cover",
-                  }}
-                >
-                  <Box>
-                    <Rating rating={item.rating} />
-                    <Text
-                      position="absolute"
-                      bottom="20px"
-                      left="20px"
-                      fontSize="14px"
-                      fontWeight="800"
-                      lineHeight="14px"
-                    >
-                      {item.title}
-                    </Text>
-                  </Box>
-                </Box>
+              <SwiperSlide
+                key={id}
+                onClick={() => {
+                  setActiveIndex(id);
+                  setActiveItem(item);
+                }}
+                style={{
+                  width: "405px",
+                  height: "216px",
+                  padding: "20px",
+                  borderRadius: "15px",
+                  background: `linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 100%), url(${item.image})`,
+                  objectFit: "contain",
+                  backgroundSize: "cover",
+                }}
+              >
+                <MovieCard item={item} />
               </SwiperSlide>
             );
           })}
