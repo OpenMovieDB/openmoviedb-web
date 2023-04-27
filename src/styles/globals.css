@@ -16,7 +16,7 @@
   --background-end-rgb: 255, 255, 255;
 
   --content-width: 1600px;
-  --container-offset: 15px;
+  --container-offset: 20px;
   --container-width: calc(var(--content-width) + var(--container-offset) * 2);
 }
 

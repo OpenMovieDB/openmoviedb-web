@@ -14,19 +14,29 @@ export const MovieCardEmpty: FC<MovieCardEmptyProps> = ({
   props,
 }) => {
   return (
-    <Box {...props} background="rgba(255, 255, 255, 0.05)">
-      <Box>
-        <Text
-          position="relative"
-          top="140px"
-          left="20px"
-          fontSize="14px"
-          fontWeight="800"
-          lineHeight="14px"
-        >
-          {text}
-        </Text>
-      </Box>
+    <Box
+      style={{
+        width: "calc(25% - 40px)",
+        minWidth: "300px",
+        height: "216px",
+        padding: "20px",
+        borderRadius: "15px",
+        objectFit: "contain",
+        backgroundSize: "cover",
+      }}
+      {...props}
+      bg="gray.700"
+    >
+      <Text
+        position="relative"
+        top="140px"
+        left="20px"
+        fontSize="14px"
+        fontWeight="800"
+        lineHeight="14px"
+      >
+        {text}
+      </Text>
     </Box>
   );
 };

@@ -2,7 +2,7 @@
 
 import { Carousel } from "@/components/Carousel/Carousel";
 import { MovieCard } from "@/components/MovieCard/MovieCard";
-import { Box, Grid, GridItem, Heading, Wrap, WrapItem } from "@chakra-ui/react";
+import { Box, Flex, Heading } from "@chakra-ui/react";
 import { SwiperSlide } from "swiper/react";
 
 import image1 from "@/public/Popular/1.jpeg";
@@ -88,31 +88,36 @@ const Popular = () => {
     <Box className="container" mt="150px">
       <Heading>Популярное</Heading>
 
-      <Grid mt="30px" ml="-35px" templateColumns="repeat(4, 1fr)" gap="30px">
+      <Flex
+        mt="30px"
+        ml="-35px"
+        flexWrap="wrap"
+        gap="30px"
+        className="container"
+      >
         {listOfPopular.slice(0, 7).map((item, id) => {
           return (
-            <GridItem key={id}>
-              <Box
-                style={{
-                  width: "405px",
-                  height: "216px",
-                  padding: "20px",
-                  borderRadius: "15px",
-                  background: `linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 100%), url(${item.image})`,
-                  objectFit: "contain",
-                  backgroundSize: "cover",
-                }}
-              >
-                <MovieCard item={item} />
-              </Box>
-            </GridItem>
+            <Box
+              key={id}
+              style={{
+                width: "calc(25% - 40px)",
+                minWidth: "300px",
+                height: "216px",
+                padding: "20px",
+                borderRadius: "15px",
+                background: `linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 100%), url(${item.image})`,
+                objectFit: "contain",
+                backgroundSize: "cover",
+              }}
+            >
+              <MovieCard item={item} />
+            </Box>
           );
         })}
-        <GridItem>
+        <Box>
           <MovieCardEmpty title="Показать всё" />
-        </GridItem>
-        ;
-      </Grid>
+        </Box>
+      </Flex>
     </Box>
   );
 };
