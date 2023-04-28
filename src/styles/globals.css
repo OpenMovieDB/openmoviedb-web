@@ -32,12 +32,6 @@ body {
   font-family: "Montserrat", sans-serif;
   color: white;
   background-color: #0f0d18;
-  /* background: linear-gradient( */
-  /*     to bottom, */
-  /*     transparent, */
-  /*     rgb(var(--background-end-rgb)) */
-  /*   ) */
-  /*   rgb(var(--background-start-rgb)); */
 }
 
 .container {
