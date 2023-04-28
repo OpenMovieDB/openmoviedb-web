@@ -90,25 +90,24 @@ const Popular = () => {
 
       <Flex
         mt="30px"
-        ml="-35px"
         flexWrap="wrap"
         gap="30px"
         className="container"
+        alignItems="center"
+        justifyContent="center"
       >
         {listOfPopular.slice(0, 7).map((item, id) => {
           return (
             <Box
               key={id}
-              style={{
-                width: "calc(25% - 40px)",
-                minWidth: "300px",
-                height: "216px",
-                padding: "20px",
-                borderRadius: "15px",
-                background: `linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 100%), url(${item.image})`,
-                objectFit: "contain",
-                backgroundSize: "cover",
-              }}
+              width="calc(25% - 40px)"
+              minWidth="230px"
+              height="216px"
+              padding="20px"
+              borderRadius="15px"
+              background={`linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 100%), url(${item.image})`}
+              objectFit="contain"
+              backgroundSize="cover"
             >
               <MovieCard item={item} />
             </Box>

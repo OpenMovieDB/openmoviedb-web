@@ -15,17 +15,13 @@ export const MovieCardEmpty: FC<MovieCardEmptyProps> = ({
 }) => {
   return (
     <Box
-      style={{
-        width: "calc(25% - 40px)",
-        minWidth: "300px",
-        height: "216px",
-        padding: "20px",
-        borderRadius: "15px",
-        objectFit: "contain",
-        backgroundSize: "cover",
-      }}
-      {...props}
+      width="calc(20% - 40px)"
+      minWidth="230px"
+      height="216px"
+      padding="20px"
+      borderRadius="15px"
       bg="gray.700"
+      {...props}
     >
       <Text
         position="relative"
