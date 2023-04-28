@@ -83,8 +83,8 @@ const Genres = () => {
             alignItems="center"
             justifyContent="center"
             flexDirection="column"
-            minHeight={{ base: "260px", sm: "207px" }}
-            minWidth={{ base: "260px", sm: "207px" }}
+            height={{ xl: "260px", md: "207px" }}
+            width={{ xl: "260px", md: "207px" }}
           >
             <Image src={item.icon} alt="" />
             <Text>{item.type}</Text>
