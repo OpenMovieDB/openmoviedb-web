@@ -19,7 +19,7 @@ export default function Header() {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
-    <header className="bg-transparent md:block hidden absolute w-full z-10">
+    <header className="bg-transparent md:block hidden w-full z-10">
       <nav
         className="container mx-auto flex items-center justify-between p-6 lg:px-8 "
         aria-label="Global"

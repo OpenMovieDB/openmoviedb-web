@@ -1,9 +1,8 @@
 "use client";
 
-import { Carousel } from "@/components/Carousel/Carousel";
 import { MovieCard } from "@/components/MovieCard/MovieCard";
-import { Box, Flex, Heading } from "@chakra-ui/react";
-import { SwiperSlide } from "swiper/react";
+import { Box, Flex, Heading, Text, Image } from "@chakra-ui/react";
+import rightArrow from "@/public/right.png";
 
 import image1 from "@/public/Popular/1.jpeg";
 import image2 from "@/public/Popular/2.jpeg";
@@ -73,16 +72,6 @@ const listOfPopular = [
   },
 ];
 
-const seeAll = [
-  {
-    id: 9,
-    image: image7.src,
-    title: "Люди икс: Тёмный феникс",
-    rating: 7.1,
-    url: "4",
-  },
-];
-
 const Popular = () => {
   return (
     <Box className="container" mt="150px">
@@ -114,7 +103,25 @@ const Popular = () => {
           );
         })}
         <Box>
-          <MovieCardEmpty title="Показать всё" />
+          <MovieCardEmpty>
+            <Flex
+              flexDirection="column"
+              justifyContent="center"
+              alignItems="center"
+            >
+              <Box w="26px" h="52px" color="#898990" mb="25px">
+                <Image src={rightArrow.src} alt="" />
+              </Box>
+              <Text
+                fontSize="14px"
+                fontWeight="800"
+                lineHeight="14px"
+                color="#898990"
+              >
+                Показать ещё
+              </Text>
+            </Flex>
+          </MovieCardEmpty>
         </Box>
       </Flex>
     </Box>

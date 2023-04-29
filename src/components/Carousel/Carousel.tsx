@@ -57,7 +57,6 @@ export const Carousel: FC<PropsWithChildren<CarouselProps>> = ({
       swiper.params.navigation.prevEl = navigationPrevRef.current;
       // @ts-ignore
       swiper.params.navigation.nextEl = navigationNextRef.current;
-
       // Re-init navigation
       swiper.navigation.destroy();
       swiper.navigation.init();
