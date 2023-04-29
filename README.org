@@ -23,7 +23,7 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
 * Tasks
-** Add / Change / Delete / Fix  ~N~ [6/11]
+** Add / Change / Delete / Fix  ~N~ [7/12]
 1) [X] @ADD: Header
 2) [-] @ADD: Hero section
    - [ ] @FIX: Update icon. From film emoji to openmovie-db logo
@@ -42,15 +42,28 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
      - [X] @ADD: Rating
      - [X] @ADD: Title
    - [ ] @ADD: Film selecting
-   - [ ] @ADD: Selected film (main film)
-   - [ ] @ADD: Bottom placed film list. Under selected film
+   - [X] @CHANGE: New carousel
+     - [X] @ADD: Preview selected item (big image + desc)
+       - [X] @ADD: Title
+       - [X] @ADD: Genres 
+       - [X] @ADD: Rating
+       - [X] @ADD: Description
+       - [X] @ADD: Image
+       - [X] @ADD: Buttons
+       - [X] @ADD: Play button
+   - [X] @ADD: Selected film (main film)
+   - [X] @ADD: Bottom placed film list. Under selected film
+   - [X] @ADD: Responsive
+6) [ ] Popular section
+   - [ ] Add cards
+   - [ ] Add empty card
    
-6) [X] @ADD: Carousel
-7) [X] @ADD: Emoji pack
-8) [X] @ADD: Move settings for ChakraUI to ~config.ts~ file
-9) [X] @ADD: /Montserrat/ font
-10) [ ] @CHANGE: Move "Swiper" feature from [[file:src/components/screens/Home/Hero.tsx][Hero.tsx]] to separate file
-11) [ ] @BUGFIX:
+7) [X] @ADD: Carousel
+8) [X] @ADD: Emoji pack
+9) [X] @ADD: Move settings for ChakraUI to ~config.ts~ file
+10) [X] @ADD: /Montserrat/ font
+11) [ ] @CHANGE: Move "Swiper" feature from [[file:src/components/screens/Home/Hero.tsx][Hero.tsx]] to separate file
+12) [ ] @BUGFIX:
 
 
 

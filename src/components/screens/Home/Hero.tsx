@@ -38,6 +38,7 @@ import avatar1 from "@/public/Hero/avatar1.png";
 import avatar2 from "@/public/Hero/avatar2.png";
 import avatar3 from "@/public/Hero/avatar3.png";
 import avatar4 from "@/public/Hero/avatar4.png";
+import { RatingInline } from "@/components/RatingInline/RatingInline";
 
 const films = [
   {
@@ -216,11 +217,7 @@ const Hero = () => {
                       </Flex>
                       <Flex>
                         {ratings.map((item, id) => (
-                          <div key={id} className="mb-10 mt-8 mr-9">
-                            <Text>
-                              <b>{item.rating}</b> <span>{item.service}</span>
-                            </Text>
-                          </div>
+                          <RatingInline item={item} key={id} />
                         ))}
                       </Flex>
 
@@ -281,7 +278,10 @@ const Hero = () => {
                     className="hidden lg:flex md:flex pt-4 pb-4 rounded-full bg-black"
                   >
                     {characters.map((item, id) => (
-                      <div className="mr-4 flex items-center content-center gap-2">
+                      <div
+                        key={id}
+                        className="mr-4 flex items-center content-center gap-2"
+                      >
                         <div>
                           <Img src={item.image} width={46} height={46} alt="" />
                         </div>
