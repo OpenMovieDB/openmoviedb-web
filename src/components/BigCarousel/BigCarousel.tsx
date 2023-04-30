@@ -1,29 +1,33 @@
 "use client";
 
-import { FC, PropsWithChildren, ReactNode, useRef, useState } from "react";
+// Libraries
+import { FC, useRef, useState, useEffect } from "react";
 
-import Rating from "@/components/Rating/Rating";
-import { SliderBtn } from "@/UI/SliderBtn/SliderBtn";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperClass, { Navigation } from "swiper";
 import "swiper/css";
 
-import preview from "@/public/preview.jpeg";
-
+// Components
 import {
   Image,
   Box,
   Flex,
   Heading,
   useBreakpointValue,
-  Text,
   Button,
   ButtonGroup,
 } from "@chakra-ui/react";
 import { Genres } from "@/components/Genres/Genres";
+import { MovieCard } from "@/components/MovieCard/MovieCard";
+import { RatingInline } from "@/components/RatingInline/RatingInline";
+import { SliderBtn } from "@/UI/SliderBtn/SliderBtn";
+
+// Types
+import { CarouselProps } from "./types/IBigCarousel";
+
+// IMages
+import preview from "@/public/preview.jpeg";
 import play from "@/public/play.png";
-import { MovieCard } from "../MovieCard/MovieCard";
-import { RatingInline } from "../RatingInline/RatingInline";
 
 const swiperBreakpoints = {
   577: {
@@ -48,27 +52,7 @@ const swiperBreakpoints = {
   },
 };
 
-// TODO: Write interface for BigCarousel data
-interface CarouselProps {
-  data: {
-    description: string;
-    id: number;
-    rating: number;
-    title: string;
-    url: string;
-  };
-  id: number;
-  className?: string;
-  title?: string;
-  children?: ReactNode;
-}
-
-export const BigCarousel: FC<CarouselProps> = ({
-  className,
-  children,
-  title,
-  data,
-}) => {
+export const BigCarousel: FC<CarouselProps> = ({ className, title, data }) => {
   const [activeIndex, setActiveIndex] = useState(1);
   const [activeItem, setActiveItem] = useState(data[activeIndex]);
   const navigationPrevRef = useRef<HTMLButtonElement>(null);
