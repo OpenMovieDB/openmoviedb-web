@@ -2,12 +2,14 @@
 
 import { FC, PropsWithChildren, useRef } from "react";
 
-import { SliderBtn } from "@/UI/SliderBtn/SliderBtn";
 import { Swiper } from "swiper/react";
 import SwiperClass, { Navigation } from "swiper";
 import "swiper/css";
 
 import { Box, Flex, Heading, useBreakpointValue } from "@chakra-ui/react";
+import { SliderBtn } from "@/UI/SliderBtn/SliderBtn";
+
+import { CarouselProps } from "./types/ICarouselProps";
 
 const breakpoints = {
   577: {
@@ -31,11 +33,6 @@ const breakpoints = {
     spaceBetween: 30,
   },
 };
-
-interface CarouselProps {
-  title?: string;
-  className?: string;
-}
 
 export const Carousel: FC<PropsWithChildren<CarouselProps>> = ({
   className,
