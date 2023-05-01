@@ -70,26 +70,11 @@ export const BigCarousel: FC<CarouselProps> = ({ className, title, data }) => {
     nextEl: navigationNextRef.current,
   };
 
-  const onSwiper = (swiper: SwiperClass) => {
-    setTimeout(() => {
-      // @ts-ignore
-      swiper.params.navigation.prevEl = navigationPrevRef.current;
-      // @ts-ignore
-      swiper.params.navigation.nextEl = navigationNextRef.current;
-
-      // Re-init navigation
-      swiper.navigation.destroy();
-      swiper.navigation.init();
-      swiper.navigation.update();
-    });
-  };
-
   const swiperParams = {
     slidesPerView: 2,
     slidesPerGroup: 2,
     spaceBetween: 15,
     navigation: swiperNavigation,
-    onSwiper: onSwiper,
     breakpoints: swiperBreakpoints,
   };
 

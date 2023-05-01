@@ -48,19 +48,19 @@ export const Carousel: FC<PropsWithChildren<CarouselProps>> = ({
     nextEl: navigationNextRef.current,
   };
 
-  const onSwiper = (swiper: SwiperClass) => {
-    setTimeout(() => {
-      // @ts-ignore
-      swiper.params.navigation.prevEl = navigationPrevRef.current;
-      // @ts-ignore
-      swiper.params.navigation.nextEl = navigationNextRef.current;
-      // Re-init navigation
-      swiper.navigation.destroy();
-      swiper.navigation.init();
-      swiper.navigation.update();
-    });
-  };
-
+  /* const onSwiper = (swiper: SwiperClass) => {
+   *   setTimeout(() => {
+   *     // @ts-ignore
+   *     swiper.params.navigation.prevEl = navigationPrevRef.current;
+   *     // @ts-ignore
+   *     swiper.params.navigation.nextEl = navigationNextRef.current;
+   *     // Re-init navigation
+   *     swiper.navigation.destroy();
+   *     swiper.navigation.init();
+   *     swiper.navigation.update();
+   *   });
+   * };
+   */
   return (
     <Box mt="150px" className={`${className}`}>
       <Heading mb="70px" className="container">
@@ -76,7 +76,6 @@ export const Carousel: FC<PropsWithChildren<CarouselProps>> = ({
           slidesPerGroup={2}
           spaceBetween={15}
           navigation={navigation}
-          onSwiper={onSwiper}
           breakpoints={breakpoints}
         >
           {children}
