@@ -1,4 +1,4 @@
-import { FC, ReactNode } from "react";
+import { FC } from "react";
 import { Text, Box } from "@chakra-ui/react";
 
 import { RatingInlineProps } from "./types/IRatingInlineProps";
