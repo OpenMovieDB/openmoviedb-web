@@ -1,11 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useState, forwardRef } from "react";
 import { useDisclosure } from "@chakra-ui/react";
 import Image from "next/image";
 
 import logo from "@/public/Hero/header/image.png";
 import userLogo from "@/public/Hero/header/user.png";
+
+import { HeaderProps } from "./types/IHeaderProps";
 
 const mainItems = [
   { name: "Главная", href: "#" },
@@ -14,12 +16,16 @@ const mainItems = [
   { name: "Подписки", href: "#" },
 ];
 
-export default function Header() {
+const Header = forwardRef<HTMLButtonElement, HeaderProps>((props, ref) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
-    <header className="bg-transparent md:block hidden w-full z-10">
+    <header
+      className={`bg-transparent md:block hidden w-full z-10 ${
+        props.placement === "absolute" ? "absolute" : "static"
+      }`}
+    >
       <nav
         className="container mx-auto flex items-center justify-between p-6 lg:px-8 "
         aria-label="Global"
@@ -60,4 +66,5 @@ export default function Header() {
       </nav>
     </header>
   );
-}
+});
+export default Header;

@@ -14,7 +14,7 @@ const RootLayout = ({ children }: Props) => (
   <html lang="ru">
     <body>
       <InitChakraUI>
-        <Header />
+        <Header placement="static" />
         <main>{children}</main>
         <Footer />
       </InitChakraUI>
