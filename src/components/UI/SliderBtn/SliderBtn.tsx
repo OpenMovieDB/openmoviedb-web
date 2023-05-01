@@ -1,10 +1,7 @@
 import { forwardRef } from "react";
-import styles from "./SliderBtn.module.scss";
 import { Button } from "@chakra-ui/react";
 
-interface SliderBtnProps {
-  dir: "left" | "right";
-}
+import { SliderBtnProps } from "./types/ISliderBtnProps";
 
 export const SliderBtn = forwardRef<HTMLButtonElement, SliderBtnProps>(
   (props, ref) => {

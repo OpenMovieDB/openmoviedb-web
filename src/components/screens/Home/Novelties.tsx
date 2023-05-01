@@ -1,18 +1,28 @@
 "use client";
 
-import { SwiperSlide } from "swiper/react";
 import { BigCarousel } from "@/components/BigCarousel/BigCarousel";
-import { Flex, Box, Text, Center, Image } from "@chakra-ui/react";
 
 import image1 from "@/public/Novelties/main-poster-0.png";
 import image2 from "@/public/Novelties/main-poster-1.png";
 import image3 from "@/public/Novelties/main-poster-2.png";
 import image4 from "@/public/Novelties/main-poster-3.png";
-import Rating from "@/components/Rating/Rating";
-import Genres from "./Genres";
+
+export interface INovelties {
+  id: number;
+  image: string;
+  description: string;
+  rating: number;
+  title: string;
+  url: string;
+  genres: {
+    name: string;
+    icon: string;
+    href: string;
+  };
+}
 
 const Novelties = () => {
-  const listOfNovelties = [
+  const listOfNovelties: INovelties[] = [
     {
       id: 1,
       image: image1.src,

@@ -1,10 +1,7 @@
-import { FC, ReactNode } from "react";
+import { FC } from "react";
 import { Text, Box } from "@chakra-ui/react";
 
-interface RatingInlineProps {
-  item: { rating: string; service: string };
-  props?: ReactNode;
-}
+import { RatingInlineProps } from "./types/IRatingInlineProps";
 
 export const RatingInline: FC<RatingInlineProps> = ({ item, props }) => {
   const { rating, service } = { ...item };
