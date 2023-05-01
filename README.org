@@ -54,9 +54,9 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
    - [X] @ADD: Selected film (main film)
    - [X] @ADD: Bottom placed film list. Under selected film
    - [X] @ADD: Responsive
-6) [ ] Popular section
-   - [ ] Add cards
-   - [ ] Add empty card
+6) [X] Popular section
+   - [X] Add cards
+   - [X] Add empty card
    
 7) [X] @ADD: Carousel
 8) [X] @ADD: Emoji pack

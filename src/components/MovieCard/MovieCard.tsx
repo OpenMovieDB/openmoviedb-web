@@ -2,15 +2,7 @@ import { Box, Text } from "@chakra-ui/react";
 import { FC, ReactNode } from "react";
 import Rating from "../Rating/Rating";
 
-interface MovieCardProps {
-  item: {
-    image: string;
-    rating: number;
-    title: string;
-  };
-  onClick?: ReactNode | null;
-  props?: ReactNode;
-}
+import { MovieCardProps } from "./types/IMovieCardProps";
 
 export const MovieCard: FC<MovieCardProps> = ({ item, props }) => {
   const { image, rating, title } = { ...item };

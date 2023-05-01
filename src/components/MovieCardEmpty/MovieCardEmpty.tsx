@@ -1,10 +1,7 @@
-import { Flex, Box, Text } from "@chakra-ui/react";
-import { FC, ReactNode } from "react";
+import { Flex } from "@chakra-ui/react";
+import { FC } from "react";
 
-interface MovieCardEmptyProps {
-  children: ReactNode;
-  props?: ReactNode;
-}
+import { MovieCardEmptyProps } from "./types/IMovieCardEmptyProps";
 
 export const MovieCardEmpty: FC<MovieCardEmptyProps> = ({
   props,

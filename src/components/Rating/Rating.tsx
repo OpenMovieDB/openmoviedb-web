@@ -1,12 +1,6 @@
 import { FC, ReactNode } from "react";
 import { Box, Flex, Text } from "@chakra-ui/react";
 
-interface RatingProps {
-  rating: number;
-  className?: string;
-  props?: ReactNode;
-}
-
 const Rating: FC<RatingProps> = ({ rating, className, props }) => {
   const ratingOMDB = Number(rating);
 
