@@ -3,7 +3,6 @@
 import {
   Box,
   Flex,
-  Text,
   Link,
   Wrap,
   WrapItem,
@@ -12,9 +11,9 @@ import {
   Button,
   Center,
 } from "@chakra-ui/react";
-import Img from "@/components/Img/Img";
+import Img from "@/UI/Img/Img";
 
-import React, { useRef, useState } from "react";
+import React from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Scrollbar } from "swiper";
