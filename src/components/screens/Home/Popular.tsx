@@ -102,6 +102,7 @@ const Popular = () => {
             </Box>
           );
         })}
+
         <Box>
           <MovieCardEmpty>
             <Flex

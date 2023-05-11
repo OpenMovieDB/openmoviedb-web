@@ -24,13 +24,13 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 * Tasks
 ** Add / Change / Delete / Fix  ~N~ [4/6]
-- Home
+- Home page
   1) [X] @ADD: Header
   2) [-] @ADD: Hero section
      - [ ] @FIX: Update icon. From film emoji to openmovie-db logo
      - [X] @FIX: filters
      - [X] @ADD: Swiper
-  3) [-] @ADD: Recomendations section
+  3) [-] @ADD: Recommendations section
      - [ ] @CHANGE: Move HTML code to separate component (file)
      - [ ] @FIX: Neue Machina font (idk how i can download it)
      - [X] @FIX: Change buttons placement
@@ -58,6 +58,17 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
   6) [X] Popular section
      - [X] Add cards
      - [X] Add empty card
+- Category page
+  1) [X] @ADD: Heading
+  2) [X] @ADD: Responsive film cards grid
+  3) [ ] @ADD: Filters bar
+     - [ ] @ADD: Expand on click
+     - [ ] @ADD: Tabs
+       - [ ] @ADD: Genre 
+       - [ ] @ADD: Sort by
+       - [ ] @ADD: Country 
+       - [ ] @ADD: Year 
+       - [ ] @ADD: Rating 
    
 - [X] @ADD: Carousel
 - [X] @ADD: Emoji pack

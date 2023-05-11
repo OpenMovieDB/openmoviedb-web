@@ -9,12 +9,13 @@ import {
   MenuGroup,
   MenuOptionGroup,
   MenuDivider,
+  Center,
 } from "@chakra-ui/react";
 import { ChevronDownIcon } from "@chakra-ui/icons";
 
 const Filters = () => {
   return (
-    <Flex>
+    <Center position="fixed">
       <Box>
         <Flex>
           <Box>Logo</Box>
@@ -44,7 +45,7 @@ const Filters = () => {
           </MenuList>
         </Menu>
       </Box>
-    </Flex>
+    </Center>
   );
 };
 

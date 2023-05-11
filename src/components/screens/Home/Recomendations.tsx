@@ -1,6 +1,6 @@
 "use client";
 
-import { Carousel } from "@/components/Carousel/Carousel";
+import { CarouselTopOfMonth } from "@/components/CarouselTopOfMonth/CarouselTopOfMonth";
 import { SwiperSlide } from "swiper/react";
 
 import cover1 from "@/public/Recomendations/cover1.png";
@@ -59,30 +59,35 @@ const Recomendations = () => {
   const isSmallScreen = useBreakpointValue({ sm: true, md: false });
 
   return (
-    <Carousel title="Рекомендации" className="">
-      {recomendationsList.map((item, id) => (
-        <SwiperSlide
-          key={id}
-          style={{ minWidth: "405px", marginRight: "30px" }}
-        >
-          <Box
-            background={`linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${rectangle.src})`}
-            borderRadius={15}
-          >
-            <div className="flex items-center content-center gap-2">
-              <Image src={item.image} alt="" />
+    <Box className="container">
+      <CarouselTopOfMonth
+        isWheel
+        marginTop={10}
+        titleMargin={60}
+        arrowMargin={20}
+        title="Жанры"
+      >
+        {recomendationsList.map((item, id) => (
+          <Box key={id} mr="30px" minWidth="405px">
+            <Box
+              background={`linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${rectangle.src})`}
+              borderRadius={15}
+            >
+              <div className="flex items-center content-center gap-2">
+                <Image src={item.image} alt="" />
 
-              <div className="justify-left flex flex-col gap-2.5 p-6 whitespace-nowrap">
-                <div>
-                  <b>{item.title}</b>
+                <div className="justify-left flex flex-col gap-2.5 p-6 whitespace-nowrap">
+                  <div>
+                    <b>{item.title}</b>
+                  </div>
+                  <div>{item.type}</div>
                 </div>
-                <div>{item.type}</div>
               </div>
-            </div>
+            </Box>
           </Box>
-        </SwiperSlide>
-      ))}
-    </Carousel>
+        ))}
+      </CarouselTopOfMonth>
+    </Box>
   );
 };
 
