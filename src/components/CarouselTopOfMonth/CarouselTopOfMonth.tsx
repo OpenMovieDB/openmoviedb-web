@@ -1,5 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { motion, useMotionValue } from "framer-motion";
+
+// components
 import { IconArrow } from "@/UI/IconArrow/IconArrow";
 
 // styles
