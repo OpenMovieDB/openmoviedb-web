@@ -1,11 +1,11 @@
 import { Box, Text } from "@chakra-ui/react";
-import { FC, ReactNode } from "react";
+import { FC } from "react";
 import Rating from "../Rating/Rating";
 
 import { MovieCardProps } from "./types/IMovieCardProps";
 
-export const MovieCard: FC<MovieCardProps> = ({ item, props }) => {
-  const { image, rating, title } = { ...item };
+export const MovieCard: FC<MovieCardProps> = ({ item, onClick, ...props }) => {
+  const { image, rating, title } = item;
 
   return (
     <Box {...props}>

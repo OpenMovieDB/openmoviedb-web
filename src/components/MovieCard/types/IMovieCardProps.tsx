@@ -7,5 +7,5 @@ export interface MovieCardProps {
     title: string;
   };
   onClick?: ReactNode | null;
-  props?: ReactNode;
+  props?: any;
 }
