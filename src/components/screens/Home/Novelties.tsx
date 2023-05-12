@@ -276,11 +276,7 @@ const Novelties = () => {
   ];
 
   return (
-    <BigCarousel
-      title="Новинки"
-      data={listOfNovelties}
-      className="mt-96"
-    ></BigCarousel>
+    <BigCarousel title="Новинки" data={listOfNovelties} className="mt-96" />
   );
 };
 

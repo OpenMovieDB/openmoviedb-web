@@ -41,19 +41,9 @@ const Filters = () => {
                 Create a Copy
               </MenuItem>
             </MenuList>
+            <FiltersMenuButton title="Год" />
+            <FiltersMenuButton title="Рейтинг" />
           </Menu>
-          <Menu>
-            <FiltersMenuButton title="Сортировать" />
-            <MenuList>
-              <MenuItem>Download</MenuItem>
-              <MenuItem onClick={() => alert("Kagebunshin")}>
-                Create a Copy
-              </MenuItem>
-            </MenuList>
-          </Menu>
-
-          <FiltersMenuButton title="Год" />
-          <FiltersMenuButton title="Рейтинг" />
         </Box>
       </Flex>
     </Box>

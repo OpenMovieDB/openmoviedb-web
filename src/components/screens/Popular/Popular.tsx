@@ -1,5 +1,7 @@
+"use client";
+
 import { MovieCard } from "@/components/MovieCard/MovieCard";
-import { Box, Flex, Heading, Center } from "@chakra-ui/react";
+import { Box, Flex, Heading } from "@chakra-ui/react";
 import Filters from "@/components/Filters/Filters";
 
 import image1 from "@/public/Popular/1.jpeg";
@@ -206,7 +208,7 @@ const Popular = () => {
             );
           })}
         </Flex>
-        <Filters />
+        {/* <Filters /> */}
       </Box>
     </>
   );

@@ -1,7 +1,8 @@
-import { FC, ReactNode } from "react";
+import { FC } from "react";
 import { Box, Flex, Text } from "@chakra-ui/react";
+import { RatingProps } from "./types/IMovieRatingProps";
 
-const Rating: FC<RatingProps> = ({ rating, className, props }) => {
+const Rating: FC<RatingProps> = ({ rating, className, ...props }) => {
   const ratingOMDB = Number(rating);
 
   const bgStyle = {

@@ -1,15 +1,13 @@
 "use client";
 
 import { CarouselTopOfMonth } from "@/components/CarouselTopOfMonth/CarouselTopOfMonth";
-import { SwiperSlide } from "swiper/react";
 
 import cover1 from "@/public/Recomendations/cover1.png";
 import cover2 from "@/public/Recomendations/cover2.png";
 import cover3 from "@/public/Recomendations/cover3.png";
 import cover4 from "@/public/Recomendations/cover4.png";
 
-import { Flex, Box, Image, useBreakpointValue } from "@chakra-ui/react";
-import Img from "@/components/Img/Img";
+import { Box, Image, useBreakpointValue } from "@chakra-ui/react";
 import rectangle from "@/public/rectangle.png";
 
 const recomendationsList = [

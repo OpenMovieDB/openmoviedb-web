@@ -20,42 +20,10 @@ import { MovieCard } from "@/components/MovieCard/MovieCard";
 import { RatingInline } from "@/components/RatingInline/RatingInline";
 import { SliderBtn } from "@/UI/SliderBtn/SliderBtn";
 
-/* import { CarouselProps } from "@/types/IBigCarousel"; */
-import { INovelties } from "@/screens/Home/Novelties";
+import { CarouselProps } from "./types/IBigCarousel";
 
 import preview from "@/public/preview.jpeg";
 import play from "@/public/play.png";
-
-interface CarouselProps {
-  items: Array<any>;
-  autoplay?: boolean;
-  autoplaySpeed?: number;
-  infiniteLoop?: boolean;
-  showArrows?: boolean;
-  showDots?: boolean;
-  arrowLeft?: JSX.Element;
-  arrowRight?: JSX.Element;
-  dot?: JSX.Element;
-  itemWidth?: number | string;
-  itemHeight?: number | string;
-  responsive?: Array<{
-    breakpoint: number;
-    settings: {
-      slidesToShow: number;
-      slidesToScroll?: number;
-      itemWidth?: number | string;
-      itemHeight?: number | string;
-    };
-  }>;
-  beforeChange?: (oldIndex: number, newIndex: number) => void;
-  afterChange?: (currentIndex: number) => void;
-}
-
-interface CarouselProps {
-  className: string;
-  title: string;
-  data: Array<INovelties>;
-}
 
 const swiperBreakpoints = {
   577: {
