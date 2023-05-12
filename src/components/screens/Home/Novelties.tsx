@@ -7,6 +7,12 @@ import image2 from "@/public/Novelties/main-poster-1.png";
 import image3 from "@/public/Novelties/main-poster-2.png";
 import image4 from "@/public/Novelties/main-poster-3.png";
 
+interface IGenres {
+  name: string;
+  icon: string;
+  href: string;
+}
+
 export interface INovelties {
   id: number;
   image: string;
@@ -14,13 +20,7 @@ export interface INovelties {
   rating: number;
   title: string;
   url: string;
-  genres: [
-    {
-      name: string;
-      icon: string;
-      href: string;
-    }
-  ];
+  genres: Array<IGenres>;
 }
 
 const Novelties = () => {

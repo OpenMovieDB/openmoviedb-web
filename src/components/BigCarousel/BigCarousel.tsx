@@ -1,6 +1,6 @@
-import { FC, useRef, useState } from "react";
+import { FC, ReactNode, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperClass, { Navigation } from "swiper";
+import { Navigation } from "swiper";
 import "swiper/swiper.min.css";
 import "swiper/components/navigation/navigation.min.css";
 
@@ -19,9 +19,16 @@ import { RatingInline } from "@/components/RatingInline/RatingInline";
 import { SliderBtn } from "@/UI/SliderBtn/SliderBtn";
 
 import { CarouselProps } from "@/types/IBigCarousel";
+import { INovelties } from "@/screens/Home/Novelties";
 
 import preview from "@/public/preview.jpeg";
 import play from "@/public/play.png";
+
+interface CarouselProps {
+  className: string;
+  title: string;
+  data: Array<INovelties>;
+}
 
 const swiperBreakpoints = {
   577: {
@@ -120,7 +127,7 @@ export const BigCarousel: FC<CarouselProps> = ({ className, title, data }) => {
             <Flex flexDirection="column">
               <Flex mb="80px" gap="30px">
                 <Genres data={activeItem} />
-              </Flex>
+              </Flex>{" "}
               <Heading
                 mb="30px"
                 fontWeight="800"
@@ -138,7 +145,6 @@ export const BigCarousel: FC<CarouselProps> = ({ className, title, data }) => {
               >
                 {activeItem.description}
               </Box>
-
               <Box>
                 <ButtonGroup>
                   <Button
