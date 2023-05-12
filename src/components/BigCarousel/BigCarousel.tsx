@@ -1,13 +1,9 @@
-"use client";
-
-// Libraries
-import { FC, useRef, useState, useEffect } from "react";
-
+import { FC, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperClass, { Navigation } from "swiper";
-import "swiper/css";
+import "swiper/swiper.min.css";
+import "swiper/components/navigation/navigation.min.css";
 
-// Components
 import {
   Image,
   Box,
@@ -22,10 +18,8 @@ import { MovieCard } from "@/components/MovieCard/MovieCard";
 import { RatingInline } from "@/components/RatingInline/RatingInline";
 import { SliderBtn } from "@/UI/SliderBtn/SliderBtn";
 
-// Types
-import { CarouselProps } from "./types/IBigCarousel";
+import { CarouselProps } from "@/types/IBigCarousel";
 
-// IMages
 import preview from "@/public/preview.jpeg";
 import play from "@/public/play.png";
 
@@ -57,9 +51,9 @@ export const BigCarousel: FC<CarouselProps> = ({ className, title, data }) => {
   const [activeItem, setActiveItem] = useState(data[activeIndex]);
   const navigationPrevRef = useRef<HTMLButtonElement>(null);
   const navigationNextRef = useRef<HTMLButtonElement>(null);
-  const isSmallScreen = useBreakpointValue({ sm: true, md: false });
+  const isSmallScreen = useBreakpointValue({ base: true, md: false });
   const isMediumScreen = useBreakpointValue({
-    sm: true,
+    base: true,
     md: true,
     lg: true,
     xl: false,
@@ -110,7 +104,7 @@ export const BigCarousel: FC<CarouselProps> = ({ className, title, data }) => {
             );
           })}
         </Swiper>
-        {!isSmallScreen && <SliderBtn dir="right" ref={navigationPrevRef} />}
+        {!isSmallScreen && <SliderBtn dir="right" ref={navigationNextRef} />}
       </Flex>
 
       {!isMediumScreen && (
@@ -135,7 +129,7 @@ export const BigCarousel: FC<CarouselProps> = ({ className, title, data }) => {
               >
                 {activeItem.title}
               </Heading>
-              <RatingInline item={data.rating} />
+              <RatingInline item={activeItem.rating} />
               <Box
                 fontStyle="normal"
                 fontWeight="400"
@@ -148,9 +142,7 @@ export const BigCarousel: FC<CarouselProps> = ({ className, title, data }) => {
               <Box>
                 <ButtonGroup>
                   <Button
-                    p="25px 60px 25px 60px"
-                    fontStyle="normal"
-                    fontWeight="400"
+                    p="25px 60px"
                     fontSize="18px"
                     lineHeight="150%"
                     textAlign="center"
@@ -161,7 +153,7 @@ export const BigCarousel: FC<CarouselProps> = ({ className, title, data }) => {
                     Подробнее
                   </Button>
                   <Button
-                    p="25px 60px 25px 60px"
+                    p="25px 60px"
                     fontStyle="normal"
                     fontWeight="400"
                     fontSize="18px"
@@ -174,7 +166,7 @@ export const BigCarousel: FC<CarouselProps> = ({ className, title, data }) => {
                     В избранное
                   </Button>
                   <Button
-                    p="25px 60px 25px 60px"
+                    p="25px 60px"
                     fontStyle="normal"
                     fontWeight="400"
                     fontSize="18px"
@@ -240,7 +232,7 @@ export const BigCarousel: FC<CarouselProps> = ({ className, title, data }) => {
             );
           })}
         </Swiper>
-        {!isSmallScreen && <SliderBtn dir="right" ref={navigationPrevRef} />}
+        {!isSmallScreen && <SliderBtn dir="right" ref={navigationNextRef} />}
       </Flex>
     </Box>
   );
