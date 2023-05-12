@@ -1,8 +1,10 @@
 import { FC, ReactNode, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
-import "swiper/swiper.min.css";
-import "swiper/components/navigation/navigation.min.css";
+
+/* import "swiper/swiper.min.css";
+ * import "swiper/components/navigation/navigation.min.css"; */
+import "swiper/css";
 
 import {
   Image,
@@ -18,11 +20,36 @@ import { MovieCard } from "@/components/MovieCard/MovieCard";
 import { RatingInline } from "@/components/RatingInline/RatingInline";
 import { SliderBtn } from "@/UI/SliderBtn/SliderBtn";
 
-import { CarouselProps } from "@/types/IBigCarousel";
+/* import { CarouselProps } from "@/types/IBigCarousel"; */
 import { INovelties } from "@/screens/Home/Novelties";
 
 import preview from "@/public/preview.jpeg";
 import play from "@/public/play.png";
+
+interface CarouselProps {
+  items: Array<any>;
+  autoplay?: boolean;
+  autoplaySpeed?: number;
+  infiniteLoop?: boolean;
+  showArrows?: boolean;
+  showDots?: boolean;
+  arrowLeft?: JSX.Element;
+  arrowRight?: JSX.Element;
+  dot?: JSX.Element;
+  itemWidth?: number | string;
+  itemHeight?: number | string;
+  responsive?: Array<{
+    breakpoint: number;
+    settings: {
+      slidesToShow: number;
+      slidesToScroll?: number;
+      itemWidth?: number | string;
+      itemHeight?: number | string;
+    };
+  }>;
+  beforeChange?: (oldIndex: number, newIndex: number) => void;
+  afterChange?: (currentIndex: number) => void;
+}
 
 interface CarouselProps {
   className: string;
@@ -135,7 +162,7 @@ export const BigCarousel: FC<CarouselProps> = ({ className, title, data }) => {
                 lineHeight="41px"
               >
                 {activeItem.title}
-              </Heading>{" "}
+              </Heading>
               <RatingInline item={activeItem.rating} />
               <Box
                 fontStyle="normal"

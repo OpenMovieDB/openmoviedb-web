@@ -3,11 +3,9 @@ import { Text, Box } from "@chakra-ui/react";
 
 import { RatingInlineProps } from "./types/IRatingInlineProps";
 
-export const RatingInline: FC<RatingInlineProps> = ({
-  rating,
-  service,
-  className,
-}) => {
+export const RatingInline = ({ item }: any) => {
+  const { rating, service, className }: RatingInlineProps = { ...item };
+
   return (
     <Box
       fontSize="16px"
