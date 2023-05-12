@@ -6,8 +6,8 @@ export interface GenresProps {
       name: string;
       href: string;
       icon: string;
-    };
+    }[];
   };
   className?: string;
-  props?: ReactNode;
+  children?: ReactNode;
 }

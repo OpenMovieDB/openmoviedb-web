@@ -135,7 +135,7 @@ export const BigCarousel: FC<CarouselProps> = ({ className, title, data }) => {
                 lineHeight="41px"
               >
                 {activeItem.title}
-              </Heading>
+              </Heading>{" "}
               <RatingInline item={activeItem.rating} />
               <Box
                 fontStyle="normal"
