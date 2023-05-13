@@ -1,5 +1,8 @@
+"use client";
+
 import { MovieCard } from "@/components/MovieCard/MovieCard";
-import { Box, Flex, Heading, Text, Image } from "@chakra-ui/react";
+import { Box, Flex, Heading } from "@chakra-ui/react";
+import Filters from "@/components/Filters/Filters";
 
 import image1 from "@/public/Popular/1.jpeg";
 import image2 from "@/public/Popular/2.jpeg";
@@ -182,29 +185,32 @@ const Popular = () => {
   ];
 
   return (
-    <Box className="container" mt="90px">
-      <Heading>Популярное</Heading>
+    <>
+      <Box className="container" mt="90px">
+        <Heading>Популярное</Heading>
 
-      <Flex mt="30px" flexWrap="wrap" gap="30px" className="container">
-        {listOfPopular.map((item, id) => {
-          return (
-            <Box
-              key={id}
-              width="calc(23%)"
-              minWidth="320px"
-              height="216px"
-              padding="20px"
-              borderRadius="15px"
-              background={`linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 100%), url(${item.image})`}
-              objectFit="contain"
-              backgroundSize="cover"
-            >
-              <MovieCard item={item} />
-            </Box>
-          );
-        })}
-      </Flex>
-    </Box>
+        <Flex mt="30px" flexWrap="wrap" gap="30px" className="container">
+          {listOfPopular.map((item, id) => {
+            return (
+              <Box
+                key={id}
+                width="calc(23%)"
+                minWidth="320px"
+                height="216px"
+                padding="20px"
+                borderRadius="15px"
+                background={`linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 100%), url(${item.image})`}
+                objectFit="contain"
+                backgroundSize="cover"
+              >
+                <MovieCard item={item} />
+              </Box>
+            );
+          })}
+        </Flex>
+        {/* <Filters /> */}
+      </Box>
+    </>
   );
 };
 

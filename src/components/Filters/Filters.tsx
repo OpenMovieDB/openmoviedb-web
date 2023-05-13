@@ -1,50 +1,52 @@
 import {
   Box,
   Flex,
+  Button,
   Menu,
-  MenuButton,
   MenuList,
+  MenuButton,
   MenuItem,
-  MenuItemOption,
-  MenuGroup,
-  MenuOptionGroup,
-  MenuDivider,
 } from "@chakra-ui/react";
 import { ChevronDownIcon } from "@chakra-ui/icons";
+import { FiltersMenuButton } from "./components/FiltersMenuButton";
 
 const Filters = () => {
   return (
-    <Flex>
-      <Box>
-        <Flex>
-          <Box>Logo</Box>
-          <Box>Фильтры</Box>
-        </Flex>
-      </Box>
-      <Box>
-        <Menu>
-          <MenuButton
-            px={4}
-            py={2}
-            transition="all 0.2s"
-            borderRadius="md"
-            borderWidth="1px"
-            _hover={{ bg: "gray.400" }}
-            _expanded={{ bg: "blue.400" }}
-            _focus={{ boxShadow: "outline" }}
-          >
-            File <ChevronDownIcon />
-          </MenuButton>
-          <MenuList>
-            <MenuItem>New File</MenuItem>
-            <MenuItem>New Window</MenuItem>
-            <MenuDivider />
-            <MenuItem>Open...</MenuItem>
-            <MenuItem>Save File</MenuItem>
-          </MenuList>
-        </Menu>
-      </Box>
-    </Flex>
+    <Box
+      position="fixed"
+      margin="auto"
+      left="50%"
+      bottom="30px"
+      transform="translate(-50%, -50%)"
+    >
+      <Flex
+        bg="rgba(0, 0, 0, 0.4)"
+        backdropFilter="blur(7.5px)"
+        borderRadius="15px"
+        p="10px"
+        justifyContent="center"
+        alignItems="center"
+      >
+        <Box mr="25px">
+          <Flex>
+            <Box>Logo</Box>
+          </Flex>
+        </Box>
+        <Box bg="#080715" borderRadius="10px" p="15px 18px 15px 18px">
+          <Menu>
+            <FiltersMenuButton title="Жанр" />
+            <MenuList>
+              <MenuItem>Download</MenuItem>
+              <MenuItem onClick={() => alert("Kagebunshin")}>
+                Create a Copy
+              </MenuItem>
+            </MenuList>
+            <FiltersMenuButton title="Год" />
+            <FiltersMenuButton title="Рейтинг" />
+          </Menu>
+        </Box>
+      </Flex>
+    </Box>
   );
 };
 

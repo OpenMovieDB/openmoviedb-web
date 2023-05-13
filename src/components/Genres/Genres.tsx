@@ -1,16 +1,13 @@
-import { PropsWithChildren, FC } from "react";
+import { FC } from "react";
 import { Flex, Wrap, WrapItem, Link } from "@chakra-ui/react";
 
 import { GenresProps } from "./types/IGenres";
 
-export const Genres: FC<PropsWithChildren<GenresProps>> = ({
-  data,
-  className,
-}) => {
+export const Genres: FC<GenresProps> = ({ data, className }) => {
   return (
     <>
-      {data.genres.map((item, idx) => {
-        const { name, icon, href }: any = { ...item };
+      {data.genres.map((item: any, idx: number) => {
+        const { name, icon, href }: any = item;
         return (
           <Flex key={idx} gap="15px" className={className}>
             <Wrap>

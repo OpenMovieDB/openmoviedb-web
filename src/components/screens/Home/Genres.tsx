@@ -1,10 +1,8 @@
 "use client";
 
-import { Carousel } from "@/components/Carousel/Carousel";
-import { SwiperSlide } from "swiper/react";
+import { CarouselTopOfMonth } from "@/components/CarouselTopOfMonth/CarouselTopOfMonth";
 
-import { Flex, Box, Text, Center, Image } from "@chakra-ui/react";
-import Img from "@/components/Img/Img";
+import { Flex, Box, Text, Image } from "@chakra-ui/react";
 
 import ghost from "@/assets/emojis/ghost.png";
 import alien from "@/assets/emojis/alien.png";
@@ -67,31 +65,34 @@ const genresList = [
 
 const Genres = () => {
   return (
-    <Carousel title="Жанры" className="mt-96">
-      {genresList.map((item, id) => (
-        <SwiperSlide
-          key={id}
-          style={{
-            marginRight: "90px",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <Flex
-            borderRadius="15px"
-            bgColor="rgba(255, 255, 255, 0.05)"
-            alignItems="center"
-            justifyContent="center"
-            flexDirection="column"
-            height={{ xl: "260px", md: "207px" }}
-            width={{ xl: "260px", md: "207px" }}
-          >
-            <Image src={item.icon} alt="" />
-            <Text>{item.type}</Text>
-          </Flex>
-        </SwiperSlide>
-      ))}
-    </Carousel>
+    <Box className="container mt-96">
+      <CarouselTopOfMonth
+        isWheel
+        marginTop={10}
+        titleMargin={60}
+        arrowMargin={20}
+        title="Жанры"
+      >
+        {genresList.map((item, id) => (
+          <Box>
+            <Flex
+              key={id}
+              borderRadius="15px"
+              bgColor="rgba(255, 255, 255, 0.05)"
+              alignItems="center"
+              justifyContent="center"
+              flexDirection="column"
+              height={{ xl: "260px", md: "207px" }}
+              width={{ xl: "260px", md: "207px" }}
+              mr="90px"
+            >
+              <Image src={item.icon} alt="" />
+              <Text>{item.type}</Text>
+            </Flex>
+          </Box>
+        ))}
+      </CarouselTopOfMonth>
+    </Box>
   );
 };
 

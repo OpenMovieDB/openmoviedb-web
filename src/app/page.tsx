@@ -6,13 +6,13 @@ import Recomendations from "@/components/screens/Home/Recomendations";
 
 const Home = () => {
   return (
-    <>
+    <div>
       <Hero />
       <Recomendations />
       <Genres />
       <Novelties />
       <Popular />
-    </>
+    </div>
   );
 };
 
