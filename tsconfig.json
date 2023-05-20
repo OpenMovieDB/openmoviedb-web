@@ -13,21 +13,25 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
+    "noImplicitAny": true,
     "incremental": true,
     "paths": {
-      "@/types/*": ["src/types/*"],
-
-      "@/components/*": ["src/components/*"],
-      "@/UI/*": ["src/components/UI/*"],
-      "@/screens/*": ["src/components/screens/*"],
-
-      "@/pages/*": ["src/pages/*"],
-      "@/services/*": ["src/services/*"],
-
+      "@/types/*": ["./src/types/*"],
+      "@/components/*": ["./src/components/*"],
+      "@/UI/*": ["./src/components/UI/*"],
+      "@/screens/*": ["./src/components/screens/*"],
+      "@/pages/*": ["./src/pages/*"],
+      "@/services/*": ["./src/services/*"],
       "@/public/*": ["./public/*"],
-      "@/styles/*": ["src/styles/*"]
-    }
+      "@/styles/*": ["./src/styles/*"],
+      "@/assets/*": ["./src/assets/*"]
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
 }
