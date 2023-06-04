@@ -35,14 +35,16 @@ const Filters = () => {
         <Box bg="#080715" borderRadius="10px" p="15px 18px 15px 18px">
           <Menu>
             <FiltersMenuButton title="Жанр" />
+            <FiltersMenuButton title="Сортировка" />
+            <FiltersMenuButton title="Страна" />
+            <FiltersMenuButton title="Год" />
+            <FiltersMenuButton title="Рейтинг" />
             <MenuList>
               <MenuItem>Download</MenuItem>
               <MenuItem onClick={() => alert("Kagebunshin")}>
                 Create a Copy
               </MenuItem>
             </MenuList>
-            <FiltersMenuButton title="Год" />
-            <FiltersMenuButton title="Рейтинг" />
           </Menu>
         </Box>
       </Flex>

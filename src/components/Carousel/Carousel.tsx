@@ -9,7 +9,7 @@ import "swiper/css";
 import { Box, Flex, Heading, useBreakpointValue } from "@chakra-ui/react";
 import { SliderBtn } from "@/UI/SliderBtn/SliderBtn";
 
-import { CarouselProps } from "./types/ICarouselProps";
+import { CarouselProps } from "@/types/ICarouselProps";
 
 const breakpoints = {
   577: {

@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { Text, Box } from "@chakra-ui/react";
 
-import { RatingInlineProps } from "./types/IRatingInlineProps";
+import { RatingInlineProps } from "@/types/IRatingInlineProps";
 
 export const RatingInline = ({ item }: any) => {
   const { rating, service, className }: RatingInlineProps = { ...item };
