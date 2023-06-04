@@ -1,10 +1,4 @@
-import { FC, ReactNode, useRef, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper";
-
-/* import "swiper/swiper.min.css";
- * import "swiper/components/navigation/navigation.min.css"; */
-import "swiper/css";
+import { FC, useRef, useState } from "react";
 
 import {
   Image,
@@ -15,12 +9,12 @@ import {
   Button,
   ButtonGroup,
 } from "@chakra-ui/react";
-import { Genres } from "@/components/Genres/Genres";
+import { GenresInline } from "@/components/GenresInline/GenresInline";
 import { MovieCard } from "@/components/MovieCard/MovieCard";
 import { RatingInline } from "@/components/RatingInline/RatingInline";
-import { SliderBtn } from "@/UI/SliderBtn/SliderBtn";
+import { Slider } from "@/components/Slider/Slider";
 
-import { CarouselProps } from "./types/IBigCarousel";
+import { CarouselProps } from "@/types/IBigCarousel";
 
 import preview from "@/public/preview.jpeg";
 import play from "@/public/play.png";
@@ -51,8 +45,10 @@ const swiperBreakpoints = {
 export const BigCarousel: FC<CarouselProps> = ({ className, title, data }) => {
   const [activeIndex, setActiveIndex] = useState(1);
   const [activeItem, setActiveItem] = useState(data[activeIndex]);
+
   const navigationPrevRef = useRef<HTMLButtonElement>(null);
   const navigationNextRef = useRef<HTMLButtonElement>(null);
+
   const isSmallScreen = useBreakpointValue({ base: true, md: false });
   const isMediumScreen = useBreakpointValue({
     base: true,
@@ -80,33 +76,29 @@ export const BigCarousel: FC<CarouselProps> = ({ className, title, data }) => {
         {title}
       </Heading>
 
-      <Flex alignItems="center">
-        {!isSmallScreen && <SliderBtn dir="left" ref={navigationPrevRef} />}
-        <Swiper modules={[Navigation]} {...swiperParams}>
+      <Flex alignItems="center" className="container">
+        <Slider
+          isWheel
+          marginTop={10}
+          titleMargin={60}
+          arrowMargin={20}
+          title=" "
+        >
           {data.map((item, id) => {
             return (
-              <SwiperSlide
+              <Box
                 key={id}
                 onClick={() => {
                   setActiveIndex(id);
                   setActiveItem(item);
                 }}
-                style={{
-                  width: "405px",
-                  height: "216px",
-                  padding: "20px",
-                  borderRadius: "15px",
-                  background: `linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 100%), url(${item.image})`,
-                  objectFit: "contain",
-                  backgroundSize: "cover",
-                }}
+                style={{ marginRight: "30px" }}
               >
                 <MovieCard item={item} />
-              </SwiperSlide>
+              </Box>
             );
           })}
-        </Swiper>
-        {!isSmallScreen && <SliderBtn dir="right" ref={navigationNextRef} />}
+        </Slider>
       </Flex>
 
       {!isMediumScreen && (
@@ -115,13 +107,16 @@ export const BigCarousel: FC<CarouselProps> = ({ className, title, data }) => {
           mt="30px"
           className="container"
           borderRadius="15px"
-          height="749px"
+          width={{ lg: "1710px", md: "1390px" }}
+          height={{ lg: "749px", md: "633px" }}
           position="relative"
         >
           <Box w="782px" h="547px" ml="50px" mt="220px" zIndex="5">
             <Flex flexDirection="column">
               <Flex mb="80px" gap="30px">
-                <Genres data={activeItem} />
+                {activeItem.genres.map((item: any, idx: number) => (
+                  <GenresInline item={item} />
+                ))}
               </Flex>{" "}
               <Heading
                 mb="30px"
@@ -207,33 +202,29 @@ export const BigCarousel: FC<CarouselProps> = ({ className, title, data }) => {
         </Flex>
       )}
 
-      <Flex alignItems="center" mt="30px">
-        {!isSmallScreen && <SliderBtn dir="left" ref={navigationPrevRef} />}
-        <Swiper modules={[Navigation]} {...swiperParams}>
+      <Flex alignItems="center" mt="30px" className="container">
+        <Slider
+          isWheel
+          marginTop={10}
+          titleMargin={60}
+          arrowMargin={20}
+          title=" "
+        >
           {data.map((item, id) => {
             return (
-              <SwiperSlide
+              <Box
                 key={id}
                 onClick={() => {
                   setActiveIndex(id);
                   setActiveItem(item);
                 }}
-                style={{
-                  width: "405px",
-                  height: "216px",
-                  padding: "20px",
-                  borderRadius: "15px",
-                  background: `linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 100%), url(${item.image})`,
-                  objectFit: "contain",
-                  backgroundSize: "cover",
-                }}
+                style={{ marginRight: "30px" }}
               >
                 <MovieCard item={item} />
-              </SwiperSlide>
+              </Box>
             );
           })}
-        </Swiper>
-        {!isSmallScreen && <SliderBtn dir="right" ref={navigationNextRef} />}
+        </Slider>
       </Flex>
     </Box>
   );

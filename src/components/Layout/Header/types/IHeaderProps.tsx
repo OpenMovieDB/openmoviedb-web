@@ -1,3 +1,3 @@
 export interface HeaderProps {
-  placement: "absolute" | "static";
+  absolute?: boolean;
 }

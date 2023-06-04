@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { Box, Flex, Text } from "@chakra-ui/react";
-import { RatingProps } from "./types/IMovieRatingProps";
+import { RatingProps } from "@/types/IMovieRatingProps";
 
 const Rating: FC<RatingProps> = ({ rating, className, ...props }) => {
   const ratingOMDB = Number(rating);

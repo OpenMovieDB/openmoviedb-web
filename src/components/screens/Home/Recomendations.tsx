@@ -1,69 +1,23 @@
-'use client';
+"use client";
 
-import { CarouselTopOfMonth } from '@/components/CarouselTopOfMonth/CarouselTopOfMonth';
+import { Box, Image, Heading } from "@chakra-ui/react";
+import { Slider } from "@/components/Slider/Slider";
+import { recomendationsList } from "@/src/objects";
 
-import cover1 from '@/public/Recomendations/cover1.png';
-import cover2 from '@/public/Recomendations/cover2.png';
-import cover3 from '@/public/Recomendations/cover3.png';
-import cover4 from '@/public/Recomendations/cover4.png';
-
-import { Box, Image, useBreakpointValue } from '@chakra-ui/react';
-import rectangle from '@/public/rectangle.png';
-
-const recomendationsList = [
-  {
-    image: cover1.src,
-    title: 'История игрушек 4',
-    type: 'Мультфильм',
-  },
-  {
-    image: cover2.src,
-    title: 'Очень странные дела',
-    type: 'Мультфильм',
-  },
-  {
-    image: cover3.src,
-    title: 'К звёздам',
-    type: 'Фильм',
-  },
-  {
-    image: cover4.src,
-    title: 'Она',
-    type: 'Фильм',
-  },
-  {
-    image: cover1.src,
-    title: 'История игрушек 4',
-    type: 'Мультфильм',
-  },
-  {
-    image: cover2.src,
-    title: 'Очень странные дела',
-    type: 'Мультфильм',
-  },
-  {
-    image: cover3.src,
-    title: 'К звёздам',
-    type: 'Фильм',
-  },
-  {
-    image: cover4.src,
-    title: 'Она',
-    type: 'Фильм',
-  },
-];
+import rectangle from "@/public/rectangle.png";
 
 const Recomendations = () => {
-  const isSmallScreen = useBreakpointValue({ sm: true, md: false });
-
   return (
     <Box className="container">
-      <CarouselTopOfMonth
+      <Heading mb="70px" className="container">
+        Жанры
+      </Heading>
+      <Slider
         isWheel
         marginTop={10}
         titleMargin={60}
         arrowMargin={20}
-        title="Жанры"
+        title=" "
       >
         {recomendationsList.map((item, id) => (
           <Box key={id} mr="30px" minWidth="405px">
@@ -84,7 +38,7 @@ const Recomendations = () => {
             </Box>
           </Box>
         ))}
-      </CarouselTopOfMonth>
+      </Slider>
     </Box>
   );
 };

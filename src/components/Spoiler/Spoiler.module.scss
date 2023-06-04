@@ -1,0 +1,17 @@
+.contents {
+  border-radius: 0.3em;
+  cursor: pointer;
+  font-size: inherit;
+  position: relative;
+  transition: all 0.1s ease-out;
+}
+
+.contents > span {
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+  visibility: visible;
+}
+
+.is--hidden {
+  user-select: none;
+}
