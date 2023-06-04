@@ -24,7 +24,11 @@
       "@/services/*": ["./src/services/*"],
       "@/public/*": ["./public/*"],
       "@/styles/*": ["./src/styles/*"],
-      "@/assets/*": ["./src/assets/*"]
+      "@/assets/*": ["./src/assets/*"],
+      "@/types/*": ["./src/types/*"],
+      "@/hooks/*": ["./src/hooks/*"],
+      "@/store/*": ["./src/store/*"],
+      "@/src/*": ["./src/*"]
     },
     "plugins": [
       {

@@ -22,63 +22,17 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-* Tasks
-** Add / Change / Delete / Fix  ~N~ [4/6]
-- Home page
-  1) [X] @ADD: Header
-  2) [-] @ADD: Hero section
-     - [ ] @FIX: Update icon. From film emoji to openmovie-db logo
-     - [X] @FIX: filters
-     - [X] @ADD: Swiper
-  3) [-] @ADD: Recommendations section
-     - [ ] @CHANGE: Move HTML code to separate component (file)
-     - [ ] @FIX: Neue Machina font (idk how i can download it)
-     - [X] @FIX: Change buttons placement
-     - [X] @FIX: Add white space between swiper elements
-     - [X] @FIX: Background
-  4) [X] @ADD: Genres section
-     - [X] @ADD: Emojis
-  5) [-] @ADD: Novelties section
-     - [X] @ADD: Main Card
-       - [X] @ADD: Rating
-       - [X] @ADD: Title
-     - [ ] @ADD: Film selecting
-     - [X] @CHANGE: New carousel
-       - [X] @ADD: Preview selected item (big image + desc)
-         - [X] @ADD: Title
-         - [X] @ADD: Genres 
-         - [X] @ADD: Rating
-         - [X] @ADD: Description
-         - [X] @ADD: Image
-         - [X] @ADD: Buttons
-         - [X] @ADD: Play button
-     - [X] @ADD: Selected film (main film)
-     - [X] @ADD: Bottom placed film list. Under selected film
-     - [X] @ADD: Responsive
-  6) [X] Popular section
-     - [X] Add cards
-     - [X] Add empty card
-- Category page
-  1) [X] @ADD: Heading
-  2) [X] @ADD: Responsive film cards grid
-  3) [ ] @ADD: Filters bar
-     - [ ] @ADD: Expand on click
-     - [ ] @ADD: Tabs
-       - [ ] @ADD: Genre 
-       - [ ] @ADD: Sort by
-       - [ ] @ADD: Country 
-       - [ ] @ADD: Year 
-       - [ ] @ADD: Rating 
-   
-- [X] @ADD: Carousel
-- [X] @ADD: Emoji pack
-- [X] @ADD: Move settings for ChakraUI to ~config.ts~ file
-- [X] @ADD: /Montserrat/ font
-- [ ] @CHANGE: Move "Swiper" feature from [[file:src/components/screens/Home/Hero.tsx][Hero.tsx]] to separate file
-- [ ] @BUGFIX:
+* Paths
+#+begin_src bash
+  openmoviedb
+  ├── Home          # /
+  ├── Film          # /film/[id]
+  ├── Popular       # /popular
+  ├── Settings      # /settings
+  ├── Register page # /register
+  └── Login page    # /login
 
-
-
+#+end_src
    
 
 
