@@ -29,7 +29,9 @@ export const FiltersItem = ({ item }: any) => {
         maxHeight="30px"
         height="30px"
       >
-        <Image src={icon} alt="" width="15px" height="15px" mr="5px" />
+        {icon && (
+          <Image src={icon} alt="" width="15px" height="15px" mr="5px" />
+        )}
         {name}
       </Flex>
     </Link>

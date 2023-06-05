@@ -1,4 +1,4 @@
-import { Text, Grid, Box, GridItem, Divider } from "@chakra-ui/react";
+import { Text, Grid, Box, GridItem, Divider, HStack } from "@chakra-ui/react";
 import { FiltersItem } from "../FilterItem/FiltersItem";
 import { PopularGenresData } from "@/src/objects";
 
@@ -11,6 +11,18 @@ const sortBy = [
   },
   {
     name: "Дате",
+  },
+];
+
+const showOnly = [
+  {
+    name: "Всё",
+  },
+  {
+    name: "Фильмы",
+  },
+  {
+    name: "Сериалы",
   },
 ];
 
@@ -29,21 +41,33 @@ export const Sorting = () => {
 
         <Divider mt="10px" />
 
-        <Grid
-          mt="20px"
-          templateColumns="repeat(5, 1fr)"
-          gap="8px"
-          width="700px"
-          maxHeight="360px"
-          maxWidth="700px"
-          flexWrap="wrap"
-        >
+        <HStack wrap="wrap" width="auto">
           {sortBy.map((item, id) => (
-            <GridItem key={id}>
+            <Box key={id}>
               <FiltersItem item={item} />
-            </GridItem>
+            </Box>
           ))}
-        </Grid>
+        </HStack>
+      </Box>
+      <Box mt="20px">
+        <Text
+          fontWeight="400"
+          fontSize="14px"
+          lineHeight="140%"
+          color="rgba(255, 255, 255, 0.5)"
+        >
+          Показывать
+        </Text>
+
+        <Divider mt="10px" />
+
+        <HStack wrap="wrap">
+          {showOnly.map((item, id) => (
+            <Box key={id}>
+              <FiltersItem item={item} />
+            </Box>
+          ))}
+        </HStack>
       </Box>
     </Box>
   );

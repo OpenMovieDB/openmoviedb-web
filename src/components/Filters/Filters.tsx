@@ -39,7 +39,7 @@ const Filters = () => {
     >
       {isOpen && (
         <Box width="auto" height="350px" bg="#080715" p="25px 40px">
-          <InputGroup m="25px 40px">
+          <InputGroup m="25px">
             <Input
               placeholder="Поиск по фильмам"
               bg="rgba(255, 255, 255, 0.05)"
@@ -54,7 +54,7 @@ const Filters = () => {
                 color: "black.600",
               }}
             />
-            <InputRightElement width="22px" m="12px 13px">
+            <InputRightElement width="22px">
               <BsSearch />
             </InputRightElement>
           </InputGroup>
