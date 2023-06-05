@@ -41,7 +41,12 @@ export const Sorting = () => {
 
         <Divider mt="10px" />
 
-        <HStack wrap="wrap" width="auto">
+        <HStack
+          wrap="wrap"
+          width="auto"
+          justifyContent="center"
+          alignItems="center"
+        >
           {sortBy.map((item, id) => (
             <Box key={id}>
               <FiltersItem item={item} />
@@ -61,7 +66,7 @@ export const Sorting = () => {
 
         <Divider mt="10px" />
 
-        <HStack wrap="wrap">
+        <HStack wrap="wrap" justifyContent="center" alignItems="center">
           {showOnly.map((item, id) => (
             <Box key={id}>
               <FiltersItem item={item} />

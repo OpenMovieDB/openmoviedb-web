@@ -18,6 +18,8 @@ import { BsSearch } from "react-icons/bs";
 import { PopularGenres } from "./components/GenresTab/PopularGenres";
 import { Sorting } from "./components/GenresTab/Sorting";
 import { Year } from "./components/GenresTab/Year";
+import { Rating } from "./components/GenresTab/Rating";
+import { Countries } from "./components/GenresTab/Countries";
 
 const Filters = () => {
   const [isOpen, setIsOpen] = useState(true);
@@ -39,7 +41,13 @@ const Filters = () => {
       _focus={{ backgroundColor: "gray" }}
     >
       {isOpen && (
-        <Box width="auto" height="350px" bg="#080715" p="25px 40px">
+        <Box
+          width="auto"
+          height="350px"
+          bg="#080715"
+          p="25px 40px"
+          borderRadius="10px"
+        >
           <InputGroup m="25px">
             <Input
               placeholder="Поиск по фильмам"
@@ -61,9 +69,12 @@ const Filters = () => {
           </InputGroup>
 
           <Box overflowY="auto">
+            {/* TODO: Update filters expanding */}
             {/* <PopularGenres /> */}
             {/* <Sorting /> */}
-            <Year />
+            {/* <Year /> */}
+            {/* <Rating /> */}
+            <Countries />
           </Box>
         </Box>
       )}

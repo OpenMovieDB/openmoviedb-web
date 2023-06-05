@@ -67,6 +67,19 @@ import image_10 from "@/public/Filters/Genres/image-10.png";
 import image_11 from "@/public/Filters/Genres/image-11.png";
 import image_12 from "@/public/Filters/Genres/image-12.png";
 
+import image__1 from "@/public/Filters/Countries/image-1.png";
+import image__2 from "@/public/Filters/Countries/image-2.png";
+import image__3 from "@/public/Filters/Countries/image-3.png";
+import image__4 from "@/public/Filters/Countries/image-4.png";
+import image__5 from "@/public/Filters/Countries/image-5.png";
+import image__6 from "@/public/Filters/Countries/image-6.png";
+import image__7 from "@/public/Filters/Countries/image-7.png";
+import image__8 from "@/public/Filters/Countries/image-8.png";
+import image__9 from "@/public/Filters/Countries/image-9.png";
+import image__10 from "@/public/Filters/Countries/image-10.png";
+import image__11 from "@/public/Filters/Countries/image-11.png";
+import image__12 from "@/public/Filters/Countries/image-12.png";
+
 /* --- ------- --- */
 
 export const films = [
@@ -1021,6 +1034,69 @@ export const PopularGenresData = [
   {
     icon: image_12.src,
     name: "Детективы",
+    href: "#",
+  },
+];
+
+export const CountriesData = [
+  {
+    icon: image__1.src,
+    name: "Россия",
+    href: "#",
+  },
+  {
+    icon: image__2.src,
+    name: "Австрия",
+    href: "#",
+  },
+  {
+    icon: image__3.src,
+    name: "Алжир",
+    href: "#",
+  },
+  {
+    icon: image__4.src,
+    name: "Великобритания",
+    href: "#",
+  },
+  {
+    icon: image__5.src,
+    name: "Азербайджан",
+    href: "#",
+  },
+  {
+    icon: image__6.src,
+    name: "Американское Самоа",
+    href: "#",
+  },
+  {
+    icon: image__7.src,
+    name: "СССР",
+    href: "#",
+  },
+  {
+    icon: image__8.src,
+    name: "США",
+    href: "#",
+  },
+  {
+    icon: image__9.src,
+    name: "Франция",
+    href: "#",
+  },
+  {
+    icon: image__10.src,
+    name: "Южная Корея",
+    href: "#",
+  },
+  {
+    icon: image__11.src,
+    name: "Австралия",
+    href: "#",
+  },
+  {
+    icon: image__12.src,
+    name: "Албания",
     href: "#",
   },
 ];
