@@ -9,10 +9,10 @@ import {
   Image,
 } from "@chakra-ui/react";
 
-import { GenresProps, GenresItem } from "@/types/IGenres";
+import { GenresItem } from "@/types/IGenres";
 
 export const FiltersItem = ({ item }: any) => {
-  const { type, icon, href }: GenresItem = { ...item };
+  const { name, icon, href }: GenresItem = { ...item };
 
   return (
     <Link href={href}>
@@ -21,7 +21,6 @@ export const FiltersItem = ({ item }: any) => {
         borderRadius="full"
         color="white"
         _hover={{ backgroundColor: "rgba(255, 255, 255, 0.05)" }}
-        justifyContent="center"
         alignItems="center"
         fontWeight="400"
         fontSize="14px"
@@ -31,7 +30,7 @@ export const FiltersItem = ({ item }: any) => {
         height="30px"
       >
         <Image src={icon} alt="" width="15px" height="15px" mr="5px" />
-        {type}
+        {name}
       </Flex>
     </Link>
   );

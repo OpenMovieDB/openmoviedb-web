@@ -14,7 +14,9 @@ import logo from "@/public/Hero/header/image.png";
 import { useState, useEffect } from "react";
 
 import { BsSearch } from "react-icons/bs";
+
 import { PopularGenres } from "./components/GenresTab/PopularGenres";
+import { Sorting } from "./components/GenresTab/Sorting";
 
 const Filters = () => {
   const [isOpen, setIsOpen] = useState(true);
@@ -57,8 +59,9 @@ const Filters = () => {
             </InputRightElement>
           </InputGroup>
 
-          <Box>
-            <PopularGenres />
+          <Box overflowY="auto">
+            {/* <PopularGenres /> */}
+            <Sorting />
           </Box>
         </Box>
       )}

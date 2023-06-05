@@ -965,62 +965,62 @@ export const factsList: IFact[] = [
 export const PopularGenresData = [
   {
     icon: image_1.src,
-    type: "Мультфильмы",
+    name: "Мультфильмы",
     href: "#",
   },
   {
     icon: image_2.src,
-    type: "Триллеры",
+    name: "Триллеры",
     href: "#",
   },
   {
     icon: image_3.src,
-    type: "Детские",
+    name: "Детские",
     href: "#",
   },
   {
     icon: image_4.src,
-    type: "Комедия",
+    name: "Комедия",
     href: "#",
   },
   {
     icon: image_5.src,
-    type: "Военные",
+    name: "Военные",
     href: "#",
   },
   {
     icon: image_6.src,
-    type: "Документальные",
+    name: "Документальные",
     href: "#",
   },
   {
     icon: image_7.src,
-    type: "Ужасы",
+    name: "Ужасы",
     href: "#",
   },
   {
     icon: image_8.src,
-    type: "Фантастика",
+    name: "Фантастика",
     href: "#",
   },
   {
     icon: image_9.src,
-    type: "Драмы",
+    name: "Драмы",
     href: "#",
   },
   {
     icon: image_10.src,
-    type: "Триллеры",
+    name: "Триллеры",
     href: "#",
   },
   {
     icon: image_11.src,
-    type: "Аниме",
+    name: "Аниме",
     href: "#",
   },
   {
     icon: image_12.src,
-    type: "Детективы",
+    name: "Детективы",
     href: "#",
   },
 ];
