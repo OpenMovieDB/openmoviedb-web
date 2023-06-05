@@ -54,6 +54,32 @@ import mage from "@/assets/emojis/mage.png";
 import sad from "@/assets/emojis/sad.png";
 import laugh from "@/assets/emojis/laugh.png";
 
+import image_1 from "@/public/Filters/Genres/image-1.png";
+import image_2 from "@/public/Filters/Genres/image-2.png";
+import image_3 from "@/public/Filters/Genres/image-3.png";
+import image_4 from "@/public/Filters/Genres/image-4.png";
+import image_5 from "@/public/Filters/Genres/image-5.png";
+import image_6 from "@/public/Filters/Genres/image-6.png";
+import image_7 from "@/public/Filters/Genres/image-7.png";
+import image_8 from "@/public/Filters/Genres/image-8.png";
+import image_9 from "@/public/Filters/Genres/image-9.png";
+import image_10 from "@/public/Filters/Genres/image-10.png";
+import image_11 from "@/public/Filters/Genres/image-11.png";
+import image_12 from "@/public/Filters/Genres/image-12.png";
+
+import image__1 from "@/public/Filters/Countries/image-1.png";
+import image__2 from "@/public/Filters/Countries/image-2.png";
+import image__3 from "@/public/Filters/Countries/image-3.png";
+import image__4 from "@/public/Filters/Countries/image-4.png";
+import image__5 from "@/public/Filters/Countries/image-5.png";
+import image__6 from "@/public/Filters/Countries/image-6.png";
+import image__7 from "@/public/Filters/Countries/image-7.png";
+import image__8 from "@/public/Filters/Countries/image-8.png";
+import image__9 from "@/public/Filters/Countries/image-9.png";
+import image__10 from "@/public/Filters/Countries/image-10.png";
+import image__11 from "@/public/Filters/Countries/image-11.png";
+import image__12 from "@/public/Filters/Countries/image-12.png";
+
 /* --- ------- --- */
 
 export const films = [
@@ -946,5 +972,131 @@ export const factsList: IFact[] = [
     index: 8,
     text: "Съемки второго сезона начались до премьеры первого. Это произошло потому, что создатели хотели быть уверены, что актеры не будут выглядеть слишком старыми для своих ролей.",
     isSpoiler: false,
+  },
+];
+
+export const PopularGenresData = [
+  {
+    icon: image_1.src,
+    name: "Мультфильмы",
+    href: "#",
+  },
+  {
+    icon: image_2.src,
+    name: "Триллеры",
+    href: "#",
+  },
+  {
+    icon: image_3.src,
+    name: "Детские",
+    href: "#",
+  },
+  {
+    icon: image_4.src,
+    name: "Комедия",
+    href: "#",
+  },
+  {
+    icon: image_5.src,
+    name: "Военные",
+    href: "#",
+  },
+  {
+    icon: image_6.src,
+    name: "Документальные",
+    href: "#",
+  },
+  {
+    icon: image_7.src,
+    name: "Ужасы",
+    href: "#",
+  },
+  {
+    icon: image_8.src,
+    name: "Фантастика",
+    href: "#",
+  },
+  {
+    icon: image_9.src,
+    name: "Драмы",
+    href: "#",
+  },
+  {
+    icon: image_10.src,
+    name: "Триллеры",
+    href: "#",
+  },
+  {
+    icon: image_11.src,
+    name: "Аниме",
+    href: "#",
+  },
+  {
+    icon: image_12.src,
+    name: "Детективы",
+    href: "#",
+  },
+];
+
+export const CountriesData = [
+  {
+    icon: image__1.src,
+    name: "Россия",
+    href: "#",
+  },
+  {
+    icon: image__2.src,
+    name: "Австрия",
+    href: "#",
+  },
+  {
+    icon: image__3.src,
+    name: "Алжир",
+    href: "#",
+  },
+  {
+    icon: image__4.src,
+    name: "Великобритания",
+    href: "#",
+  },
+  {
+    icon: image__5.src,
+    name: "Азербайджан",
+    href: "#",
+  },
+  {
+    icon: image__6.src,
+    name: "Американское Самоа",
+    href: "#",
+  },
+  {
+    icon: image__7.src,
+    name: "СССР",
+    href: "#",
+  },
+  {
+    icon: image__8.src,
+    name: "США",
+    href: "#",
+  },
+  {
+    icon: image__9.src,
+    name: "Франция",
+    href: "#",
+  },
+  {
+    icon: image__10.src,
+    name: "Южная Корея",
+    href: "#",
+  },
+  {
+    icon: image__11.src,
+    name: "Австралия",
+    href: "#",
+  },
+  {
+    icon: image__12.src,
+    name: "Албания",
+    href: "#",
   },
 ];
