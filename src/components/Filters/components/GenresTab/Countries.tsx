@@ -52,8 +52,8 @@ export const Countries = () => {
           width="700px"
           maxHeight="360px"
           maxWidth="700px"
-          overflowY="auto"
           flexWrap="wrap"
+          overflowX="hidden"
         >
           {CountriesData.map((item, id) => (
             <GridItem key={id}>

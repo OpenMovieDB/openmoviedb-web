@@ -43,10 +43,14 @@ const Filters = () => {
       {isOpen && (
         <Box
           width="auto"
-          height="350px"
+          maxWidth="780px"
+          height="auto"
+          maxHeight="400px"
           bg="#080715"
           p="25px 40px"
           borderRadius="10px"
+          overflowY="auto"
+          overflowX="hidden"
         >
           <InputGroup m="25px">
             <Input
@@ -68,13 +72,13 @@ const Filters = () => {
             </InputRightElement>
           </InputGroup>
 
-          <Box overflowY="auto">
+          <Box>
             {/* TODO: Update filters expanding */}
-            {/* <PopularGenres /> */}
+            <PopularGenres />
             {/* <Sorting /> */}
             {/* <Year /> */}
             {/* <Rating /> */}
-            <Countries />
+            {/* <Countries /> */}
           </Box>
         </Box>
       )}
@@ -84,8 +88,8 @@ const Filters = () => {
         backdropFilter="blur(7.5px)"
         borderRadius="15px"
         p="10px"
-        justifyContent="bottom"
-        alignItems="bottom"
+        justifyContent="center"
+        alignItems="center"
       >
         <Box mr="25px">
           <Flex alignItems="center">
@@ -101,6 +105,7 @@ const Filters = () => {
             </Text>
           </Flex>
         </Box>
+
         <Box bg="#080715" borderRadius="10px" p="15px 18px">
           <Menu>
             <FiltersMenuButton title="Жанр" onClick={buttonHandler} />
@@ -114,5 +119,4 @@ const Filters = () => {
     </Box>
   );
 };
-
 export default Filters;
