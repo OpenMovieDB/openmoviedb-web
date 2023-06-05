@@ -54,6 +54,19 @@ import mage from "@/assets/emojis/mage.png";
 import sad from "@/assets/emojis/sad.png";
 import laugh from "@/assets/emojis/laugh.png";
 
+import image_1 from "@/public/Filters/Genres/image-1.png";
+import image_2 from "@/public/Filters/Genres/image-2.png";
+import image_3 from "@/public/Filters/Genres/image-3.png";
+import image_4 from "@/public/Filters/Genres/image-4.png";
+import image_5 from "@/public/Filters/Genres/image-5.png";
+import image_6 from "@/public/Filters/Genres/image-6.png";
+import image_7 from "@/public/Filters/Genres/image-7.png";
+import image_8 from "@/public/Filters/Genres/image-8.png";
+import image_9 from "@/public/Filters/Genres/image-9.png";
+import image_10 from "@/public/Filters/Genres/image-10.png";
+import image_11 from "@/public/Filters/Genres/image-11.png";
+import image_12 from "@/public/Filters/Genres/image-12.png";
+
 /* --- ------- --- */
 
 export const films = [
@@ -946,5 +959,68 @@ export const factsList: IFact[] = [
     index: 8,
     text: "Съемки второго сезона начались до премьеры первого. Это произошло потому, что создатели хотели быть уверены, что актеры не будут выглядеть слишком старыми для своих ролей.",
     isSpoiler: false,
+  },
+];
+
+export const PopularGenresData = [
+  {
+    icon: image_1.src,
+    type: "Мультфильмы",
+    href: "#",
+  },
+  {
+    icon: image_2.src,
+    type: "Триллеры",
+    href: "#",
+  },
+  {
+    icon: image_3.src,
+    type: "Детские",
+    href: "#",
+  },
+  {
+    icon: image_4.src,
+    type: "Комедия",
+    href: "#",
+  },
+  {
+    icon: image_5.src,
+    type: "Военные",
+    href: "#",
+  },
+  {
+    icon: image_6.src,
+    type: "Документальные",
+    href: "#",
+  },
+  {
+    icon: image_7.src,
+    type: "Ужасы",
+    href: "#",
+  },
+  {
+    icon: image_8.src,
+    type: "Фантастика",
+    href: "#",
+  },
+  {
+    icon: image_9.src,
+    type: "Драмы",
+    href: "#",
+  },
+  {
+    icon: image_10.src,
+    type: "Триллеры",
+    href: "#",
+  },
+  {
+    icon: image_11.src,
+    type: "Аниме",
+    href: "#",
+  },
+  {
+    icon: image_12.src,
+    type: "Детективы",
+    href: "#",
   },
 ];
