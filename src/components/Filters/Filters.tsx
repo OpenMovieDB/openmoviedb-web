@@ -17,6 +17,7 @@ import { BsSearch } from "react-icons/bs";
 
 import { PopularGenres } from "./components/GenresTab/PopularGenres";
 import { Sorting } from "./components/GenresTab/Sorting";
+import { Year } from "./components/GenresTab/Year";
 
 const Filters = () => {
   const [isOpen, setIsOpen] = useState(true);
@@ -61,7 +62,8 @@ const Filters = () => {
 
           <Box overflowY="auto">
             {/* <PopularGenres /> */}
-            <Sorting />
+            {/* <Sorting /> */}
+            <Year />
           </Box>
         </Box>
       )}
