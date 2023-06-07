@@ -45,7 +45,7 @@ const Novelties = () => {
         </Box>
       </Flex>
 
-      <Flex alignItems="center" mb="70px">
+      <Flex alignItems="center">
         <Slider
           isWheel
           marginTop={10}
@@ -73,13 +73,12 @@ const Novelties = () => {
       {!isMediumScreen && (
         <Flex
           bg="rgba(0, 0, 0, 0.4)"
-          mt="30px"
           borderRadius="15px"
           width={{ lg: "1710px", md: "1390px" }}
           height={{ lg: "749px", md: "633px" }}
           position="relative"
         >
-          <Box w="782px" h="547px" ml="50px" mt="220px" zIndex="5">
+          <Box w="782px" h="547px" ml="50px" mt="100px" zIndex="5">
             <Flex flexDirection="column">
               <Flex mb="80px" gap="30px">
                 {activeItem.genres.map((item: any, id: number) => (
@@ -96,7 +95,16 @@ const Novelties = () => {
               >
                 {activeItem.title}
               </Heading>
-              <RatingInline item={activeItem.rating} />
+              <Flex>
+                {activeItem.ratings.map((item, id) => {
+                  console.log(item);
+                  return (
+                    <Box key={id}>
+                      <RatingInline item={item} />
+                    </Box>
+                  );
+                })}
+              </Flex>
               <Box
                 fontStyle="normal"
                 fontWeight="400"
@@ -108,7 +116,7 @@ const Novelties = () => {
               <Box>
                 <ButtonGroup>
                   <Button
-                    p="25px 60px"
+                    p="40px 60px"
                     fontSize="18px"
                     lineHeight="150%"
                     textAlign="center"
@@ -150,6 +158,7 @@ const Novelties = () => {
           </Box>
           <Flex
             bg={`linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 18.96%), url(${preview.src})`}
+            borderRadius="15px"
             w="80rem"
             h="47rem"
             objectFit="contain"
@@ -160,14 +169,14 @@ const Novelties = () => {
             position="absolute"
             right="0px"
           >
-            <Button
-              p="45px"
-              bg="rgba(255, 255, 255, 0.05)"
-              borderRadius="full"
-              backdropFilter="blur(15px)"
-            >
-              <Image src={play.src} />
-            </Button>
+            {/* <Button
+									p="45px"
+									bg="rgba(255, 255, 255, 0.05)"
+									borderRadius="full"
+									backdropFilter="blur(15px)"
+									>
+									<Image src={play.src} />
+									</Button> */}
           </Flex>
         </Flex>
       )}

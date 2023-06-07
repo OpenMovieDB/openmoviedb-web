@@ -1,12 +1,4 @@
-import {
-  Flex,
-  Wrap,
-  WrapItem,
-  Link,
-  Text,
-  Box,
-  HStack,
-} from "@chakra-ui/react";
+import { WrapItem, Link, Text, Box, HStack } from "@chakra-ui/react";
 
 import { GenresProps } from "@/types/IGenres";
 
