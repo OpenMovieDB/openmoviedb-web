@@ -2,22 +2,40 @@ import { FC } from "react";
 import { Box, Flex, Text } from "@chakra-ui/react";
 import { RatingProps } from "@/types/IMovieRatingProps";
 
-const Rating: FC<RatingProps> = ({ rating, className, ...props }) => {
+const Rating: FC<RatingProps> = ({ rating, className, hasBg, ...props }) => {
   const ratingOMDB = Number(rating);
-
-  const bgStyle = {
-    backgroundColor:
-      rating >= 6 ? "#00950F" : rating < 6 ? "#D32F2F" : "#5F5F5F",
-    borderRadius: "100px",
-    padding: "2px 10px 2px 10px",
-  };
 
   return (
     <Box className={className} {...props}>
       <Flex alignItems="center">
-        <Box style={bgStyle} mr={1}>
+        <Box
+          mr={1}
+          p="2px 10px"
+          borderRadius="full"
+          style={{
+            backgroundColor: hasBg
+              ? `${
+                  rating >= 6 ? "#00950F" : rating < 6 ? "#D32F2F" : "#5F5F5F"
+                }`
+              : "transparent",
+          }}
+        >
           <Flex alignItems="center">
-            <Text fontSize="sm" fontWeight="bold" color="white">
+            <Text
+              fontSize="sm"
+              fontWeight="bold"
+              style={{
+                color: hasBg
+                  ? "white"
+                  : `${
+                      rating >= 6
+                        ? "#00950F"
+                        : rating < 6
+                        ? "#D32F2F"
+                        : "#5F5F5F"
+                    }`,
+              }}
+            >
               {ratingOMDB.toFixed(1)}
             </Text>
           </Flex>

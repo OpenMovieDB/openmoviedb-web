@@ -58,7 +58,7 @@ export const SearchItem = ({ item, onClick }: ISearchItem) => {
         </Flex>
         <Spacer />
         <Box>
-          <Rating rating={rating} />
+          <Rating rating={rating} hasBg={false} />
         </Box>
       </Flex>
     </ListItem>
