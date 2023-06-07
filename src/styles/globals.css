@@ -35,6 +35,35 @@ body {
   overflow-x: hidden;
 }
 
+body::-webkit-scrollbar {
+  width: 2px;
+}
+
+body::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: white;
+  width: 2px;
+  border-radius: 2px;
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 2px;
+  max-height: 50%;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background-color: white;
+  width: 2px;
+  border-radius: 2px;
+}
+
 .container {
   margin: 0 auto;
   padding-left: var(--container-offset);

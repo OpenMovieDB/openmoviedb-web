@@ -87,6 +87,7 @@ export const Search = () => {
               maxWidth="700px"
               mt="480px"
               overflowY="auto"
+              className="scrollbar"
             >
               {results.map((item, id) => (
                 <Box key={id}>

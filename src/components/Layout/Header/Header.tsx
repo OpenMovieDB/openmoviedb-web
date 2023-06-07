@@ -1,13 +1,12 @@
 "use client";
 
-import Image from "next/image";
-
 import logo from "@/public/Hero/header/image.png";
 import userLogo from "@/public/Hero/header/user.png";
 
 import { usePathname } from "next/navigation";
 
 import { Search } from "@/components/Search/Search";
+import { Box, Image } from "@chakra-ui/react";
 
 const Header = () => {
   const pathname = usePathname();
@@ -30,7 +29,7 @@ const Header = () => {
       >
         <div className="flex lg:flex-1 ">
           <a href="#" className="-m-1.5 p-1.5">
-            <Image className="h-16 w-auto" src={logo} alt="" />
+            <Image src={logo.src} width="65px" height="65px" alt="" />
           </a>
         </div>
 
@@ -41,7 +40,9 @@ const Header = () => {
             href="#"
             className="text-sm font-semibold leading-6 text-gray-900"
           ></a>
-          <Image className="h-16 w-auto" src={userLogo} alt="" />
+          <Box p="5px" bg="rgba(255, 255, 255, 0.05)" borderRadius="full">
+            <Image src={userLogo.src} width="60px" height="60px" alt="" />
+          </Box>
         </div>
       </nav>
     </header>

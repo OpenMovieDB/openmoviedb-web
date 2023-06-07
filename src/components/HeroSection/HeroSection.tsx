@@ -43,7 +43,12 @@ export const HeroSection = ({ item }: IHeroSection) => {
           <Flex flex="1" flexDirection="column" flexWrap="wrap">
             <Flex flexDirection="column">
               {isSmallScreen && <Image src={filmCharacterImage} alt="" />}
-              <Image src={filmTitleImage} alt="" width="840px" height="220px" />
+              <Image
+                src={filmTitleImage}
+                alt=""
+                minWidth="840px"
+                minHeight="220px"
+              />
               <Flex>
                 {ratings?.map((item, id) => (
                   <RatingInline item={item} key={id} />
