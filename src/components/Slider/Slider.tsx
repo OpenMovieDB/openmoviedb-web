@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
+import { Heading } from "@chakra-ui/react";
 import { motion, useMotionValue } from "framer-motion";
 import { IconArrow } from "@/UI/IconArrow/IconArrow";
 
@@ -121,7 +122,16 @@ export const Slider = ({ children, ...props }: Props) => {
         marginTop: `${marginTop}px`,
       }}
     >
-      {title && <h1 ref={refTitle}>{title}</h1>}
+      {title && (
+        <Heading
+          fontWeight="800"
+          fontSize="40px"
+          lineHeight="41px"
+          ref={refTitle}
+        >
+          {title}
+        </Heading>
+      )}
 
       <div className={styles.content}>
         <button
