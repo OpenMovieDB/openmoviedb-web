@@ -106,6 +106,7 @@ export const HeroSection = ({ item }: IHeroSection) => {
         bottom="80px"
         borderRadius="full"
         bg="rgba(255, 255, 255, 0.05)"
+        backdropFilter="blur(7.5px)"
         p="15px 0px"
         className="lg:flex md:flex pt-4 pb-4"
         justifyContent="center"
@@ -113,14 +114,14 @@ export const HeroSection = ({ item }: IHeroSection) => {
         maxWidth="95%"
       >
         {charactersList?.map((item, id) => (
-          <div key={id} className="flex items-center content-center gap-2">
-            <div>
+          <Flex key={id} alignItems="center" justifyContent="center" mr="30px">
+            <Box mr="15px">
               <Image src={item.image} width={46} height={46} alt="" />
-            </div>
-            <div>
+            </Box>
+            <Box>
               {item.firstName} {item.lastName}
-            </div>
-          </div>
+            </Box>
+          </Flex>
         ))}
       </Flex>
     </Box>
