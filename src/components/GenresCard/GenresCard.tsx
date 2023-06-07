@@ -18,11 +18,13 @@ export const GenresCard = ({ item }: IGenresCard) => {
     >
       <Image
         src={icon}
-        width={{ xl: "130px", md: "147px", sm: "76px" }}
+        width={{ xl: "147px", md: "147px", sm: "76px" }}
         height={{ xl: "145px", md: "92px", sm: "31px" }}
         alt=""
       />
-      <Text as="b">{type}</Text>
+      <Text mt="25px" fontWeight="800" fontSize="14px" lineHeight="14px">
+        {type}
+      </Text>
     </Flex>
   );
 };
