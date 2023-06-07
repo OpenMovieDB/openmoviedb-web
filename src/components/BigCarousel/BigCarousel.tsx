@@ -8,6 +8,7 @@ import {
   useBreakpointValue,
   Button,
   ButtonGroup,
+  Text,
 } from "@chakra-ui/react";
 import { GenresInline } from "@/components/GenresInline/GenresInline";
 import { MovieCard } from "@/components/MovieCard/MovieCard";
@@ -62,21 +63,23 @@ export const BigCarousel: FC<CarouselProps> = ({ className, title, data }) => {
     nextEl: navigationNextRef.current,
   };
 
-  const swiperParams = {
-    slidesPerView: 2,
-    slidesPerGroup: 2,
-    spaceBetween: 15,
-    navigation: swiperNavigation,
-    breakpoints: swiperBreakpoints,
-  };
-
   return (
     <Box className={className}>
-      <Heading mb="70px" className="container">
-        {title}
-      </Heading>
+      <Flex>
+        <Heading mb="70px">{title}</Heading>
+        <Box bg="rgba(255, 255, 255, 0.05)">
+          <Text
+            fontWeight="400"
+            fontSize="14px"
+            p="8px 20px"
+            borderRadius="full"
+          >
+            Показать всё
+          </Text>
+        </Box>
+      </Flex>
 
-      <Flex alignItems="center" className="container">
+      <Flex alignItems="center">
         <Slider
           isWheel
           marginTop={10}
@@ -105,7 +108,6 @@ export const BigCarousel: FC<CarouselProps> = ({ className, title, data }) => {
         <Flex
           bg="rgba(0, 0, 0, 0.4)"
           mt="30px"
-          className="container"
           borderRadius="15px"
           width={{ lg: "1710px", md: "1390px" }}
           height={{ lg: "749px", md: "633px" }}
@@ -202,7 +204,7 @@ export const BigCarousel: FC<CarouselProps> = ({ className, title, data }) => {
         </Flex>
       )}
 
-      <Flex alignItems="center" mt="30px" className="container">
+      <Flex alignItems="center" mt="30px">
         <Slider
           isWheel
           marginTop={10}

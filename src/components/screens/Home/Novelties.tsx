@@ -7,7 +7,7 @@ import { Box } from "@chakra-ui/react";
 const Novelties = () => {
   return (
     <Box className="container">
-      <BigCarousel title="Новинки" data={listOfNovelties} />
+      <BigCarousel title="Новинки кино" data={listOfNovelties} />
     </Box>
   );
 };
