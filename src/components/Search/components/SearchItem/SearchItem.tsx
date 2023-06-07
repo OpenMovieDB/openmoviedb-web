@@ -1,6 +1,13 @@
 import Rating from "@/components/Rating/Rating";
-import { Box, Flex, Heading, Image, ListItem, Spacer } from "@chakra-ui/react";
-import { ReactNode } from "react";
+import {
+  Box,
+  Flex,
+  Heading,
+  Text,
+  Image,
+  ListItem,
+  Spacer,
+} from "@chakra-ui/react";
 
 interface ISearchItemItem {
   image?: any;
@@ -25,7 +32,8 @@ export const SearchItem = ({ item, onClick }: ISearchItem) => {
       zIndex={100}
       onClick={onClick}
       borderRadius="35px"
-      p="20px"
+      p="20px 10px 20px 25px"
+      m="10px"
       _hover={{
         background: "#141321",
         color: "white",
@@ -41,21 +49,20 @@ export const SearchItem = ({ item, onClick }: ISearchItem) => {
         <Box mr="10px">
           <Image src={image} alt="" width="70px" height="100px" />
         </Box>
-        <Flex alignItems="center" justifyContent="center" justifyItems="center">
-          <Heading fontWeight="400" fontSize="18px" lineHeight="150%">
+        <Box>
+          <Heading fontWeight="400" fontSize="18px">
             {title}
             {"\n"}
           </Heading>
-          <Heading
+          <Text
             fontWeight="400"
             fontSize="14px"
-            lineHeight="150px"
             color="rgba(255, 255, 255, 0.5)"
             mt="5px"
           >
             {type}, {year}
-          </Heading>
-        </Flex>
+          </Text>
+        </Box>
         <Spacer />
         <Box>
           <Rating rating={rating} hasBg={false} />
