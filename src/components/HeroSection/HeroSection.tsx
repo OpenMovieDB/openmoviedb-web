@@ -30,11 +30,11 @@ export const HeroSection = ({ item }: IHeroSection) => {
 
   return (
     <Box
-      backgroundRepeat="no-repeat"
       backgroundSize="cover"
       backgroundPosition="center"
       minHeight="100vh"
-      background={`linear-gradient(180deg, rgba(15, 13, 24, 0) 0%, rgba(15, 13, 24, 0.84) 100%), linear-gradient(90deg, rgba(15, 13, 24, 0.2) -11.3%, rgba(21, 21, 21, 0) 100%, rgba(15, 13, 24, 0) 100%), url(${filmBackground}), no-repeat`}
+      background={`linear-gradient(180deg, rgba(15, 13, 24, 0) 0%, rgba(15, 13, 24, 0.84) 100%), linear-gradient(90deg, rgba(15, 13, 24, 0.2) -11.3%, rgba(21, 21, 21, 0) 100%, rgba(15, 13, 24, 0) 100%), url(${filmBackground})`}
+      backgroundRepeat="no-repeat"
       justifyContent="center"
       alignItems="center"
     >
@@ -55,16 +55,23 @@ export const HeroSection = ({ item }: IHeroSection) => {
                 ))}
               </Flex>
 
-              <Flex gap="15px">
+              <Flex gap="30px">
                 {genres.map((item, id) => (
                   <Box key={id}>
-                    <GenresInline item={item} />
+                    <Wrap>
+                      <GenresInline item={item} />
+                    </Wrap>
                   </Box>
                 ))}
               </Flex>
 
               <Flex mt="40px">
-                <Box fontSize="18px" lineHeight="27px" fontWeight="400">
+                <Box
+                  fontSize="18px"
+                  lineHeight="27px"
+                  fontWeight="400"
+                  maxWidth="840px"
+                >
                   {description}
                 </Box>
               </Flex>
