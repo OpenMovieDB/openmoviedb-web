@@ -49,6 +49,7 @@ export const HeroSection = ({ item }: IHeroSection) => {
                 minWidth="840px"
                 minHeight="220px"
               />
+
               <Flex>
                 {ratings?.map((item, id) => (
                   <RatingInline item={item} key={id} />
@@ -101,13 +102,15 @@ export const HeroSection = ({ item }: IHeroSection) => {
         </Wrap>
       </Flex>
       <Flex
+        position="relative"
+        bottom="80px"
         borderRadius="full"
         bg="rgba(255, 255, 255, 0.05)"
         p="15px 0px"
         className="lg:flex md:flex pt-4 pb-4"
         justifyContent="center"
         alignItems="center"
-        maxHeight="80%"
+        maxWidth="95%"
       >
         {charactersList?.map((item, id) => (
           <div key={id} className="flex items-center content-center gap-2">
