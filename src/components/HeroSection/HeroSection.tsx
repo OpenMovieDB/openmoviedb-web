@@ -34,7 +34,7 @@ export const HeroSection = ({ item }: IHeroSection) => {
       backgroundSize="cover"
       backgroundPosition="center"
       minHeight="100vh"
-      background={`linear-gradient(180deg, rgba(15, 13, 24, 0) 0%, rgba(15, 13, 24, 0.84) 100%), linear-gradient(90deg, rgba(15, 13, 24, 0.2) -11.3%, rgba(21, 21, 21, 0) 100%, rgba(15, 13, 24, 0) 100%), url(${filmBackground})`}
+      background={`linear-gradient(180deg, rgba(15, 13, 24, 0) 0%, rgba(15, 13, 24, 0.84) 100%), linear-gradient(90deg, rgba(15, 13, 24, 0.2) -11.3%, rgba(21, 21, 21, 0) 100%, rgba(15, 13, 24, 0) 100%), url(${filmBackground}), no-repeat`}
       justifyContent="center"
       alignItems="center"
     >
@@ -64,11 +64,9 @@ export const HeroSection = ({ item }: IHeroSection) => {
               </Flex>
 
               <Flex mt="40px">
-                <Container>
-                  <Box fontSize="18px" lineHeight="27px" fontWeight="400">
-                    {description}
-                  </Box>
-                </Container>
+                <Box fontSize="18px" lineHeight="27px" fontWeight="400">
+                  {description}
+                </Box>
               </Flex>
             </Flex>
 
