@@ -23,17 +23,14 @@ const mock = [
 ];
 
 const TopOfMonth = () => (
-  <Flex className="container">
+  <Box>
     <Heading fontWeight="800" fontSize="40px" lineHeight="41px">
       Топ месяца
     </Heading>
     <Box mt="70px">
       <Slider
         isWheel // доступ управления колесиком мыши
-        marginTop={10} // отступ сверху слайдера
-        titleMargin={60} // отступ снизу тайтла
         arrowMargin={20} // отступ от стрелок управления
-        title=" " // название слайдера
       >
         {mock.map((item, i) => (
           <MovieTopOfMonthCard
@@ -45,7 +42,7 @@ const TopOfMonth = () => (
         ))}
       </Slider>
     </Box>
-  </Flex>
+  </Box>
 );
 
 export default TopOfMonth;

@@ -20,29 +20,6 @@ import { CarouselProps } from "@/types/IBigCarousel";
 import preview from "@/public/preview.jpeg";
 import play from "@/public/play.png";
 
-const swiperBreakpoints = {
-  577: {
-    slidesPerGroup: 3,
-    slidesPerView: 3,
-    spaceBetween: 15,
-  },
-  769: {
-    slidesPerGroup: 3,
-    slidesPerView: 3,
-    spaceBetween: 30,
-  },
-  1025: {
-    slidesPerGroup: 4,
-    slidesPerView: 4,
-    spaceBetween: 30,
-  },
-  1200: {
-    slidesPerGroup: 4,
-    slidesPerView: 4,
-    spaceBetween: 30,
-  },
-};
-
 export const BigCarousel: FC<CarouselProps> = ({ className, title, data }) => {
   const [activeIndex, setActiveIndex] = useState(1);
   const [activeItem, setActiveItem] = useState(data[activeIndex]);
@@ -57,11 +34,6 @@ export const BigCarousel: FC<CarouselProps> = ({ className, title, data }) => {
     lg: true,
     xl: false,
   });
-
-  const swiperNavigation = {
-    prevEl: navigationPrevRef.current,
-    nextEl: navigationNextRef.current,
-  };
 
   return (
     <Box className={className}>

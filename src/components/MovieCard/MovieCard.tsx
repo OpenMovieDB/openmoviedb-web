@@ -21,7 +21,7 @@ export const MovieCard: FC<MovieCardProps> = ({ item, onClick, ...props }) => {
       {...props}
     >
       <Rating rating={rating} hasBg={true} />
-      <Text marginTop="40%" fontSize="14px" fontWeight="800" lineHeight="14px">
+      <Text marginTop="36%" fontSize="14px" fontWeight="800" lineHeight="17px">
         {title}
       </Text>
     </Box>

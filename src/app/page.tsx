@@ -10,8 +10,8 @@ const Home = () => {
     <div>
       <Hero />
       <Genres />
-      <TopOfMonth />
-      <Recomendations />
+      {/* <TopOfMonth /> */}
+      {/* <Recomendations /> */}
       <Novelties />
       <Popular />
     </div>
