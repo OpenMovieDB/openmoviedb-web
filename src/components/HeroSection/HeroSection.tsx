@@ -72,8 +72,7 @@ export const HeroSection = ({ item }: IHeroSection) => {
 
             <Box mt="180px">
               <Link href={url}>
-                <Button borderRadius={50} p="25px 60px">
-                  {" "}
+                <Button borderRadius="full" p="40px 60px">
                   Страница фильма
                 </Button>
               </Link>
