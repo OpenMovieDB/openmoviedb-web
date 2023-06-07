@@ -77,9 +77,9 @@ export const HeroSection = ({ item }: IHeroSection) => {
               </Flex>
             </Flex>
 
-            <Box mt="180px">
+            <Box mt="140px">
               <Link href={url}>
-                <Button borderRadius="full" p="40px 60px">
+                <Button borderRadius="full" p="40px 70px">
                   Страница фильма
                 </Button>
               </Link>
@@ -100,23 +100,26 @@ export const HeroSection = ({ item }: IHeroSection) => {
           )}
         </Wrap>
       </Flex>
-      <Center>
-        <div className="hidden lg:flex md:flex pt-4 pb-4 rounded-full bg-black">
-          {charactersList?.map((item, id) => (
-            <div
-              key={id}
-              className="mr-4 flex items-center content-center gap-2"
-            >
-              <div>
-                <Image src={item.image} width={46} height={46} alt="" />
-              </div>
-              <div>
-                {item.firstName} {item.lastName}
-              </div>
+      <Flex
+        borderRadius="full"
+        bg="rgba(255, 255, 255, 0.05)"
+        p="15px 0px"
+        className="lg:flex md:flex pt-4 pb-4"
+        justifyContent="center"
+        alignItems="center"
+        maxHeight="80%"
+      >
+        {charactersList?.map((item, id) => (
+          <div key={id} className="flex items-center content-center gap-2">
+            <div>
+              <Image src={item.image} width={46} height={46} alt="" />
             </div>
-          ))}
-        </div>
-      </Center>
+            <div>
+              {item.firstName} {item.lastName}
+            </div>
+          </div>
+        ))}
+      </Flex>
     </Box>
   );
 };

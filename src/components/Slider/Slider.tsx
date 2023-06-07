@@ -124,21 +124,21 @@ export const Slider = ({ children, ...props }: Props) => {
       {title && <h1 ref={refTitle}>{title}</h1>}
 
       <div className={styles.content}>
-        {/* <button
-							className={position !== 0 && !isTransition ? "" : styles.hidden}
-							style={{ left: `${arrowMargin}px` }}
-							onClick={() => handleTrack("left")}
-							>
-							<IconArrow direction="left" />
-							</button> */}
+        <button
+          className={position !== 0 && !isTransition ? "" : styles.hidden}
+          style={{ left: `${arrowMargin}px` }}
+          onClick={() => handleTrack("left")}
+        >
+          <IconArrow direction="left" />
+        </button>
 
-        {/* <button
-							className={position !== left && !isTransition ? "" : styles.hidden}
-							style={{ right: `${arrowMargin}px` }}
-							onClick={() => handleTrack("right")}
-							>
-							<IconArrow direction="right" />
-							</button> */}
+        <button
+          className={position !== left && !isTransition ? "" : styles.hidden}
+          style={{ right: `${arrowMargin}px` }}
+          onClick={() => handleTrack("right")}
+        >
+          <IconArrow direction="right" />
+        </button>
 
         <div ref={refContainer} className={styles.track}>
           <motion.div

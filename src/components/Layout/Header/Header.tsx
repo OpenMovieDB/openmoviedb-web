@@ -24,11 +24,11 @@ const Header = () => {
       }`}
     >
       <nav
-        className="container mx-auto flex items-center justify-between p-6 lg:px-8 "
+        className="container mx-auto flex items-center justify-between pt-6 lg:px-8 "
         aria-label="Global"
       >
         <div className="flex lg:flex-1 ">
-          <a href="#" className="-m-1.5 p-1.5">
+          <a href="#">
             <Image src={logo.src} width="65px" height="65px" alt="" />
           </a>
         </div>
