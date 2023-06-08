@@ -1,19 +1,36 @@
 "use client";
 
+import { useState } from "react";
 import { MovieCard } from "@/components/MovieCard/MovieCard";
-import { Box, Flex, Heading, Text, Image } from "@chakra-ui/react";
+import { Box, Flex, Heading, Text, Image, Link } from "@chakra-ui/react";
 import rightArrow from "@/public/right.png";
 
 import { MovieCardEmpty } from "@/components/MovieCardEmpty/MovieCardEmpty";
 import { listOfPopular } from "@/src/objects";
+import { Slider } from "@/components/Slider/Slider";
 
 const Popular = () => {
   return (
     <Box className="container" mt="150px">
-      <Heading>Популярное</Heading>
+      <Flex>
+        <Heading>Популярное</Heading>
+
+        <Box
+          bg="rgba(255, 255, 255, 0.05)"
+          borderRadius="full"
+          p="8px 20px"
+          ml="30px"
+        >
+          <Link href="#">
+            <Text fontWeight="400" fontSize="14px">
+              Показать всё
+            </Text>
+          </Link>
+        </Box>
+      </Flex>
 
       <Flex
-        mt="30px"
+        mt="70px"
         flexWrap="wrap"
         gap="30px"
         alignItems="center"
@@ -26,7 +43,6 @@ const Popular = () => {
             </Box>
           );
         })}
-
         <Box>
           <MovieCardEmpty>
             <Flex

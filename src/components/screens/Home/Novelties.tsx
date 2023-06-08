@@ -13,6 +13,7 @@ import {
   Button,
   ButtonGroup,
   Text,
+  Link,
 } from "@chakra-ui/react";
 import { GenresInline } from "@/components/GenresInline/GenresInline";
 import { MovieCard } from "@/components/MovieCard/MovieCard";
@@ -23,6 +24,8 @@ import preview from "@/public/preview.jpeg";
 import play from "@/public/play.png";
 
 const Novelties = () => {
+  const [showMessage, setShowMessage] = useState(false);
+
   const [activeIndex, setActiveIndex] = useState(1);
   const [activeItem, setActiveItem] = useState(listOfNovelties[activeIndex]);
 
@@ -38,10 +41,17 @@ const Novelties = () => {
     <Box className="container mt-96">
       <Flex>
         <Heading mr="30px">Новинки кино</Heading>
-        <Box bg="rgba(255, 255, 255, 0.05)" borderRadius="full" p="8px 20px">
-          <Text fontWeight="400" fontSize="14px">
-            Показать всё
-          </Text>
+        <Box
+          bg="rgba(255, 255, 255, 0.05)"
+          borderRadius="full"
+          p="8px 20px"
+          ml="30px"
+        >
+          <Link href="#">
+            <Text fontWeight="400" fontSize="14px">
+              Показать всё
+            </Text>
+          </Link>
         </Box>
       </Flex>
 
@@ -61,9 +71,16 @@ const Novelties = () => {
                   setActiveIndex(id);
                   setActiveItem(item);
                 }}
+                onMouseEnter={() => {
+                  setShowMessage(true);
+                }}
+                onMouseLeave={() => {
+                  setShowMessage(false);
+                }}
                 mr="30px"
               >
                 <MovieCard item={item} />
+                {showMessage && <h1>Hello, World!</h1>}
               </Box>
             );
           })}
