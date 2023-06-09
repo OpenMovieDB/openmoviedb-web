@@ -6,6 +6,7 @@ import { FC, useRef, useState } from "react";
 
 import {
   Image,
+  Divider,
   Box,
   Flex,
   Heading,
@@ -80,7 +81,18 @@ const Novelties = () => {
                 mr="30px"
               >
                 <MovieCard item={item} />
-                {showMessage && <h1>Hello, World!</h1>}
+
+                {showMessage && (
+                  <div
+                    mt="15px"
+                    height="4px"
+                    style={{
+                      border: "solid 2px",
+                      borderImageSource:
+                        "radial-gradient(100% 376.62% at 100% 0%, #00F0FF 0%, #BD00FF 45.31%, #0500FF 100%",
+                    }}
+                  />
+                )}
               </Box>
             );
           })}
