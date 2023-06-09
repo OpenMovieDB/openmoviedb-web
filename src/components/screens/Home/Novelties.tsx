@@ -222,9 +222,23 @@ const Novelties = () => {
                   setActiveIndex(id);
                   setActiveItem(item);
                 }}
-                style={{ marginRight: "30px" }}
+                onMouseEnter={() => setHoveredIndex(id)}
+                onMouseLeave={() => setHoveredIndex(-1)}
+                mr="30px"
               >
                 <MovieCard item={item} />
+
+                {hoveredIndex === id && (
+                  <Divider
+                    mt="15px"
+                    height="3px"
+                    style={{
+                      background:
+                        "radial-gradient(100% 376.62% at 100% 0%, #00F0FF 0%, #BD00FF 45.31%, #0500FF 100%",
+                      transition: "all 0.5s ease-out",
+                    }}
+                  />
+                )}
               </Box>
             );
           })}
