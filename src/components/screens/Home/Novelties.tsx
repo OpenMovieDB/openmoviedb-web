@@ -25,7 +25,7 @@ import preview from "@/public/preview.jpeg";
 import play from "@/public/play.png";
 
 const Novelties = () => {
-  const [showMessage, setShowMessage] = useState(false);
+  const [hoveredIndex, setHoveredIndex] = useState(-1);
 
   const [activeIndex, setActiveIndex] = useState(1);
   const [activeItem, setActiveItem] = useState(listOfNovelties[activeIndex]);
@@ -72,24 +72,20 @@ const Novelties = () => {
                   setActiveIndex(id);
                   setActiveItem(item);
                 }}
-                onMouseEnter={() => {
-                  setShowMessage(true);
-                }}
-                onMouseLeave={() => {
-                  setShowMessage(false);
-                }}
+                onMouseEnter={() => setHoveredIndex(id)}
+                onMouseLeave={() => setHoveredIndex(-1)}
                 mr="30px"
               >
                 <MovieCard item={item} />
 
-                {showMessage && (
-                  <div
+                {hoveredIndex === id && (
+                  <Divider
                     mt="15px"
-                    height="4px"
+                    height="3px"
                     style={{
-                      border: "solid 2px",
-                      borderImageSource:
+                      background:
                         "radial-gradient(100% 376.62% at 100% 0%, #00F0FF 0%, #BD00FF 45.31%, #0500FF 100%",
+                      transition: "all 0.5s ease-out",
                     }}
                   />
                 )}
