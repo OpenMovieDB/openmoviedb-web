@@ -78,7 +78,7 @@ const RegisterPage = () => {
     >
       <VStack>
         <Heading fontWeight="800" fontSize="40px" lineHeight="41px" mb="50px">
-          Регистрация
+          Войти
         </Heading>
         <Flex
           flexDirection="column"
@@ -103,6 +103,7 @@ const RegisterPage = () => {
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
                     value={formik.values.email}
+                    bg="transparent"
                   />
                   {formik.touched.email && formik.errors.email && (
                     <Box mt={2} color="red.500">
