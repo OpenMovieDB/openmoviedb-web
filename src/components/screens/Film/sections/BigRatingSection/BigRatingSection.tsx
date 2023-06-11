@@ -1,12 +1,10 @@
 import {
   HStack,
-  VStack,
   Flex,
   Text,
-  Wrap,
-  WrapItem,
   useBreakpointValue,
   Box,
+  Spacer,
 } from "@chakra-ui/react";
 import { Stars } from "./components/Stars/Stars";
 import { Share } from "./components/Share/Share";
@@ -24,15 +22,17 @@ export const BigRatingSection = ({ ratings }: IRatingsColumn) => {
       </Text>
 
       {!isSmallScreen && (
-        <HStack spacing={{ xl: 350, md: 30, base: 60 }}>
+        <Flex mt="70px">
           <Box>
             <Stars rating={7} />
           </Box>
-          <HStack spacing={4}>
+          <Spacer />
+          <HStack spacing="60px">
             <RatingsColumn ratings={ratings} />
           </HStack>
+          <Spacer />
           <Share />
-        </HStack>
+        </Flex>
       )}
       {isSmallScreen && (
         <Box>
