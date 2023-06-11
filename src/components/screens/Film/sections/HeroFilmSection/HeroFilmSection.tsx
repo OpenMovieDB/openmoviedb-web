@@ -38,18 +38,18 @@ export const HeroFilmSection = ({ item }: IHeroSection) => {
     <>
       {!isSmallScreen && (
         <Box
-          backgroundRepeat="no-repeat"
-          backgroundSize="cover"
-          backgroundPosition="center"
           minHeight="100vh"
           background={`linear-gradient(180deg, rgba(15, 13, 24, 0) 0%, rgba(15, 13, 24, 0.84) 100%), linear-gradient(90deg, rgba(15, 13, 24, 0.2) -11.3%, rgba(21, 21, 21, 0) 100%, rgba(15, 13, 24, 0) 100%), url(${image.src})`}
+          bgRepeat="no-repeat"
+          backgroundSize="cover"
+          backgroundPosition="center"
         >
           <Flex
             color="white"
             flexWrap="wrap"
             pt={{ lg: "90px", md: "35px", sm: "10px" }}
           >
-            <Wrap className="container" mt="100px">
+            <Wrap className="container" mt="70px">
               <Flex flex="1" flexDirection="column" flexWrap="wrap">
                 <Flex gap="15px" mb="60px">
                   {genres.map((item, id) => (
@@ -59,15 +59,15 @@ export const HeroFilmSection = ({ item }: IHeroSection) => {
 
                 <Flex flexDirection="column">
                   <Heading size="xl">{filmTitle}</Heading>
-                  <Heading size="sm">{filmTitleOriginal}</Heading>
+                  <Heading size="sm" mt="">
+                    {filmTitleOriginal}
+                  </Heading>
                 </Flex>
 
                 <Flex mt="40px">
-                  <Container>
-                    <Box fontSize="18px" lineHeight="27px" fontWeight="400">
-                      {description}
-                    </Box>
-                  </Container>
+                  <Box fontSize="18px" fontWeight="400">
+                    {description}
+                  </Box>
                 </Flex>
 
                 <Box mt="60px">

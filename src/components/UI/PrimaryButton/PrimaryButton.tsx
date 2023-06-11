@@ -1,42 +1,44 @@
 import { FC } from "react";
 import { Box, Button } from "@chakra-ui/react";
+import { css } from "@emotion/react";
 
 interface PrimaryButtonProps {
   children: React.ReactNode;
   onClick?: () => void;
+  props: any;
 }
-
-/* <Button
- *   border="2px solid"
- *   borderImageSource="radial-gradient(100% 376.62% at 100% 0%, #00F0FF 0%, #BD00FF 45.31%, #0500FF 100%)"
- *   colorScheme="purple"
- *   onClick={onClick}
- * >
- *   {children}
- * </Button> */
 
 export const PrimaryButton: FC<PrimaryButtonProps> = ({
   children,
   onClick = () => {},
+  props,
 }) => {
   return (
-    <Box
-      style={{
-        border: "solid 2px",
+    <Button
+      bg="transparent"
+      borderRadius="50px"
+      border="2px solid"
+      borderColor="radial-gradient(100% 376.62% at 100% 0%, #00F0FF 0%, #BD00FF 45.31%, #0500FF 100%)"
+      color="#FFFFFF"
+      padding="25px 60px"
+      position="relative"
+      _before={{
+        content: "''",
+        position: "absolute",
+        borderRadius: "inherit",
+        top: "-2px",
+        right: "-2px",
+        bottom: "-2px",
+        left: "-2px",
         borderImageSource:
           "radial-gradient(100% 376.62% at 100% 0%, #00F0FF 0%, #BD00FF 45.31%, #0500FF 100%)",
-        width: "220px",
-        minHeight: "77px",
-        padding: "25px 60px",
         borderImageSlice: "1",
-        justifyContent: "center",
-        borderRadius: "100%",
-        alignItems: "center",
+        zIndex: "-1",
       }}
-      borderRadius="full"
       onClick={onClick}
+      {...props}
     >
       {children}
-    </Box>
+    </Button>
   );
 };

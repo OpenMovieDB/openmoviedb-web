@@ -25,6 +25,7 @@ import background from "@/public/register/bg.png";
 
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { PrimaryButton } from "@/components/UI/PrimaryButton/PrimaryButton";
 
 interface RegistrationFormValues {
   email: string;
@@ -77,19 +78,16 @@ const RegisterPage = () => {
       bg={`radial-gradient(171.02% 540.49% at 0% 100%, #0F0D18 0%, rgba(15, 13, 24, 0) 100%), url(${background.src})`}
     >
       <VStack>
-        <Heading fontWeight="800" fontSize="40px" lineHeight="41px" mb="50px">
+        <Heading fontWeight="800" fontSize="40px" mb="70px">
           Войти
         </Heading>
-        <Flex
-          flexDirection="column"
-          maxWidth="550px"
-          maxHeight="660px"
-          bg="#080715"
-          borderRadius="15px"
-          m="20px"
-        >
-          <Flex justifyContent="center" alignItems="center">
-            <Stack spacing="15px" p="60px">
+        <Box bg="#080715" borderRadius="15px" width="550px" height="570px">
+          <Flex
+            flexDirection="column"
+            justifyContent="center"
+            alignItems="center"
+          >
+            <Stack p="60px">
               <form onSubmit={formik.handleSubmit}>
                 <FormControl
                   id="email"
@@ -163,59 +161,66 @@ const RegisterPage = () => {
                   )}{" "}
                 </FormControl>
 
-                <Button
-                  p="25px 60px"
-                  borderRadius="full"
-                  border="#1f1f1f 1px solid"
-                  maxW="284px"
-                  maxH="77px"
-                  mt="40px"
-                  type="submit"
-                  isLoading={isLoading}
-                >
-                  Зарегистрироваться
-                </Button>
+                {/* <Button
+										p="25px 60px"
+										borderRadius="full"
+										border="#1f1f1f 1px solid"
+										maxW="284px"
+										maxH="77px"
+										mt="40px"
+										type="submit"
+										isLoading={isLoading}
+										>
+										Войти
+										</Button>
+									*/}
+
+                <Box mt="40px">
+                  <PrimaryButton type="submit" isLoading={isLoading}>
+                    Войти
+                  </PrimaryButton>
+                </Box>
               </form>
             </Stack>
+
+            <Box p="0px 60px 60px 60px">
+              <Flex
+                alignItems="left"
+                justifyContent="left"
+                flexDirection="column"
+                mt="30px"
+              >
+                <Text mr="15px">Войти с помощью:</Text>
+                <HStack spacing={{ lg: "20px", sm: "60px" }} mt="15px">
+                  <Link href="#">
+                    <FaVk size="25px" color="#fff" />
+                  </Link>
+                  <Link href="#">
+                    <FaOdnoklassniki size="25px" color="#fff" />
+                  </Link>
+                  <Link href="#">
+                    <FaFacebook size="25px" color="#fff" />
+                  </Link>
+                  <Link href="#">
+                    <FaGoogle size="25px" color="#fff" />
+                  </Link>
+                </HStack>
+              </Flex>
+
+              <Flex alignItems="center" mt="60px">
+                <Box>
+                  <Text>Уже есть аккаунт?</Text>
+                </Box>
+                <Spacer />
+                <Box>
+                  <Button p="8px 20px" borderRadius="full">
+                    Войти
+                  </Button>
+                </Box>
+              </Flex>
+            </Box>
           </Flex>
-
-          <Box p="0px 60px 60px 60px">
-            <Flex
-              alignItems="left"
-              justifyContent="left"
-              flexDirection="column"
-              mt="30px"
-            >
-              <Text mr="15px">Войти с помощью:</Text>
-              <HStack spacing={{ lg: "20px", sm: "60px" }} mt="15px">
-                <Link href="#">
-                  <FaVk size="25px" color="#fff" />
-                </Link>
-                <Link href="#">
-                  <FaOdnoklassniki size="25px" color="#fff" />
-                </Link>
-                <Link href="#">
-                  <FaFacebook size="25px" color="#fff" />
-                </Link>
-                <Link href="#">
-                  <FaGoogle size="25px" color="#fff" />
-                </Link>
-              </HStack>
-            </Flex>
-
-            <Flex alignItems="center" mt="60px">
-              <Box>
-                <Text>Уже есть аккаунт?</Text>
-              </Box>
-              <Spacer />
-              <Box>
-                <Button p="8px 20px" borderRadius="full">
-                  Войти
-                </Button>
-              </Box>
-            </Flex>
-          </Box>
-        </Flex>
+        </Box>
       </VStack>
     </Flex>
   );
