@@ -95,13 +95,14 @@ export const HeroFilmSection = ({ item }: IHeroSection) => {
                   </Link>
                 </Box>
 
-    <VStack spacing="15px" mt="90px">
-										{vendorsList.map((item, id) => (
-												<Box key={id}>
-														<Vendors item={item} /></Box>
-))}
-										
-    </VStack>
+                <HStack spacing="60px" mt="90px">
+                  {vendorsList.map((item, id) => (
+                    <Box key={id}>
+                      <Vendors item={item} />
+                    </Box>
+                  ))}
+                </HStack>
+              </Flex>
 
               {!isSmallScreen && (
                 <Flex flex="2" alignItems="center" justifyContent="center">
