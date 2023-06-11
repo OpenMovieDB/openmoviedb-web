@@ -52,17 +52,11 @@ export const SeasonsAndSeriesSection = () => {
 
         <TabPanels>
           <TabPanel>
-            <Box>
-              <Slider
-                isWheel
-                marginTop={10}
-                titleMargin={60}
-                arrowMargin={20}
-                title=" "
-              >
+            <Box className="container">
+              <Slider isWheel titleMargin={60} arrowMargin={20} title=" ">
                 {" "}
                 {seriesList.map((item, id) => (
-                  <Box key={id + 1}>
+                  <Box key={id + 1} mr="30px">
                     <SeriesCard item={item} />
                   </Box>
                 ))}

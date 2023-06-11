@@ -1,11 +1,22 @@
 import { Box, Flex, Text, Image } from "@chakra-ui/react";
 
-// TODO: wirte types
-export const SeriesCard = ({ item }: any) => {
-  const { index, image, title, date }: any = { ...item };
+interface ISeriesCard {
+  index: string;
+  image: string | any;
+  title: string;
+  date: string;
+}
+
+interface ISeriesCardItem {
+  item: Array<ISeriesCard>;
+}
+
+export const SeriesCard = ({ item }: ISeriesCardItem) => {
+  //@ts-ignore
+  const { index, image, title, date } = { ...item };
 
   return (
-    <Box mr="30px" cursor="pointer">
+    <Box cursor="pointer">
       <Flex
         position="relative"
         borderRadius="15px"
@@ -25,11 +36,12 @@ export const SeriesCard = ({ item }: any) => {
           }}
         />
         <Box
-          m={{
-            xl: "20px 20px 20px 10px",
-            md: "20px 20px 20px 10px",
-            base: "10px 10px 10px 5px",
+          mt={{
+            xl: "36px",
+            md: "20px",
+            base: "30px",
           }}
+          ml="25px"
         >
           <Text
             fontWeight="400"
