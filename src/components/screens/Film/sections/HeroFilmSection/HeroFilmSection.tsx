@@ -107,7 +107,10 @@ export const HeroFilmSection = ({ item }: IHeroSection) => {
               {!isSmallScreen && (
                 <Flex flex="2" alignItems="center" justifyContent="center">
                   <Image width="100px" height="125px" src={play.src} alt="" />
-                  <VStack ml={{ lg: "340px", md: "280px", sm: "90px" }}>
+                  <VStack
+                    position="relative"
+                    left={{ lg: "350px", md: "280px", sm: "90px" }}
+                  >
                     <RatingsColumn ratings={currentFilm.ratings} />
                   </VStack>
                 </Flex>
