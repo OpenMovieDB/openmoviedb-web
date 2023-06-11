@@ -1,4 +1,4 @@
-import { Flex, Text } from "@chakra-ui/react";
+import { Flex, Box, Text } from "@chakra-ui/react";
 import { Spoiler } from "@/components/Spoiler/Spoiler";
 import { IFactElement } from "@/types/IFactElement";
 
@@ -10,7 +10,8 @@ export const FactElement = ({ item }: IFactElement) => {
       <Flex
         bgColor="#141321"
         borderRadius="15px"
-        maxWidth="100px"
+        width="100px"
+        height="100px"
         maxHeight="100px"
         justifyContent="center"
         alignItems="center"
@@ -20,7 +21,11 @@ export const FactElement = ({ item }: IFactElement) => {
           {index}
         </Text>
       </Flex>
-      <Spoiler>{text}</Spoiler>
+
+      <Box maxWidth="710px">
+        {isSpoiler && <Spoiler>{text}</Spoiler>}
+        {!isSpoiler && <Text>{text}</Text>}
+      </Box>
     </Flex>
   );
 };
