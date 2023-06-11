@@ -12,6 +12,8 @@ import {
   Heading,
   Image,
   VStack,
+  Text,
+  HStack,
 } from "@chakra-ui/react";
 
 import { GenresInline } from "@/components/GenresInline/GenresInline";
@@ -64,10 +66,22 @@ export const HeroFilmSection = ({ item }: IHeroSection) => {
                   </Heading>
                 </Flex>
 
-                <Flex mt="40px">
-                  <Box fontSize="18px" fontWeight="400">
+                <HStack
+                  spacing="20px"
+                  fontWeight="400"
+                  fontSize="18px"
+                  color="rgba(255, 255, 255, 0.5)"
+                  mt="35px"
+                >
+                  <Text>2016</Text>
+                  <Text>США</Text>
+                  <Text>114 мин. / 01:54</Text>
+                </HStack>
+
+                <Flex mt="40px" width="840px">
+                  <Text fontSize="18px" fontWeight="400" lineHeight="27px">
                     {description}
-                  </Box>
+                  </Text>
                 </Flex>
 
                 <Box mt="60px">
