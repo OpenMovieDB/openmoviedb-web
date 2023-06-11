@@ -2,6 +2,7 @@
 
 import { INovelties } from "@/screens/Home/types/INovelties";
 import { IFact } from "@/types/IFact";
+import { IVendorItem } from "@/types/IVendorItem";
 
 /* --- Images --- */
 
@@ -79,6 +80,10 @@ import image__9 from "@/public/Filters/Countries/image-9.png";
 import image__10 from "@/public/Filters/Countries/image-10.png";
 import image__11 from "@/public/Filters/Countries/image-11.png";
 import image__12 from "@/public/Filters/Countries/image-12.png";
+
+import iviLogo from "@/public/vendors/ivi.png";
+import premierLogo from "@/public/vendors/premier.png";
+import okkoLogo from "@/public/vendors/okko.png";
 
 /* --- ------- --- */
 
@@ -1675,5 +1680,20 @@ export const CountriesData = [
     icon: image__12.src,
     name: "Албания",
     href: "#",
+  },
+];
+
+export const vendorsList: IVendorItem[] = [
+  {
+    icon: iviLogo.src,
+    title: "Иви",
+  },
+  {
+    icon: premierLogo.src,
+    title: "Premier",
+  },
+  {
+    icon: okkoLogo.src,
+    title: "Okko",
   },
 ];

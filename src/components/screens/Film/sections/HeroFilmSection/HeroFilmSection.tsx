@@ -18,7 +18,10 @@ import {
 
 import { GenresInline } from "@/components/GenresInline/GenresInline";
 import { RatingsColumn } from "@/components/RatingsColumn/RatingsColumn";
+import { Vendors } from "./components/Vendors/Vendors";
+
 import { currentFilm } from "@/src/objects";
+import { vendorsList } from "@/src/objects";
 
 import image from "@/public/Film/image.png";
 import play from "@/public/play.png";
@@ -84,12 +87,21 @@ export const HeroFilmSection = ({ item }: IHeroSection) => {
                   </Text>
                 </Flex>
 
-                <Box mt="60px">
-                  <Link href={url} color="gray.400">
-                    Показать ещё
+                <Box mt="30px">
+                  <Link href={url} color="rgba(255, 255, 255, 0.5)">
+                    <Text fontWeight="400" fontSize="14px" lineHeight="20px">
+                      Показать ещё
+                    </Text>
                   </Link>
                 </Box>
-              </Flex>
+
+    <VStack spacing="15px" mt="90px">
+										{vendorsList.map((item, id) => (
+												<Box key={id}>
+														<Vendors item={item} /></Box>
+))}
+										
+    </VStack>
 
               {!isSmallScreen && (
                 <Flex flex="2" alignItems="center" justifyContent="center">
