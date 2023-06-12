@@ -1,6 +1,8 @@
 import * as React from "react";
 import styles from "./Spoiler.module.scss";
 
+import { Flex, Button, Text } from "@chakra-ui/react";
+
 interface SpoilerProps {
   text?: string;
   textColor?: string;
@@ -39,20 +41,36 @@ export const Spoiler: React.FunctionComponent<SpoilerProps> = ({
   };
 
   return (
-    <span
-      onClick={handleClick}
-      onKeyPress={handleKeyPress}
-      className={`spoiler-text ${styles.contents} ${
-        isHidden ? styles["is--hidden"] : ""
-      }`}
-      style={{ filter: isHidden ? hiddenColor : revealedColor }}
-      aria-label={isHidden ? ariaLabelShowText : ariaLabelHideText}
-      role="button"
-      tabIndex={0}
-    >
-      <span role="alert" style={{ color: textColor }}>
-        {children || text}
+    <Flex justifyContent="center" alignItems="center">
+      <span
+        onClick={handleClick}
+        onKeyPress={handleKeyPress}
+        className={`spoiler-text ${styles.contents} ${
+          isHidden ? styles["is--hidden"] : ""
+        }`}
+        style={{ filter: isHidden ? hiddenColor : revealedColor }}
+        aria-label={isHidden ? ariaLabelShowText : ariaLabelHideText}
+        role="button"
+        tabIndex={0}
+      >
+        <span role="alert" style={{ color: textColor }}>
+          {children || text}
+        </span>
       </span>
-    </span>
+
+      {isHidden && (
+        <Button
+          position="absolute"
+          p="11px 20px"
+          borderRadius="full"
+          onClick={handleClick}
+          onKeyPress={handleKeyPress}
+        >
+          <Text fontWeight="400" fontSize="14px" lineHeight="20px">
+            Спойлер
+          </Text>
+        </Button>
+      )}
+    </Flex>
   );
 };

@@ -27,9 +27,6 @@ export const FactsSection = () => {
           </Box>
         ))}
       </Grid>
-
-      {/* {!isSmallScreen && (
-					)} */}
     </Box>
   );
 };
