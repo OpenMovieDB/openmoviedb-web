@@ -54,7 +54,7 @@ export const ActorsSection = () => {
       </Box>
 
       <Flex flexWrap="wrap" mt="60px">
-        <Box>
+        <Box width="620px">
           <Box mb="30px">
             <Text
               fontWeight="400"
@@ -66,10 +66,11 @@ export const ActorsSection = () => {
             </Text>
             <Flex>
               {movieAuthorsList.director.map((item, id) => (
-                <Text>{item.name},</Text>
+                <Text key={id}>{item.name}, </Text>
               ))}
             </Flex>
           </Box>
+
           <Box mb="30px">
             <Text
               fontWeight="400"
@@ -81,10 +82,11 @@ export const ActorsSection = () => {
             </Text>
             <Flex>
               {movieAuthorsList.script.map((item, id) => (
-                <Text>{item.name},</Text>
+                <Text key={id}>{item.name}, </Text>
               ))}
             </Flex>
           </Box>
+
           <Box mt="30px">
             <Text
               fontWeight="400"
@@ -96,13 +98,15 @@ export const ActorsSection = () => {
             </Text>
             <Flex>
               {movieAuthorsList.producer.map((item, id) => (
-                <Text>{item.name}, </Text>
+                <Text key={id}>{item.name}, </Text>
               ))}
             </Flex>
           </Box>
         </Box>
+
         <Spacer />
-        <Box>
+
+        <Box width="620px">
           <Box mb="30px">
             <Text
               fontWeight="400"
@@ -114,10 +118,11 @@ export const ActorsSection = () => {
             </Text>
             <Flex>
               {movieAuthorsList.operator.map((item, id) => (
-                <Text>{item.name},</Text>
+                <Text key={id}>{item.name},</Text>
               ))}
             </Flex>
           </Box>
+
           <Box mb="30px">
             <Text
               fontWeight="400"
@@ -129,10 +134,11 @@ export const ActorsSection = () => {
             </Text>
             <Flex>
               {movieAuthorsList.composer.map((item, id) => (
-                <Text>{item.name},</Text>
+                <Text key={id}>{item.name},</Text>
               ))}
             </Flex>
           </Box>
+
           <Box mb="30px">
             <Text
               fontWeight="400"
@@ -144,7 +150,7 @@ export const ActorsSection = () => {
             </Text>
             <Flex>
               {movieAuthorsList.artist.map((item, id) => (
-                <Text>{item.name}, </Text>
+                <Text key={id}>{item.name}, </Text>
               ))}
             </Flex>
           </Box>

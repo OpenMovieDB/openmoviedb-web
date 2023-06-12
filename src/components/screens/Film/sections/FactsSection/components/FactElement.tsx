@@ -12,6 +12,7 @@ export const FactElement = ({ item }: IFactElement) => {
         borderRadius="15px"
         width="100px"
         height="100px"
+        minWidth="100px"
         maxHeight="100px"
         justifyContent="center"
         alignItems="center"
