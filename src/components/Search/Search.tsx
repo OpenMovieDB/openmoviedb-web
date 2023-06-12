@@ -41,6 +41,7 @@ export const Search = () => {
           placeholder="Поиск по фильмам"
           bg="rgba(255, 255, 255, 0.05)"
           padding="20px 25px"
+          border="0px"
           borderRadius="full"
           maxHeight="67px"
           color="#0F0D18"
