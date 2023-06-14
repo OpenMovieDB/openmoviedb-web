@@ -49,7 +49,8 @@ export const Settings = () => {
             <Spacer />
 
             <Box>
-                <AccountSettingsSection />
+                {/* <AccountSettingsSection /> */}
+                <ChangePasswordSection />
             </Box>
 
             <Spacer />
