@@ -42,18 +42,30 @@ export const Settings = () => {
 
     return (
         <Flex className="container" mt="90px">
-            <Box>
-                <NavBar />
-            </Box>
+            {!isSmallScreen && (
+                <>
+                    <Box>
+                        <NavBar />
+                    </Box>
 
-            <Spacer />
+                    <Spacer />
 
-            <Box>
-                {/* <AccountSettingsSection /> */}
-                <ChangePasswordSection />
-            </Box>
+                    <Box>
+                        {/* TODO: Make a changer for sections using NavBar */}
+                        {/* <AccountSettingsSection /> */}
+                        <ChangePasswordSection />
+                    </Box>
 
-            <Spacer />
+                    <Spacer />
+                </>
+            )}
+
+            {isSmallScreen && (
+                <Flex flexDirection="column">
+                    <AccountSettingsSection />
+                    {/* <ChangePasswordSection /> */}
+                </Flex>
+            )}
         </Flex>
     );
 };
