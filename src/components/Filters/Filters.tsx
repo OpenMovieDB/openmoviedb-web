@@ -56,10 +56,10 @@ const Filters = () => {
                     <Box>
                         {/* TODO: Update filters expanding */}
                         {/* <PopularGenres /> */}
-                        <Sorting />
+                        {/* <Sorting /> */}
                         {/* <Year /> */}
                         {/* <Rating /> */}
-                        {/* <Countries /> */}
+                        <Countries />
                     </Box>
                 </Box>
             )}
