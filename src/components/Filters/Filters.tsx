@@ -1,19 +1,8 @@
-import {
-    Box,
-    Flex,
-    Menu,
-    Image,
-    Text,
-    Input,
-    InputGroup,
-    InputRightElement,
-} from "@chakra-ui/react";
+import { Box, Flex, Menu, Image, Text } from "@chakra-ui/react";
 import { FiltersMenuButton } from "./components/FiltersMenuButton/FiltersMenuButton";
 
 import logo from "@/public/Hero/header/image.png";
 import { useState, useEffect } from "react";
-
-import { BsSearch } from "react-icons/bs";
 
 import { PopularGenres } from "./components/GenresTab/PopularGenres";
 import { Sorting } from "./components/GenresTab/Sorting";
