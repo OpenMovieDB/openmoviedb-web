@@ -6,16 +6,16 @@ import Recomendations from "@/components/screens/Home/Recomendations";
 import TopOfMonth from "@/components/screens/Home/TopOfMonth";
 
 const Home = () => {
-  return (
-    <div>
-      <Hero />
-      <Genres />
-      {/* <TopOfMonth /> */}
-      {/* <Recomendations /> */}
-      <Novelties />
-      <Popular />
-    </div>
-  );
+    return (
+        <div>
+            <Hero />
+            <Genres />
+            <TopOfMonth />
+            <Recomendations />
+            <Novelties />
+            <Popular />
+        </div>
+    );
 };
 
 export default Home;
