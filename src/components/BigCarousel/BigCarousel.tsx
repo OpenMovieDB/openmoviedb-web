@@ -88,8 +88,10 @@ export const BigCarousel: FC<CarouselProps> = ({ className, title, data }) => {
                     <Box w="782px" h="547px" ml="50px" mt="220px" zIndex="5">
                         <Flex flexDirection="column">
                             <Flex mb="80px" gap="30px">
-                                {activeItem.genres.map((item: any, idx: number) => (
-                                    <GenresInline item={item} />
+                                {activeItem.genres.map((item: any, id: number) => (
+                                    <Box key={id}>
+                                        <GenresInline item={item} />
+                                    </Box>
                                 ))}
                             </Flex>{" "}
                             <Heading
@@ -100,7 +102,7 @@ export const BigCarousel: FC<CarouselProps> = ({ className, title, data }) => {
                             >
                                 {activeItem.title}
                             </Heading>
-                            <RatingInline item={activeItem.rating} />
+                            <RatingInline item={activeItem.ratings} />
                             <Box
                                 fontStyle="normal"
                                 fontWeight="400"

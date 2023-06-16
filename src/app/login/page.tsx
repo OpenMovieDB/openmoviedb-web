@@ -161,24 +161,8 @@ const RegisterPage = () => {
                                     )}{" "}
                                 </FormControl>
 
-                                {/* <Button
-										p="25px 60px"
-										borderRadius="full"
-										border="#1f1f1f 1px solid"
-										maxW="284px"
-										maxH="77px"
-										mt="40px"
-										type="submit"
-										isLoading={isLoading}
-										>
-										Войти
-										</Button>
-									*/}
-
                                 <Box mt="40px">
-                                    <PrimaryButton type="submit" isLoading={isLoading}>
-                                        Войти
-                                    </PrimaryButton>
+                                    <PrimaryButton isLoading={isLoading}>Войти</PrimaryButton>
                                 </Box>
                             </form>
                         </Stack>

@@ -11,7 +11,7 @@ const Home = () => {
             <Hero />
             <Genres />
             <TopOfMonth />
-            <Recomendations />
+            {/* <Recomendations /> */}
             <Novelties />
             <Popular />
         </div>

@@ -24,16 +24,13 @@ const mock = [
 
 const TopOfMonth = () => (
     <Box className="container" mt="70px" minHeight="520px">
-        {/* <Heading fontWeight="800" fontSize="40px" lineHeight="41px">
-          Топ месяца
-          </Heading> */}
         <Box>
             <Slider
                 isWheel
                 marginTop={10}
                 titleMargin={60}
                 arrowMargin={20}
-                title=" "
+                title="Топ месяца"
             >
                 {mock.map((item, i) => (
                     <MovieTopOfMonthCard

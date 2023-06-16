@@ -1,5 +1,7 @@
 "use client";
 
+import { Global } from "@emotion/react";
+
 import { ChakraProvider } from "@chakra-ui/react";
 import { extendTheme } from "@chakra-ui/react";
 import type { StyleFunctionProps } from "@chakra-ui/styled-system";
@@ -65,8 +67,35 @@ interface Props {
     children: React.ReactNode;
 }
 
+const GlobalStyles = () => (
+    <Global
+        styles={`
+      @font-face {
+        font-family: 'Neue Machina';
+        src: url('../../public/fonts/NeueMachina-Regular.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Neue Machina bold';
+        src: url('/public/fonts/NeueMachina-Bold.ttf') format('truetype');
+        font-weight: bold;
+        font-style: normal;
+        font-display: swap;
+      }
+    `}
+    />
+);
+
 const InitChakraUI = ({ children }: Props) => {
-    return <ChakraProvider theme={theme}>{children}</ChakraProvider>;
+    return (
+        <>
+            <GlobalStyles />
+            <ChakraProvider theme={theme}>{children}</ChakraProvider>
+        </>
+    );
 };
 
 export default InitChakraUI;
