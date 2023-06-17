@@ -196,16 +196,7 @@ const Novelties = () => {
                         pr="100px"
                         position="absolute"
                         right="0px"
-                    >
-                        {/* <Button
-									p="45px"
-									bg="rgba(255, 255, 255, 0.05)"
-									borderRadius="full"
-									backdropFilter="blur(15px)"
-									>
-									<Image src={play.src} />
-									</Button> */}
-                    </Flex>
+                    ></Flex>
                 </Flex>
             )}
 

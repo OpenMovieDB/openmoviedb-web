@@ -1,4 +1,14 @@
-import { Grid, GridItem, Flex, Box, Heading, Input, Text, Image } from "@chakra-ui/react"
+import {
+    Grid,
+    GridItem,
+    Flex,
+    Box,
+    Heading,
+    Input,
+    Text,
+    Image,
+    useBreakpointValue,
+} from "@chakra-ui/react";
 import { PrimaryButton } from "@/components/UI/PrimaryButton/PrimaryButton";
 
 import avatar_1 from "@/public/avatars/avatar_1.png";
@@ -43,106 +53,97 @@ export const AccountSettings = () => {
     });
 
     return (
+        <>
+            <Flex flexWrap="wrap" flexDirection="column">
+                {isMediumScreen && (
+                    <Heading fontWeight="800" fontSize="40px" lineHeight="41px">
+                        Настройки аккаунта
+                    </Heading>
+                )}
+                <Box>
+                    <Text>E-mail</Text>
+                    <Input
+                        placeholder="Введите e-mail"
+                        variant="flushed"
+                        width="550px"
+                        maxWidth="550px"
+                        mt="30px"
+                    />
+                </Box>
 
-                <Flex flexWrap="wrap" flexDirection="column">
-                    {isMediumScreen && (
-                        <Heading fontWeight="800" fontSize="40px" lineHeight="41px">
-                            Настройки аккаунта
-                        </Heading>
-                    )}
-                    <Box>
-                        <Text>E-mail</Text>
-                        <Input
-                            placeholder="Введите e-mail"
-                            variant="flushed"
-                            width="550px"
-                            maxWidth="550px"
-                            mt="30px"
-                        />
+                {!isSmallScreen && (
+                    <Box mt="60px">
+                        <Text>Сменить аватар</Text>
+
+                        <Flex alignItems="center" mt="40px">
+                            <Box mr="70px">
+                                <Image src={avatar_1.src} alt="" width="115px" height="115px" />
+                            </Box>
+
+                            <Grid
+                                templateColumns="repeat(4, 1fr)"
+                                gap="30px"
+                                maxWidth="370px"
+                            >
+                                {listOfAvatars.map((item, id) => (
+                                    <GridItem
+                                        key={id}
+                                        cursor="pointer"
+                                        outline="2px solid mediumpurple"
+                                        outlineOffset="7px"
+                                        borderRadius="50px"
+                                    >
+                                        <Image src={item.icon} width="60px" height="60px" alt="" />
+                                    </GridItem>
+                                ))}
+                            </Grid>
+                        </Flex>
                     </Box>
+                )}
 
-                    {!isSmallScreen && (
-                        <Box mt="60px">
-                            <Text>Сменить аватар</Text>
-
-                            <Flex alignItems="center" mt="40px">
-                                <Box mr="70px">
-                                    <Image
-                                        src={avatar_1.src}
-                                        alt=""
-                                        width="115px"
-                                        height="115px"
-                                    />
-                                </Box>
-
-                                <Grid
-                                    templateColumns="repeat(4, 1fr)"
-                                    gap="30px"
-                                    maxWidth="370px"
-                                >
-                                    {listOfAvatars.map((item, id) => (
-                                        <GridItem
-                                            key={id}
-                                            cursor="pointer"
-                                            outline="2px solid mediumpurple"
-                                            outlineOffset="7px"
-                                            borderRadius="50px"
-                                        >
-                                            <Image
-                                                src={item.icon}
-                                                width="60px"
-                                                height="60px"
-                                                alt=""
-                                            />
-                                        </GridItem>
-                                    ))}
-                                </Grid>
-                            </Flex>
-                        </Box>
-                    )}
-
-                    <Flex justifyContent="center" alignItems="center" mt="100px">
-                        <PrimaryButton>Сохранить</PrimaryButton>
-                    </Flex>
-                </Flex>
-
-                <Flex mt="300px" flexWrap="wrap" flexDirection="column" width="550px">
-                    {isMediumScreen && (
-                        <Heading fontWeight="800" fontSize="40px" lineHeight="41px">
-                            Смена пароля
-                        </Heading>
-                    )}
-
-                    <Box mt={isMediumScreen ? "70px" : "0px"}>
-                        <Text>Текущий пароль</Text>
-                        <Input
-                            placeholder="***************"
-                            variant="flushed"
-                            mt="30px"
-                            maxWidth="444px"
-                        />
-                    </Box>
-                    <Box mt="70px">
-                        <Text>Новый пароль</Text>
-                        <Input
-                            placeholder="***************"
-                            variant="flushed"
-                            mt="30px"
-                            maxWidth="444px"
-                        />
-                    </Box>
-                    <Box mt="70px">
-                        <Text>Подтвердите пароль</Text>
-                        <Input
-                            placeholder="***************"
-                            variant="flushed"
-                            mt="30px"
-                            maxWidth="444px"
-                        />
-                    </Box>
-                </Flex>
                 <Flex justifyContent="center" alignItems="center" mt="100px">
                     <PrimaryButton>Сохранить</PrimaryButton>
                 </Flex>
-    )
-}
+            </Flex>
+
+            <Flex mt="300px" flexWrap="wrap" flexDirection="column" width="550px">
+                {isMediumScreen && (
+                    <Heading fontWeight="800" fontSize="40px" lineHeight="41px">
+                        Смена пароля
+                    </Heading>
+                )}
+
+                <Box mt={isMediumScreen ? "70px" : "0px"}>
+                    <Text>Текущий пароль</Text>
+                    <Input
+                        placeholder="***************"
+                        variant="flushed"
+                        mt="30px"
+                        maxWidth="444px"
+                    />
+                </Box>
+                <Box mt="70px">
+                    <Text>Новый пароль</Text>
+                    <Input
+                        placeholder="***************"
+                        variant="flushed"
+                        mt="30px"
+                        maxWidth="444px"
+                    />
+                </Box>
+                <Box mt="70px">
+                    <Text>Подтвердите пароль</Text>
+                    <Input
+                        placeholder="***************"
+                        variant="flushed"
+                        mt="30px"
+                        maxWidth="444px"
+                    />
+                </Box>
+            </Flex>
+            <Flex justifyContent="center" alignItems="center" mt="100px">
+                <PrimaryButton>Сохранить</PrimaryButton>
+            </Flex>
+        </>
+    );
+};
