@@ -29,6 +29,7 @@ const Novelties = () => {
 
     const [activeIndex, setActiveIndex] = useState(1);
     const [activeItem, setActiveItem] = useState(listOfNovelties[activeIndex]);
+    const [showMediumScreen, setShowMediumScreen] = useState(false);
 
     const isSmallScreen = useBreakpointValue({ base: true, md: false });
     const isMediumScreen = useBreakpointValue({
@@ -71,6 +72,7 @@ const Novelties = () => {
                                 onClick={() => {
                                     setActiveIndex(id);
                                     setActiveItem(item);
+                                    setShowMediumScreen(true); // измените значение состояния при клике на компонент
                                 }}
                                 onMouseEnter={() => setHoveredIndex(id)}
                                 onMouseLeave={() => setHoveredIndex(-1)}
@@ -95,7 +97,7 @@ const Novelties = () => {
                 </Slider>
             </Flex>
 
-            {!isMediumScreen && (
+            {!isMediumScreen && showMediumScreen && (
                 <Flex
                     bg="rgba(0, 0, 0, 0.4)"
                     borderRadius="15px"
@@ -200,6 +202,11 @@ const Novelties = () => {
                 </Flex>
             )}
 
+            {isMediumScreen &&
+                showMediumScreen && ( // добавьте новый блок с таким условием
+                    <Flex>nothing</Flex>
+                )}
+
             <Flex alignItems="center" mt="30px">
                 <Slider
                     isWheel
@@ -215,6 +222,7 @@ const Novelties = () => {
                                 onClick={() => {
                                     setActiveIndex(id);
                                     setActiveItem(item);
+                                    setShowMediumScreen(true); // измените значение состояния при клике на компонент
                                 }}
                                 onMouseEnter={() => setHoveredIndex(id)}
                                 onMouseLeave={() => setHoveredIndex(-1)}
