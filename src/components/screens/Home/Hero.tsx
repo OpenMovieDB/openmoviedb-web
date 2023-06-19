@@ -32,11 +32,13 @@ const Hero = () => {
                 },
             }}
         >
-            {films.map((item, id) => (
-                <SwiperSlide key={id}>
-                    <HeroSection item={item} />
-                </SwiperSlide>
-            ))}
+            <div className="swiper-wrapper">
+                {films.map((item, id) => (
+                    <SwiperSlide key={id}>
+                        <HeroSection item={item} />
+                    </SwiperSlide>
+                ))}
+            </div>
         </Swiper>
     );
 };

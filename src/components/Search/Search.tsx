@@ -36,7 +36,7 @@ export const Search = () => {
             alignItems="center"
             flexDirection="column"
         >
-            <InputGroup>
+            <InputGroup zIndex={6}>
                 <Input
                     placeholder="Поиск по фильмам"
                     bg="rgba(255, 255, 255, 0.05)"
@@ -53,6 +53,7 @@ export const Search = () => {
                         background: "white",
                         color: "black.600",
                     }}
+                    zIndex={10}
                 />
                 <InputRightElement
                     width="22px"
@@ -75,33 +76,33 @@ export const Search = () => {
                         />
                     </svg>
                 </InputRightElement>
-
-                {query && (
-                    <InputRightElement width="auto" maxWidth="720px" zIndex={100}>
-                        <List
-                            bg="#080715"
-                            borderRadius="35px"
-                            boxShadow="lg"
-                            height="360px"
-                            width="700px"
-                            maxHeight="360px"
-                            maxWidth="700px"
-                            mt="480px"
-                            overflowY="auto"
-                            className="scrollbar"
-                        >
-                            {results.map((item, id) => (
-                                <Box key={id}>
-                                    <SearchItem
-                                        item={item}
-                                        onClick={() => handleItemClick(item)}
-                                    />
-                                </Box>
-                            ))}
-                        </List>
-                    </InputRightElement>
-                )}
             </InputGroup>
+
+            {query && (
+                <List
+                    bg="#080715"
+                    borderRadius="35px"
+                    boxShadow="lg"
+                    height="auto"
+                    width="100%"
+                    maxWidth="720px"
+                    maxHeight="460px"
+                    position="absolute"
+                    pt="90px"
+                    mr="10px"
+                    ml="10px"
+                    top="calc(100% - 67px - 9px)"
+                    zIndex={5}
+                    overflowY="auto"
+                    className="scrollbar"
+                >
+                    {results.map((item, id) => (
+                        <Box key={id}>
+                            <SearchItem item={item} onClick={() => handleItemClick(item)} />
+                        </Box>
+                    ))}
+                </List>
+            )}
         </Flex>
     );
 };
