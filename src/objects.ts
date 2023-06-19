@@ -85,6 +85,13 @@ import iviLogo from "@/public/vendors/ivi.png";
 import premierLogo from "@/public/vendors/premier.png";
 import okkoLogo from "@/public/vendors/okko.png";
 
+import genre_1 from "@/public/Genres/genre-1.png";
+import genre_2 from "@/public/Genres/genre-2.png";
+import genre_3 from "@/public/Genres/genre-3.png";
+import genre_4 from "@/public/Genres/genre-4.png";
+import genre_5 from "@/public/Genres/genre-5.png";
+import genre_6 from "@/public/Genres/genre-6.png";
+
 /* --- ------- --- */
 
 export const films = [
@@ -137,22 +144,22 @@ export const films = [
     genres: [
       {
         name: "Боевик",
-        icon: "💣",
+        icon: genre_1.src,
         href: "#",
       },
       {
         name: "Мелодрама",
-        icon: "💋",
+        icon: genre_2.src,
         href: "#",
       },
       {
         name: "Драма",
-        icon: "😢",
+        icon: genre_3.src,
         href: "#",
       },
       {
         name: "Фэнтези",
-        icon: "🧙",
+        icon: genre_4.src,
         href: "#",
       },
     ],
@@ -206,22 +213,22 @@ export const films = [
     genres: [
       {
         name: "Триллер",
-        icon: "😰",
+        icon: genre_5.src,
         href: "#",
       },
       {
         name: "Ужас",
-        icon: "👻",
+        icon: genre_6.src,
         href: "#",
       },
       {
         name: "Драма",
-        icon: "😢",
+        icon: genre_2.src,
         href: "#",
       },
       {
         name: "Фэнтези",
-        icon: "🧙",
+        icon: genre_4.src,
         href: "#",
       },
     ],
