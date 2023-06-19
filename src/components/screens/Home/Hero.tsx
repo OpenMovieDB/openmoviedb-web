@@ -14,21 +14,31 @@ import { HeroSection } from "@/components/HeroSection/HeroSection";
 import { films } from "@/src/objects";
 
 const Hero = () => {
-  return (
-    <Swiper
-      scrollbar={{
-        hide: true,
-      }}
-      modules={[Scrollbar]}
-      className={styles.mySwiper}
-    >
-      {films.map((item, id) => (
-        <SwiperSlide key={id}>
-          <HeroSection item={item} />
-        </SwiperSlide>
-      ))}
-    </Swiper>
-  );
+    return (
+        <Swiper
+            scrollbar={{
+                hide: true,
+            }}
+            modules={[Scrollbar]}
+            className={styles.mySwiper}
+            spaceBetween={50}
+            slidesPerView={1}
+            centeredSlides={true}
+            loop={true}
+            pagination={{
+                clickable: true,
+                renderBullet: function(index, className) {
+                    return '<span class="' + className + '">0' + (index + 1) + "</span>";
+                },
+            }}
+        >
+            {films.map((item, id) => (
+                <SwiperSlide key={id}>
+                    <HeroSection item={item} />
+                </SwiperSlide>
+            ))}
+        </Swiper>
+    );
 };
 
 export default Hero;
