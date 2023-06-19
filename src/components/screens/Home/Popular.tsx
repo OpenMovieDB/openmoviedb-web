@@ -11,7 +11,7 @@ import { Slider } from "@/components/Slider/Slider";
 
 const Popular = () => {
     return (
-        <Box className="container" mt="150px">
+        <Box mt="150px">
             <Flex>
                 <Heading fontFamily="Neue Machina">Популярное</Heading>
 

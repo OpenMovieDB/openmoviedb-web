@@ -40,7 +40,7 @@ const Novelties = () => {
     });
 
     return (
-        <Box className="container" mt="150px">
+        <Box mt="150px">
             <Flex>
                 <Heading mr="30px">Новинки кино</Heading>
                 <Box
@@ -57,45 +57,43 @@ const Novelties = () => {
                 </Box>
             </Flex>
 
-            <Flex alignItems="center">
-                <Slider
-                    isWheel
-                    marginTop={10}
-                    titleMargin={60}
-                    arrowMargin={20}
-                    title=" "
-                >
-                    {listOfNovelties.map((item, id) => {
-                        return (
-                            <Box
-                                key={id}
-                                onClick={() => {
-                                    setActiveIndex(id);
-                                    setActiveItem(item);
-                                    setShowMediumScreen(true); // измените значение состояния при клике на компонент
-                                }}
-                                onMouseEnter={() => setHoveredIndex(id)}
-                                onMouseLeave={() => setHoveredIndex(-1)}
-                                mr="30px"
-                            >
-                                <MovieCard item={item} />
+            <Slider
+                isWheel
+                marginTop={10}
+                titleMargin={60}
+                arrowMargin={20}
+                title=" "
+            >
+                {listOfNovelties.map((item, id) => {
+                    return (
+                        <Box
+                            key={id}
+                            onClick={() => {
+                                setActiveIndex(id);
+                                setActiveItem(item);
+                                setShowMediumScreen(true); // измените значение состояния при клике на компонент
+                            }}
+                            onMouseEnter={() => setHoveredIndex(id)}
+                            onMouseLeave={() => setHoveredIndex(-1)}
+                            mr="30px"
+                        >
+                            <MovieCard item={item} />
 
-                                {hoveredIndex === id && (
-                                    <Divider
-                                        mt="15px"
-                                        height="3px"
-                                        style={{
-                                            background:
-                                                "radial-gradient(100% 376.62% at 100% 0%, #00F0FF 0%, #BD00FF 45.31%, #0500FF 100%",
-                                            transition: "all 0.5s ease-out",
-                                        }}
-                                    />
-                                )}
-                            </Box>
-                        );
-                    })}
-                </Slider>
-            </Flex>
+                            {hoveredIndex === id && (
+                                <Divider
+                                    mt="15px"
+                                    height="3px"
+                                    style={{
+                                        background:
+                                            "radial-gradient(100% 376.62% at 100% 0%, #00F0FF 0%, #BD00FF 45.31%, #0500FF 100%",
+                                        transition: "all 0.5s ease-out",
+                                    }}
+                                />
+                            )}
+                        </Box>
+                    );
+                })}
+            </Slider>
 
             {!isMediumScreen && showMediumScreen && (
                 <Flex
@@ -207,45 +205,43 @@ const Novelties = () => {
                     <Flex>nothing</Flex>
                 )}
 
-            <Flex alignItems="center" mt="30px">
-                <Slider
-                    isWheel
-                    marginTop={10}
-                    titleMargin={60}
-                    arrowMargin={20}
-                    title=" "
-                >
-                    {listOfNovelties.map((item, id) => {
-                        return (
-                            <Box
-                                key={id}
-                                onClick={() => {
-                                    setActiveIndex(id);
-                                    setActiveItem(item);
-                                    setShowMediumScreen(true); // измените значение состояния при клике на компонент
-                                }}
-                                onMouseEnter={() => setHoveredIndex(id)}
-                                onMouseLeave={() => setHoveredIndex(-1)}
-                                mr="30px"
-                            >
-                                <MovieCard item={item} />
+            <Slider
+                isWheel
+                marginTop={10}
+                titleMargin={60}
+                arrowMargin={20}
+                title=" "
+            >
+                {listOfNovelties.map((item, id) => {
+                    return (
+                        <Box
+                            key={id}
+                            onClick={() => {
+                                setActiveIndex(id);
+                                setActiveItem(item);
+                                setShowMediumScreen(true); // измените значение состояния при клике на компонент
+                            }}
+                            onMouseEnter={() => setHoveredIndex(id)}
+                            onMouseLeave={() => setHoveredIndex(-1)}
+                            mr="30px"
+                        >
+                            <MovieCard item={item} />
 
-                                {hoveredIndex === id && (
-                                    <Divider
-                                        mt="15px"
-                                        height="3px"
-                                        style={{
-                                            background:
-                                                "radial-gradient(100% 376.62% at 100% 0%, #00F0FF 0%, #BD00FF 45.31%, #0500FF 100%",
-                                            transition: "all 0.5s ease-out",
-                                        }}
-                                    />
-                                )}
-                            </Box>
-                        );
-                    })}
-                </Slider>
-            </Flex>
+                            {hoveredIndex === id && (
+                                <Divider
+                                    mt="15px"
+                                    height="3px"
+                                    style={{
+                                        background:
+                                            "radial-gradient(100% 376.62% at 100% 0%, #00F0FF 0%, #BD00FF 45.31%, #0500FF 100%",
+                                        transition: "all 0.5s ease-out",
+                                    }}
+                                />
+                            )}
+                        </Box>
+                    );
+                })}
+            </Slider>
         </Box>
     );
 };

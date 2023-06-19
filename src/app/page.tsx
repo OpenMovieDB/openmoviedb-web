@@ -9,11 +9,13 @@ const Home = () => {
     return (
         <div>
             <Hero />
-            <Genres />
-            <TopOfMonth />
-            {/* <Recomendations /> */}
-            <Novelties />
-            <Popular />
+            <div className="container">
+                <Genres />
+                <TopOfMonth />
+                {/* <Recomendations /> */}
+                <Novelties />
+                <Popular />
+            </div>
         </div>
     );
 };

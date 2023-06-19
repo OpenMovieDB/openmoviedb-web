@@ -8,7 +8,7 @@ import { GenresCard } from "@/components/GenresCard/GenresCard";
 
 const Genres = () => {
     return (
-        <Box mt="150px" className="container">
+        <Box mt="150px">
             <Box>
                 <Slider isWheel titleMargin={60} arrowMargin={20} title="Жанры">
                     {genresList.map((item, id) => (

@@ -23,7 +23,7 @@ const mock = [
 ];
 
 const TopOfMonth = () => (
-    <Box className="container" mt="70px" minHeight="520px">
+    <Box mt="70px" minHeight="520px">
         <Box>
             <Slider
                 isWheel
