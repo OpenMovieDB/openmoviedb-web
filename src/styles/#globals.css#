@@ -29,7 +29,6 @@
 }
 
 body {
-  font-family: "Neue Machina";
   color: white;
   background-color: #0f0d18;
   overflow-x: hidden;

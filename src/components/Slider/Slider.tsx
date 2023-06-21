@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import { Heading } from "@chakra-ui/react";
+import { Heading, Text } from "@chakra-ui/react";
 import { motion, useMotionValue } from "framer-motion";
 import { IconArrow } from "@/UI/IconArrow/IconArrow";
 
@@ -123,15 +123,9 @@ export const Slider = ({ children, ...props }: Props) => {
             }}
         >
             {title && (
-                <Heading
-                    fontFamily="Neue Machina"
-                    fontWeight="800"
-                    fontSize="40px"
-                    lineHeight="41px"
-                    ref={refTitle}
-                >
+                <Text fontWeight="800" fontSize="40px" lineHeight="41px" ref={refTitle}>
                     {title}
-                </Heading>
+                </Text>
             )}
 
             <div className={styles.content}>

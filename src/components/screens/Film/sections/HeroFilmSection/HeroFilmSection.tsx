@@ -59,10 +59,12 @@ export const HeroFilmSection = ({ item }: IHeroSection) => {
                                 </Flex>
 
                                 <Flex flexDirection="column">
-                                    <Heading size="xl">{filmTitle}</Heading>
-                                    <Heading size="sm" mt="">
+                                    <Text fontSize={["40px", "40px", "25px"]} fontWeight="800">
+                                        {filmTitle}
+                                    </Text>
+                                    <Text fontSize="18px" mt="">
                                         {filmTitleOriginal}
-                                    </Heading>
+                                    </Text>
                                 </Flex>
 
                                 <HStack

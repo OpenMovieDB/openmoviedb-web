@@ -23,7 +23,6 @@ const Filters = () => {
     return (
         <Box
             position="fixed"
-            margin="auto"
             left="50%"
             bottom="30px"
             transform="translate(-50%, -50%)"

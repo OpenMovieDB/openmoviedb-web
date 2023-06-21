@@ -12,21 +12,20 @@ import { Slider } from "@/components/Slider/Slider";
 const Popular = () => {
     return (
         <Box mt="150px">
-            <Flex>
-                <Heading fontFamily="Neue Machina">Популярное</Heading>
+            <Flex alignItems="center">
+                <Text fontSize="40px" fontWeight="800" mr="30px">
+                    Популярное
+                </Text>
 
-                <Box
-                    bg="rgba(255, 255, 255, 0.05)"
-                    borderRadius="full"
-                    p="8px 20px"
-                    ml="30px"
-                >
-                    <Link href="#">
-                        <Text fontWeight="400" fontSize="14px">
-                            Показать всё
-                        </Text>
-                    </Link>
-                </Box>
+                <Link href="#">
+                    <div className="w-[134px] h-[36px] px-[20px] py-2 bg-white bg-opacity-5 rounded-[28px] justify-center items-center gap-[10px] inline-flex">
+                        <div className="text-white text-[14px] font-normal leading-tight">
+                            <Text fontWeight="400" fontSize="14px">
+                                Показать все
+                            </Text>
+                        </div>
+                    </div>
+                </Link>
             </Flex>
 
             <Flex
