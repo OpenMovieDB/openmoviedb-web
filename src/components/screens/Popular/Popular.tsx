@@ -8,24 +8,23 @@ import { listOfPopular } from "@/src/objects";
 
 const Popular = () => {
     return (
-        <>
-            <Box className="container" mt="90px">
-                <Heading fontWeight="800" fontSize="40px" lineHeight="41px">
-                    Популярное
-                </Heading>
+        <Box className="container" mt="90px">
+            <Heading fontWeight="800" fontSize="40px" lineHeight="41px">
+                Популярное
+            </Heading>
 
-                <Flex mt="70px" gap="30px" flexWrap="wrap">
-                    {listOfPopular.map((item, id) => {
-                        return (
-                            <Box minWidth="405px">
-                                <MovieCard key={id} item={item} />
-                            </Box>
-                        );
-                    })}
-                </Flex>
-                <Filters />
-            </Box>
-        </>
+            <Flex mt="70px" gap="30px" flexWrap="wrap">
+                {listOfPopular.map((item, id) => {
+                    return (
+                        <Box minWidth="405px">
+                            <MovieCard key={id} item={item} />
+                        </Box>
+                    );
+                })}
+            </Flex>
+
+            <Filters />
+        </Box>
     );
 };
 
