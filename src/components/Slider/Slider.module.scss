@@ -1,6 +1,6 @@
 .slider {
   user-select: none;
-  padding: 0 20px;
+  // padding: 0 20px;
   margin: auto;
 
   & > h1 {
@@ -25,8 +25,8 @@
     width: 45px;
     height: 45px;
     border-radius: 5px;
-    border: 1px solid #fff;
-    background-color: #080715;
+    // border: 1px solid #fff;
+    // background-color: #080715;
     opacity: 0.5;
     transition: 0.1s ease-in-out;
 

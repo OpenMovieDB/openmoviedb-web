@@ -1,94 +1,71 @@
 "use client";
 
-import { Box, Flex, Heading, Text, Input } from "@chakra-ui/react";
+import { useState, useEffect } from "react";
+import {
+    Box,
+    Flex,
+    Heading,
+    Text,
+    Input,
+    List,
+    ListItem,
+    useBreakpointValue,
+    Link,
+    Spacer,
+    Image,
+    Grid,
+    GridItem,
+} from "@chakra-ui/react";
 import { AccountSettingsSection } from "./components/AccountSettingsSection/AccountSettingsSection";
 import { ChangePasswordSection } from "./components/ChangePasswordSection/ChangePasswordSection";
 
-import { MovieCard } from "@/components/MovieCard/MovieCard";
-import Filters from "@/components/Filters/Filters";
-
-import { listOfPopular } from "@/src/objects";
-import { PrimaryButton } from "@/components/UI/PrimaryButton/PrimaryButton";
+import { NavBar } from "./components/NavBar/NavBar";
+import { Slider } from "@/components/Slider/Slider";
 
 export const Settings = () => {
-  /* return (
-		 *   <>
-		 *     <Box className="container" mt="90px">
-		 *       <Flex mt="200px">
-		 *         <Heading fontWeight="800" fontSize="40px" lineHeight="41px">
-		 *           Настройки аккаунта
-		 *         </Heading>
-		 *         <Box>
-		 *           <Text>E-mail</Text>
-		 *           <Input placeholder="Введите e-mail" variant="flushed" />
-		 *         </Box>
-		 *       </Flex>
+    const [isSelected, setIsSelected] = useState(true);
+    const buttonHandler = () => {
+        setIsSelected((current) => !current);
+    };
 
-		 *       <Flex>
-		 *         <Input />
-		 *       </Flex>
-		 *     </Box>
-		 *   </>
-		 * );
-		 */
-  return (
-    <>
-      <Box className="container" mt="90px">
-        <Box></Box>
-        <Flex mt="130px" flexWrap="wrap" flexDirection="column">
-          <Heading fontWeight="800" fontSize="40px" lineHeight="41px">
-            Настройки аккаунта
-          </Heading>
-          <Box>
-            <Text mt="70px">E-mail</Text>
-            <Input
-              placeholder="Введите e-mail"
-              variant="flushed"
-              mt="30px"
-              maxWidth="444px"
-            />
-          </Box>
-          <Flex justifyContent="center" alignItems="center" mt="100px">
-            <PrimaryButton>Сохранить</PrimaryButton>
-          </Flex>
-        </Flex>
+    useEffect(() => {
+        console.log(isSelected);
+    }, [isSelected]);
 
-        <Flex mt="300px" flexWrap="wrap" flexDirection="column">
-          <Heading fontWeight="800" fontSize="40px" lineHeight="41px">
-            Смена пароля
-          </Heading>
-          <Box mt="70px">
-            <Text>Текущий пароль</Text>
-            <Input
-              placeholder="***************"
-              variant="flushed"
-              mt="30px"
-              maxWidth="444px"
-            />
-          </Box>
-          <Box mt="70px">
-            <Text>Новый пароль</Text>
-            <Input
-              placeholder="***************"
-              variant="flushed"
-              mt="30px"
-              maxWidth="444px"
-            />
-          </Box>
-          <Box mt="70px">
-            <Text>Подтвердите пароль</Text>
-            <Input
-              placeholder="***************"
-              variant="flushed"
-              mt="30px"
-              maxWidth="444px"
-            />
-          </Box>
+    const isSmallScreen = useBreakpointValue({ sm: true, md: false });
+    const isMediumScreen = useBreakpointValue({
+        base: true,
+        md: true,
+        lg: true,
+        xl: false,
+    });
+
+    return (
+        <Flex className="container" mt="90px">
+            {!isSmallScreen && (
+                <>
+                    <Box>
+                        <NavBar />
+                    </Box>
+
+                    <Spacer />
+
+                    <Box>
+                        {/* TODO: Make a changer for sections using NavBar */}
+                        {/* <AccountSettingsSection /> */}
+                        <ChangePasswordSection />
+                    </Box>
+
+                    <Spacer />
+                </>
+            )}
+
+            {isSmallScreen && (
+                <Flex flexDirection="column">
+                    <AccountSettingsSection />
+                    {/* <ChangePasswordSection /> */}
+                </Flex>
+            )}
         </Flex>
-        <Flex justifyContent="center" alignItems="center" mt="100px">
-          <PrimaryButton>Сохранить</PrimaryButton>
-        </Flex>
-      </Box>
-    </>
-  );
+    );
 };

@@ -1,23 +1,22 @@
-import { Flex, Wrap, WrapItem, Link, Text } from "@chakra-ui/react";
+import { WrapItem, Link, Text, Box, HStack, Image } from "@chakra-ui/react";
 
 import { GenresProps } from "@/types/IGenres";
 
 export const GenresInline = ({ item }: GenresProps) => {
-  const { name, icon, href }: any = { ...item };
+    const { name, icon, href }: any = { ...item };
 
-  return (
-    <Flex gap="15px">
-      <Wrap>
+    return (
         <WrapItem>
-          <div className="pt-3 pb-3 pr-5 pl-5 rounded-full bg-white/30">
             <Link href={href}>
-              <Text>
-                {name} {icon}
-              </Text>
+                <Box p="6px 20px" bg="rgba(255, 255, 255, 0.05)" borderRadius="full">
+                    <HStack spacing="15px">
+                        <Image src={icon} alt="" maxWidth="31px" maxHeight="31px" />
+                        <Text fontWeight="400" fontSize="14px">
+                            {name}
+                        </Text>
+                    </HStack>
+                </Box>
             </Link>
-          </div>
         </WrapItem>
-      </Wrap>
-    </Flex>
-  );
+    );
 };

@@ -7,27 +7,19 @@ import { genresList } from "@/src/objects";
 import { GenresCard } from "@/components/GenresCard/GenresCard";
 
 const Genres = () => {
-  return (
-    <Box className="container mt-96">
-      <Heading mb="70px" className="container">
-        Жанры
-      </Heading>
-
-      <Slider
-        isWheel
-        marginTop={10}
-        titleMargin={60}
-        arrowMargin={20}
-        title=" "
-      >
-        {genresList.map((item, id) => (
-          <Box key={id} mr="30px">
-            <GenresCard item={item} />
-          </Box>
-        ))}
-      </Slider>
-    </Box>
-  );
+    return (
+        <Box mt="150px">
+            <Box>
+                <Slider isWheel titleMargin={60} arrowMargin={20} title="Жанры">
+                    {genresList.map((item, id) => (
+                        <Box key={id} mr="30px">
+                            <GenresCard item={item} />
+                        </Box>
+                    ))}
+                </Slider>
+            </Box>
+        </Box>
+    );
 };
 
 export default Genres;

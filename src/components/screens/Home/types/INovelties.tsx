@@ -1,3 +1,5 @@
+import { RatingInlineProps } from "@/types/IRatingInlineProps";
+
 export interface IGenres {
   name: string;
   icon: string;
@@ -8,7 +10,7 @@ export interface INovelties {
   id: number;
   image: string;
   description: string;
-  rating: number;
+  ratings: any; // Array<RatingInlineProps>
   title: string;
   url: string;
   genres: Array<IGenres>;

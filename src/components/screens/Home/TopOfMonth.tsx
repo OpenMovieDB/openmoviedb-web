@@ -14,38 +14,35 @@ import ac_poster from "@/public/TopOfMonth/ac_poster.png";
 import ac_title from "@/public/TopOfMonth/ac_title.png";
 
 const mock = [
-  { poster: kh_poster.src, title: kh_title.src },
-  { poster: of_poster.src, title: of_title.src },
-  { poster: ac_poster.src, title: ac_title.src },
-  { poster: kh_poster.src, title: kh_title.src },
-  { poster: of_poster.src, title: of_title.src },
-  { poster: ac_poster.src, title: ac_title.src },
+    { poster: kh_poster.src, title: kh_title.src },
+    { poster: of_poster.src, title: of_title.src },
+    { poster: ac_poster.src, title: ac_title.src },
+    { poster: kh_poster.src, title: kh_title.src },
+    { poster: of_poster.src, title: of_title.src },
+    { poster: ac_poster.src, title: ac_title.src },
 ];
 
 const TopOfMonth = () => (
-  <Flex className="container">
-    <Heading fontWeight="800" fontSize="40px" lineHeight="41px">
-      Топ месяца
-    </Heading>
-    <Box mt="70px">
-      <Slider
-        isWheel // доступ управления колесиком мыши
-        marginTop={10} // отступ сверху слайдера
-        titleMargin={60} // отступ снизу тайтла
-        arrowMargin={20} // отступ от стрелок управления
-        title=" " // название слайдера
-      >
-        {mock.map((item, i) => (
-          <MovieTopOfMonthCard
-            key={i + 1}
-            position={i + 1}
-            poster={item.poster}
-            title={item.title}
-          />
-        ))}
-      </Slider>
+    <Box mt="70px" minHeight="520px">
+        <Box>
+            <Slider
+                isWheel
+                marginTop={10}
+                titleMargin={60}
+                arrowMargin={20}
+                title="Топ месяца"
+            >
+                {mock.map((item, i) => (
+                    <MovieTopOfMonthCard
+                        key={i + 1}
+                        position={i + 1}
+                        poster={item.poster}
+                        title={item.title}
+                    />
+                ))}
+            </Slider>
+        </Box>
     </Box>
-  </Flex>
 );
 
 export default TopOfMonth;

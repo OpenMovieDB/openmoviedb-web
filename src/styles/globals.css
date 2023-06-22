@@ -15,7 +15,7 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 
-  --content-width: 1820px;
+  --content-width: 1710px;
   --container-offset: 20px;
   --container-width: calc(var(--content-width) + var(--container-offset) * 2);
 }
@@ -29,10 +29,39 @@
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Neue Machina";
   color: white;
   background-color: #0f0d18;
   overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: 2px;
+}
+
+body::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: white;
+  width: 2px;
+  border-radius: 2px;
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 2px;
+  max-height: 50%;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background-color: white;
+  width: 2px;
+  border-radius: 2px;
 }
 
 .container {

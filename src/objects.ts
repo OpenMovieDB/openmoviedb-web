@@ -2,6 +2,7 @@
 
 import { INovelties } from "@/screens/Home/types/INovelties";
 import { IFact } from "@/types/IFact";
+import { IVendorItem } from "@/types/IVendorItem";
 
 /* --- Images --- */
 
@@ -80,6 +81,17 @@ import image__10 from "@/public/Filters/Countries/image-10.png";
 import image__11 from "@/public/Filters/Countries/image-11.png";
 import image__12 from "@/public/Filters/Countries/image-12.png";
 
+import iviLogo from "@/public/vendors/ivi.png";
+import premierLogo from "@/public/vendors/premier.png";
+import okkoLogo from "@/public/vendors/okko.png";
+
+import genre_1 from "@/public/Genres/genre-1.png";
+import genre_2 from "@/public/Genres/genre-2.png";
+import genre_3 from "@/public/Genres/genre-3.png";
+import genre_4 from "@/public/Genres/genre-4.png";
+import genre_5 from "@/public/Genres/genre-5.png";
+import genre_6 from "@/public/Genres/genre-6.png";
+
 /* --- ------- --- */
 
 export const films = [
@@ -132,22 +144,22 @@ export const films = [
     genres: [
       {
         name: "Боевик",
-        icon: "💣",
+        icon: genre_1.src,
         href: "#",
       },
       {
         name: "Мелодрама",
-        icon: "💋",
+        icon: genre_2.src,
         href: "#",
       },
       {
         name: "Драма",
-        icon: "😢",
+        icon: genre_3.src,
         href: "#",
       },
       {
         name: "Фэнтези",
-        icon: "🧙",
+        icon: genre_4.src,
         href: "#",
       },
     ],
@@ -201,22 +213,22 @@ export const films = [
     genres: [
       {
         name: "Триллер",
-        icon: "😰",
+        icon: genre_5.src,
         href: "#",
       },
       {
         name: "Ужас",
-        icon: "👻",
+        icon: genre_6.src,
         href: "#",
       },
       {
         name: "Драма",
-        icon: "😢",
+        icon: genre_2.src,
         href: "#",
       },
       {
         name: "Фэнтези",
-        icon: "🧙",
+        icon: genre_4.src,
         href: "#",
       },
     ],
@@ -288,168 +300,641 @@ export const listOfPopular = [
     id: 1,
     image: image1.src,
     title: "За мечтой",
-    rating: 7.1,
+    ratings: [
+      {
+        rating: "5.6",
+        service: "kinoland",
+      },
+      {
+        rating: "5.6",
+        service: "IMDb",
+      },
+      {
+        rating: "6",
+        service: "КП",
+      },
+    ],
     url: "1",
   },
   {
     id: 2,
     image: image2.src,
     title: "Зов волка",
-    rating: 7.1,
+    ratings: [
+      {
+        rating: "5.6",
+        service: "kinoland",
+      },
+      {
+        rating: "5.6",
+        service: "IMDb",
+      },
+      {
+        rating: "6",
+        service: "КП",
+      },
+    ],
     url: "2",
   },
   {
     id: 3,
     image: image3.src,
     title: "Тайная жизнь домашних животных 2",
-    rating: 7.1,
+    ratings: [
+      {
+        rating: "5.6",
+        service: "kinoland",
+      },
+      {
+        rating: "5.6",
+        service: "IMDb",
+      },
+      {
+        rating: "6",
+        service: "КП",
+      },
+    ],
     url: "3",
   },
   {
     id: 4,
     image: image4.src,
     title: "Люди в чёрном: Интернэшнл",
-    rating: 7.1,
+    ratings: [
+      {
+        rating: "5.6",
+        service: "kinoland",
+      },
+      {
+        rating: "5.6",
+        service: "IMDb",
+      },
+      {
+        rating: "6",
+        service: "КП",
+      },
+    ],
     url: "4",
   },
   {
     id: 5,
     image: image5.src,
     title: "Люди икс: Тёмный феникс",
-    rating: 7.1,
+    ratings: [
+      {
+        rating: "5.6",
+        service: "kinoland",
+      },
+      {
+        rating: "5.6",
+        service: "IMDb",
+      },
+      {
+        rating: "6",
+        service: "КП",
+      },
+    ],
     url: "1",
   },
   {
     id: 6,
     image: image6.src,
     title: "Детские игры",
-    rating: 7.1,
+    ratings: [
+      {
+        rating: "5.6",
+        service: "kinoland",
+      },
+      {
+        rating: "5.6",
+        service: "IMDb",
+      },
+      {
+        rating: "6",
+        service: "КП",
+      },
+    ],
     url: "2",
   },
   {
     id: 7,
     image: image7.src,
     title: "Аладин",
-    rating: 7.1,
+    ratings: [
+      {
+        rating: "5.6",
+        service: "kinoland",
+      },
+      {
+        rating: "5.6",
+        service: "IMDb",
+      },
+      {
+        rating: "6",
+        service: "КП",
+      },
+    ],
     url: "3",
   },
   {
     id: 8,
     image: image7.src,
     title: "Люди икс: Тёмный феникс",
-    rating: 7.1,
+    ratings: [
+      {
+        rating: "5.6",
+        service: "kinoland",
+      },
+      {
+        rating: "5.6",
+        service: "IMDb",
+      },
+      {
+        rating: "6",
+        service: "КП",
+      },
+    ],
     url: "4",
   },
   {
     id: 1,
     image: image1.src,
     title: "За мечтой",
-    rating: 7.1,
+    ratings: [
+      {
+        rating: "5.6",
+        service: "kinoland",
+      },
+      {
+        rating: "5.6",
+        service: "IMDb",
+      },
+      {
+        rating: "6",
+        service: "КП",
+      },
+    ],
     url: "1",
   },
   {
     id: 2,
     image: image2.src,
     title: "Зов волка",
-    rating: 7.1,
+    ratings: [
+      {
+        rating: "5.6",
+        service: "kinoland",
+      },
+      {
+        rating: "5.6",
+        service: "IMDb",
+      },
+      {
+        rating: "6",
+        service: "КП",
+      },
+    ],
     url: "2",
   },
   {
     id: 3,
     image: image3.src,
     title: "Тайная жизнь домашних животных 2",
-    rating: 7.1,
+    ratings: [
+      {
+        rating: "5.6",
+        service: "kinoland",
+      },
+      {
+        rating: "5.6",
+        service: "IMDb",
+      },
+      {
+        rating: "6",
+        service: "КП",
+      },
+    ],
     url: "3",
   },
   {
     id: 4,
     image: image4.src,
     title: "Люди в чёрном: Интернэшнл",
-    rating: 7.1,
+    ratings: [
+      {
+        rating: "5.6",
+        service: "kinoland",
+      },
+      {
+        rating: "5.6",
+        service: "IMDb",
+      },
+      {
+        rating: "6",
+        service: "КП",
+      },
+    ],
     url: "4",
   },
   {
     id: 5,
     image: image5.src,
     title: "Люди икс: Тёмный феникс",
-    rating: 7.1,
+    ratings: [
+      {
+        rating: "5.6",
+        service: "kinoland",
+      },
+      {
+        rating: "5.6",
+        service: "IMDb",
+      },
+      {
+        rating: "6",
+        service: "КП",
+      },
+    ],
     url: "1",
   },
   {
     id: 6,
     image: image6.src,
     title: "Детские игры",
-    rating: 7.1,
+    ratings: [
+      {
+        rating: "5.6",
+        service: "kinoland",
+      },
+      {
+        rating: "5.6",
+        service: "IMDb",
+      },
+      {
+        rating: "6",
+        service: "КП",
+      },
+    ],
     url: "2",
   },
   {
     id: 7,
     image: image7.src,
     title: "Аладин",
-    rating: 7.1,
+    ratings: [
+      {
+        rating: "5.6",
+        service: "kinoland",
+      },
+      {
+        rating: "5.6",
+        service: "IMDb",
+      },
+      {
+        rating: "6",
+        service: "КП",
+      },
+    ],
     url: "3",
   },
   {
     id: 8,
     image: image7.src,
     title: "Люди икс: Тёмный феникс",
-    rating: 7.1,
+    ratings: [
+      {
+        rating: "5.6",
+        service: "kinoland",
+      },
+      {
+        rating: "5.6",
+        service: "IMDb",
+      },
+      {
+        rating: "6",
+        service: "КП",
+      },
+    ],
+    url: "4",
+  },
+
+  {
+    id: 1,
+    image: image1.src,
+    title: "За мечтой",
+    ratings: [
+      {
+        rating: "5.6",
+        service: "kinoland",
+      },
+      {
+        rating: "5.6",
+        service: "IMDb",
+      },
+      {
+        rating: "6",
+        service: "КП",
+      },
+    ],
+    url: "1",
+  },
+  {
+    id: 2,
+    image: image2.src,
+    title: "Зов волка",
+    ratings: [
+      {
+        rating: "5.6",
+        service: "kinoland",
+      },
+      {
+        rating: "5.6",
+        service: "IMDb",
+      },
+      {
+        rating: "6",
+        service: "КП",
+      },
+    ],
+    url: "2",
+  },
+  {
+    id: 3,
+    image: image3.src,
+    title: "Тайная жизнь домашних животных 2",
+    ratings: [
+      {
+        rating: "5.6",
+        service: "kinoland",
+      },
+      {
+        rating: "5.6",
+        service: "IMDb",
+      },
+      {
+        rating: "6",
+        service: "КП",
+      },
+    ],
+    url: "3",
+  },
+  {
+    id: 4,
+    image: image4.src,
+    title: "Люди в чёрном: Интернэшнл",
+    ratings: [
+      {
+        rating: "5.6",
+        service: "kinoland",
+      },
+      {
+        rating: "5.6",
+        service: "IMDb",
+      },
+      {
+        rating: "6",
+        service: "КП",
+      },
+    ],
+    url: "4",
+  },
+  {
+    id: 5,
+    image: image5.src,
+    title: "Люди икс: Тёмный феникс",
+    ratings: [
+      {
+        rating: "5.6",
+        service: "kinoland",
+      },
+      {
+        rating: "5.6",
+        service: "IMDb",
+      },
+      {
+        rating: "6",
+        service: "КП",
+      },
+    ],
+    url: "1",
+  },
+  {
+    id: 6,
+    image: image6.src,
+    title: "Детские игры",
+    ratings: [
+      {
+        rating: "5.6",
+        service: "kinoland",
+      },
+      {
+        rating: "5.6",
+        service: "IMDb",
+      },
+      {
+        rating: "6",
+        service: "КП",
+      },
+    ],
+    url: "2",
+  },
+  {
+    id: 7,
+    image: image7.src,
+    title: "Аладин",
+    ratings: [
+      {
+        rating: "5.6",
+        service: "kinoland",
+      },
+      {
+        rating: "5.6",
+        service: "IMDb",
+      },
+      {
+        rating: "6",
+        service: "КП",
+      },
+    ],
+    url: "3",
+  },
+  {
+    id: 8,
+    image: image7.src,
+    title: "Люди икс: Тёмный феникс",
+    ratings: [
+      {
+        rating: "5.6",
+        service: "kinoland",
+      },
+      {
+        rating: "5.6",
+        service: "IMDb",
+      },
+      {
+        rating: "6",
+        service: "КП",
+      },
+    ],
     url: "4",
   },
   {
     id: 1,
     image: image1.src,
     title: "За мечтой",
-    rating: 7.1,
+    ratings: [
+      {
+        rating: "5.6",
+        service: "kinoland",
+      },
+      {
+        rating: "5.6",
+        service: "IMDb",
+      },
+      {
+        rating: "6",
+        service: "КП",
+      },
+    ],
     url: "1",
   },
   {
     id: 2,
     image: image2.src,
     title: "Зов волка",
-    rating: 7.1,
+    ratings: [
+      {
+        rating: "5.6",
+        service: "kinoland",
+      },
+      {
+        rating: "5.6",
+        service: "IMDb",
+      },
+      {
+        rating: "6",
+        service: "КП",
+      },
+    ],
     url: "2",
   },
   {
     id: 3,
     image: image3.src,
     title: "Тайная жизнь домашних животных 2",
-    rating: 7.1,
+    ratings: [
+      {
+        rating: "5.6",
+        service: "kinoland",
+      },
+      {
+        rating: "5.6",
+        service: "IMDb",
+      },
+      {
+        rating: "6",
+        service: "КП",
+      },
+    ],
     url: "3",
   },
   {
     id: 4,
     image: image4.src,
     title: "Люди в чёрном: Интернэшнл",
-    rating: 7.1,
+    ratings: [
+      {
+        rating: "5.6",
+        service: "kinoland",
+      },
+      {
+        rating: "5.6",
+        service: "IMDb",
+      },
+      {
+        rating: "6",
+        service: "КП",
+      },
+    ],
     url: "4",
   },
   {
     id: 5,
     image: image5.src,
     title: "Люди икс: Тёмный феникс",
-    rating: 7.1,
+    ratings: [
+      {
+        rating: "5.6",
+        service: "kinoland",
+      },
+      {
+        rating: "5.6",
+        service: "IMDb",
+      },
+      {
+        rating: "6",
+        service: "КП",
+      },
+    ],
     url: "1",
   },
   {
     id: 6,
     image: image6.src,
     title: "Детские игры",
-    rating: 7.1,
+    ratings: [
+      {
+        rating: "5.6",
+        service: "kinoland",
+      },
+      {
+        rating: "5.6",
+        service: "IMDb",
+      },
+      {
+        rating: "6",
+        service: "КП",
+      },
+    ],
     url: "2",
   },
   {
     id: 7,
     image: image7.src,
     title: "Аладин",
-    rating: 7.1,
+    ratings: [
+      {
+        rating: "5.6",
+        service: "kinoland",
+      },
+      {
+        rating: "5.6",
+        service: "IMDb",
+      },
+      {
+        rating: "6",
+        service: "КП",
+      },
+    ],
     url: "3",
   },
   {
     id: 8,
     image: image7.src,
     title: "Люди икс: Тёмный феникс",
-    rating: 7.1,
+    ratings: [
+      {
+        rating: "5.6",
+        service: "kinoland",
+      },
+      {
+        rating: "5.6",
+        service: "IMDb",
+      },
+      {
+        rating: "6",
+        service: "КП",
+      },
+    ],
     url: "4",
   },
 ];
@@ -577,7 +1062,20 @@ export const listOfNovelties: INovelties[] = [
         href: "#",
       },
     ],
-    rating: 7.1,
+    ratings: [
+      {
+        rating: "5.6",
+        service: "kinoland",
+      },
+      {
+        rating: "5.6",
+        service: "IMDb",
+      },
+      {
+        rating: "6",
+        service: "КП",
+      },
+    ],
     url: "1",
   },
   {
@@ -608,7 +1106,20 @@ export const listOfNovelties: INovelties[] = [
         href: "#",
       },
     ],
-    rating: 7.1,
+    ratings: [
+      {
+        rating: "5.6",
+        service: "kinoland",
+      },
+      {
+        rating: "5.6",
+        service: "IMDb",
+      },
+      {
+        rating: "6",
+        service: "КП",
+      },
+    ],
     url: "2",
   },
   {
@@ -639,7 +1150,20 @@ export const listOfNovelties: INovelties[] = [
         href: "#",
       },
     ],
-    rating: 7.1,
+    ratings: [
+      {
+        rating: "5.6",
+        service: "kinoland",
+      },
+      {
+        rating: "5.6",
+        service: "IMDb",
+      },
+      {
+        rating: "6",
+        service: "КП",
+      },
+    ],
     url: "3",
   },
   {
@@ -670,7 +1194,20 @@ export const listOfNovelties: INovelties[] = [
         href: "#",
       },
     ],
-    rating: 7.1,
+    ratings: [
+      {
+        rating: "5.6",
+        service: "kinoland",
+      },
+      {
+        rating: "5.6",
+        service: "IMDb",
+      },
+      {
+        rating: "6",
+        service: "КП",
+      },
+    ],
     url: "4",
   },
   {
@@ -701,7 +1238,20 @@ export const listOfNovelties: INovelties[] = [
         href: "#",
       },
     ],
-    rating: 7.1,
+    ratings: [
+      {
+        rating: "5.6",
+        service: "kinoland",
+      },
+      {
+        rating: "5.6",
+        service: "IMDb",
+      },
+      {
+        rating: "6",
+        service: "КП",
+      },
+    ],
     url: "1",
   },
   {
@@ -732,7 +1282,20 @@ export const listOfNovelties: INovelties[] = [
         href: "#",
       },
     ],
-    rating: 7.1,
+    ratings: [
+      {
+        rating: "5.6",
+        service: "kinoland",
+      },
+      {
+        rating: "5.6",
+        service: "IMDb",
+      },
+      {
+        rating: "6",
+        service: "КП",
+      },
+    ],
     url: "2",
   },
   {
@@ -763,7 +1326,20 @@ export const listOfNovelties: INovelties[] = [
         href: "#",
       },
     ],
-    rating: 7.1,
+    ratings: [
+      {
+        rating: "5.6",
+        service: "kinoland",
+      },
+      {
+        rating: "5.6",
+        service: "IMDb",
+      },
+      {
+        rating: "6",
+        service: "КП",
+      },
+    ],
     url: "3",
   },
   {
@@ -794,7 +1370,20 @@ export const listOfNovelties: INovelties[] = [
         href: "#",
       },
     ],
-    rating: 7.1,
+    ratings: [
+      {
+        rating: "5.6",
+        service: "kinoland",
+      },
+      {
+        rating: "5.6",
+        service: "IMDb",
+      },
+      {
+        rating: "6",
+        service: "КП",
+      },
+    ],
     url: "4",
   },
 ];
@@ -973,6 +1562,11 @@ export const factsList: IFact[] = [
     text: "Съемки второго сезона начались до премьеры первого. Это произошло потому, что создатели хотели быть уверены, что актеры не будут выглядеть слишком старыми для своих ролей.",
     isSpoiler: false,
   },
+  {
+    index: 9,
+    text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
+    isSpoiler: true,
+  },
 ];
 
 export const PopularGenresData = [
@@ -1098,5 +1692,20 @@ export const CountriesData = [
     icon: image__12.src,
     name: "Албания",
     href: "#",
+  },
+];
+
+export const vendorsList: IVendorItem[] = [
+  {
+    icon: iviLogo.src,
+    title: "Иви",
+  },
+  {
+    icon: premierLogo.src,
+    title: "Premier",
+  },
+  {
+    icon: okkoLogo.src,
+    title: "Okko",
   },
 ];

@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 export interface MovieCardProps {
   item: {
     image: string;
-    rating: number;
+    rating?: number;
     title: string;
   };
   onClick?: ReactNode | null;
